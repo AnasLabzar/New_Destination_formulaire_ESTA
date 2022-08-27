@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Raleway:wght@200;300;400;500;600;800;900&display=swap');
+
+@media only screen and (min-width: 1240px){
+	.container{
+		/* max-width: 1220px; */
+		background: #fff;
+		padding: 30px;
+		border-radius: 10px;
+	}
+}
+.clear-both{
+	clear: both;
+}
+body{
+	font-family: 'Raleway', sans-serif;
+	background: #f9f9f9;
+}
+
+header{
+    background: #0b4691;
+    position: relative;
+    overflow: hidden;
+}
+header .header-bg{
+    position: absolute;
+    bottom: -10px;
+    right: -80px;
+    z-index: 1;
+}
+header .header-bg img{
+    width:100%
+}
+header .container{padding: 0;background: transparent;}
+header nav{
+    background-color: transparent !important;
+}
+header nav .logo{
+    padding: 0;
+}
+header nav .logo img{
+    height: 74px;
+}
+header nav .header-info{
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    vertical-align: middle;
+    z-index: 99;
+}
+header nav .header-info .header-title{
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 0;
+    float: left;
+    height: 75px;
+}
+header nav .header-info .header-title h2{
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    line-height: 2.5em;
+}
+header nav .header-info .header-contact{
+    display: inline-block;
+    text-align: center;
+    float: right;
+    padding-top: 15px;
+}
+header nav .header-info .header-contact p{
+    margin: 0;
+}
+header nav .header-info .header-contact p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+header nav .navbar-toggler{
+    border: none !important;
+}
+header nav .navbar-toggler:focus{box-shadow: 0 0 0;}
+header nav .navbar-toggler span{
+    font-size: 30px;
+    color: #173963 !important;
+}
+header nav #navbarNav{justify-content: flex-end;}
+header nav #navbarNav ul{}
+header nav #navbarNav ul li{}
+header nav #navbarNav ul li a{
+    padding: 10px 10px 5px;
+    margin: 10px 20px;
+    color: #212121;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-bottom: 5px solid #ffffff;
+}
+header nav #navbarNav ul li a:hover{
+	border-bottom: 5px solid #163862;
+}
+
+.main-picture{
+    text-align: center;
+    background: #F9F9F9;
+}
+.main-picture .picture{
+    overflow: hidden;
+    position: relative;
+    background-image: url(/assets/img/img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-picture .picture .container{
+    background: transparent;
+}
+.main-picture .picture .main-request{
+    max-width: 700px;
+    background: #fff;
+    padding: 10px 10px;
+}
+.main-picture .picture .main-request h1{
+    font-size: 1.8rem;
+    color: #212121;
+    font-weight: 900;
+    margin-bottom: 15px;
+    margin: 20px 0 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.main-picture .picture .main-request h3{
+    font-size: 1rem;
+    color: #212121;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.main-picture .picture .main-request .visa-logo{
+    margin: 0 0 20px;
+}
+.main-picture .picture .main-request .visa-logo img{}
+.main-picture .picture .main-request a{
+    background: #143253;
+    padding: 8px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.main-picture .picture .main-request a:hover{
+	background: #165ba7;
+}
+.main-picture .picture .main-request p{
+    margin: 15px 0 0 0;
+}
+.main-picture .picture .main-request .tag-widget{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.main-picture .picture .main-request .tag-widget .widget-item{
+    color: #fff;
+    display: inline-block;
+    width: 220px;
+    padding-left: 40px;
+    position: relative;
+    font-size: 1em;
+    margin: 10px;
+    text-align: left;
+    line-height: 18px;
+}
+.main-picture .picture .main-request .tag-widget .widget-item i{position: absolute;left: 0;top: 2px;font-size: 2em;}
+
+.steps{
+    margin: 30px 0 30px;
+}
+.steps .container{
+    padding: 0;
+    background: transparent;
+}
+.steps .step-item{
+    background: #143253;
+    padding: 10px 10px 10px 50px;
+    position: relative;
+    color: #fff;
+    height: 100%;
+    align-items: center;
+    line-height: 40px;
+    text-align: center;
+}
+.steps .step-item span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 34px;
+    font-weight: 500;
+    width: 45px;
+    display: block;
+    text-align: center;
+    background: #ffffff69;
+    color: #ffffff;
+    line-height: 50px;
+}
+.steps .step-item h4{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+.steps .step-item p{}
+
+.reason{}
+.reason h2{
+    text-transform: uppercase;
+    color: #193a64;
+    font-weight: 700;
+    max-width: 500px;
+    margin: 0 auto 0;
+    text-align: center;
+}
+.reason .col-md-3{
+    padding-right: calc(var(--bs-gutter-x) * .25);
+    padding-left: calc(var(--bs-gutter-x) * .25);
+    padding-bottom: calc(var(--bs-gutter-x) * .5);
+}
+.reason .reason-item{
+    position: relative;
+    height: 270px;
+    margin-bottom: 13px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.reason .reason-item .picture{
+    width: 100%;
+    height: 100%;
+    margin: 0 0 -8px;
+}
+.reason .reason-item .picture img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.reason .reason-item .text{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    background-color: #0000009e;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 270px;
+    height: 270px;
+    text-align: center;
+}
+.reason .reason-item .text p{
+    line-height: 1.2;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.order-esta{}
+.order-esta .order-esta-picture{}
+.order-esta .order-esta-picture img{
+    width: 100%;
+    max-width: 200px;
+}
+.order-esta .order-esta-text{
+    padding: 0 0;
+}
+.order-esta .order-esta-text h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.order-esta .order-esta-text p{}
+.order-esta .order-esta-text a{
+    background: #143253;
+    padding: 9px 50px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+.order-esta .order-esta-text a:hover{
+    background: #165ba7;
+}
+
+.marquee .container{
+    background: transparent;
+    padding: 0px;
+}
+.marquee .banner{
+    margin: 20px 0;
+}
+
+.marquee .banner marquee{
+    background: #f9f9f9;
+}
+.marquee .banner marquee p{
+    margin: 0;
+    font-size: 23px;
+    padding: 10px;
+}
+.marquee .banner marquee p strong{
+    color: #ff0000;
+}
+
+.about-esta{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.about-esta .container{
+    padding: 0;
+    background: transparent;
+}
+.about-esta .about-esta-exmple{}
+.about-esta .about-esta-exmple h2{}
+.about-esta .about-esta-exmple p{}
+.about-esta .about-esta-exmple img{
+	width: 100%;
+}
+
+.about-us{
+    margin-bottom: 20px;
+    color: #000000;
+}
+.about-us .container{
+    background: transparent;
+}
+.about-us h2{
+    font-weight: 700;
+    font-size: 1.6em;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 20px 10px;
+    text-align: center;
+}
+.about-us .about-us-text{
+    font-size: .95em;
+    margin: 0px 25px 40px;
+}
+.about-us .about-us-text:last-child{
+    margin-bottom: -25px;
+}
+.about-us .about-us-text h3{
+    margin: 20px 0 5px 0;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+.about-us .about-us-text p{
+    margin-bottom: 10px;
+    /* line-height: 20px; */
+    text-align: justify;
+}
+.about-us .about-us-text p a{
+    color: #e8373c;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid;
+}
+/* .about-us .about-us-text .map-country{
+    =: 5;
+} */
+.about-us .about-us-text .map-country ul{
+    column-count: 5;
+}
+.about-us .about-us-text .map-country ul li{}
+
+.page-contact{
+    margin: 30px 0;
+    color: #191918;
+    font-family: 'Open Sans', sans-serif;
+}
+.page-contact .container{
+    background: transparent;
+}
+.page-contact .text-page{
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.page-contact .text-page h2{}
+.page-contact .text-page p{}
+.page-contact .contact-info h2, .page-contact .contact-form h2{
+    font-size: 20px;
+}
+.page-contact .contact-info .item-contact{
+    margin-top: 30px;
+}
+.page-contact .contact-info .item-contact h3{
+    font-size: 20px;
+    font-weight: 800;
+}
+.page-contact .contact-info .item-contact p{
+    margin: 0;
+}
+.page-contact .contact-info .item-contact p a{
+    color: #212529;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    font-weight: 600;
+}
+.page-contact .contact-form{}
+.page-contact .contact-form .form-group{
+    margin-top: 15px;
+}
+.page-contact .contact-form .form-group label{}
+.page-contact .contact-form .form-group input:focus, .page-contact .contact-form .form-group textarea:focus{
+    box-shadow: 0 0 0;
+    border-color: #163862;
+}
+.page-contact .contact-form .form-group button{
+    width: 170px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: #212121;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: 1px solid;
+    transition: 0.5s;
+    display: block;
+}
+.page-contact .contact-form .form-group button:hover{
+    background: #163862;
+    color: #ffffff;
+}
+
+.page-notices{
+    text-align: center;
+    margin: 30px 0;
+}
+.page-notices .container{}
+.page-notices .text-page{
+    margin-bottom: 40px;
+}
+.page-notices .text-page .logo{
+    margin-bottom: 20px;
+}
+.page-notices .text-page .logo img{}
+.page-notices .text-page h2{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 600;
+}
+.page-notices .notices-info{
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+}
+.page-notices .notices-info h3{
+    text-transform: uppercase;
+}
+.page-notices .notices-info h4{
+    font-weight: bold;
+    font-size: 22px;
+}
+.page-notices .notices-info p{
+    margin: 0;
+    font-size: 16px;
+}
+.page-notices .notices-info p a{
+    text-decoration: none;
+    color: #143253;
+    border-bottom: 1px solid;
+    font-weight: 800;
+}
+
+.page-policy{
+    /* margin: 30px 0; */
+}
+.page-policy .container{
+    background: transparent;
+    padding: 0 20px;
+}
+.page-policy .text-page{
+    margin-bottom: 40px;
+	text-align: center;
+}
+.page-policy .text-page .logo{
+    margin: 60px 20px;
+}
+.page-policy .text-page .logo img{
+	max-width: 400px;
+    width: 100%;
+}
+.page-policy .text-page h2{
+    text-transform: uppercase;
+    font-size: 2.2em;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+.page-policy .text-page h2 small{
+    font-size: 16px;
+}
+.page-policy .policy-text{
+    text-align: justify;
+    color: #000000;
+}
+.page-policy .policy-text .secondary-text{
+    padding: 0 0 0 20px;
+    margin: -10px 0 20px;
+}
+.page-policy .policy-text h5{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.page-policy .policy-text h6{}
+.page-policy .policy-text p{
+    font-size: 15px;
+}
+.page-policy .policy-text p:last-child{
+    margin: 0;
+}
+
+footer{
+    background: #0b4691;
+    padding: 40px 0 0;
+    margin: 30px 0 0;
+    text-align: center;
+    color: #c9c9c9;
+}
+footer .container{
+    background: transparent;
+}
+footer .info-footer{
+    padding: 0 20px 30px;
+}
+footer .info-footer img {
+    height: 74px;
+}
+footer .info-footer-2 img.picture-desktop {
+    width: 100%;
+    max-width: 1246px;
+    margin: 30px 0 30px;
+}
+footer .info-footer-2 img.picture-mobile {
+    display: none;
+}
+footer .info-footer p{
+    font-size: 14px;
+    margin: 0;
+}
+footer .contact-footer{
+    padding: 20px 20px;
+}
+footer .contact-footer p{
+    margin: 0;
+    font-size: 20px;
+}
+footer .contact-footer p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+footer .menu-footer{}
+footer .menu-footer ul{
+    list-style: none;
+}
+footer .menu-footer ul li{
+    display: inline-block;
+}
+footer .menu-footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 5px;
+    margin: 0 5px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-size: 0.8em;
+    border-bottom: 1px solid transparent;
+}
+footer .menu-footer ul li a:hover{
+	border-bottom: 1px solid #ffffff;
+}
+footer .menu-footer ul li button{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 5px;
+    margin: 0 5px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+}
+footer .menu-footer ul li button:hover{
+	border-bottom: 1px solid #ffffff;
+}
+footer .copyright{
+    border-top: 1px solid #ccc;
+    padding: 10px 0 0;
+}
+footer .copyright p{}
+.modal .page-contact{}
+.modal .page-contact .fisrt-text{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+.modal .page-contact .second-text{
+    text-align: center;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto 30px;
+}
+.modal .page-contact #form-contact{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.modal .page-contact #form-contact .row{}
+.modal .page-contact #form-contact .row div{
+    margin: 0 0 20px;
+}
+.page-contact #form-contact .row div label{
+    width: 100%;
+}
+.modal .page-contact #form-contact .row div label span{display: block;}
+.modal .page-contact #form-contact .row div label input{
+    width: 100%;
+    padding: 2px 10px;
+    border: 1px solid #919191;
+    border-radius: 3px;
+}
+
+.modal .page-contact #form-contact .row div label textarea{
+    width: 100%;
+    padding: 2px 10px;
+    border: 1px solid #919191;
+    border-radius: 3px;
+}
+input:focus-visible, textarea:focus-visible{
+    outline: none;
+}
+.modal .page-contact #form-contact .row div button{
+    margin: 0 auto;
+    display: block;
+    border: none;
+    padding: 5px 60px;
+    color: #fff;
+    background: #143253;
+    border-radius: 2px;
+}
+.modal .error-champ{
+    border: 1px solid #e91e1e !important;
+}
+.modal .send-mail-contact{
+    margin: 0;
+    padding: 50px 0;
+    text-align: center;
+    color: #00a105;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+@media only screen and (min-width: 769px) and (max-width: 1183px) {
+	.order-esta .order-esta-text{
+		padding-left: 35px;
+	}
+}
+@media only screen and (max-width: 980px) {
+	.navbar>.container-fluid{display: flex;flex-direction: column;}
+}
+@media only screen and (max-width: 768px) {
+	.steps .col-lg-3{
+		margin-bottom: 15px;
+	}
+	.order-esta{
+		text-align: center;
+		padding: 0 15px;
+	}
+	.order-esta .order-esta-text h2{
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	.order-esta .order-esta-text p{
+		font-size: 14px;
+	}
+	.order-esta .order-esta-text a{
+		margin: 0 auto;
+	}
+	.about-us .about-us-text .map-country ul{
+		column-count: 3;
+	}
+	.page-contact .contact-info .item-contact:last-child{margin-bottom: 30px}
+}
+@media only screen and (max-width: 740px) {
+	header nav .header-info{
+		float: left;
+	}
+	header nav .header-info .header-title{
+		float: inherit;
+		display: block;
+		width: 100%;
+		font-size: .7em;
+		text-align: center;
+		margin-right: 0;
+		height: fit-content;
+	}
+	header nav .header-info .header-contact{
+		float: inherit;
+		display: block;
+		width: 100%;
+		font-size: .9em;
+		text-align: center;
+		margin-right: 0;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.main-picture .picture .main-request{
+		padding: 10px;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+	}
+	.main-picture .picture .main-request .form-1{
+		padding: 30px 20px;
+		margin: 30px;
+	}
+	.main-picture .picture .main-request .form-2{
+		padding: 30px 20px;
+		margin: 30px;
+	}
+	.main-picture .picture .main-request .form-1 h1{
+		font-size: 2em;
+	}
+	.main-picture .picture .main-request .form-1 .reason .btn-group{
+    display: block;
+    margin: 0 30px 30px;
+    float: left;
+}
+	.main-picture .picture .main-request .form-1 .reason .btn-group label{
+		margin: 5px;
+		font-size: 1em;
+		display: block;
+		float: left;
+		width: 100%;
+	}
+	.main-picture .picture .main-request .form-1 .reason .btn-group label i{
+    font-size: 1em;
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+	.steps .col-lg-3{
+		margin-bottom: 15px;
+	}
+	.order-esta{
+		text-align: center;
+		padding: 0 15px;
+	}
+	.order-esta .order-esta-text h2{
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	.order-esta .order-esta-text p{
+		font-size: 14px;
+	}
+	.order-esta .order-esta-text a{
+		margin: 0 auto;
+	}
+	.about-us .about-us-text .map-country ul{
+		column-count: 3;
+	}
+	.page-contact .contact-info .item-contact:last-child{margin-bottom: 30px}
+}
+@media only screen and (max-width: 500px) {
+	footer .info-footer-2 img.picture-desktop{
+		display: none
+	}
+	footer .info-footer-2{
+		text-align: center;
+	}
+	footer .info-footer-2 img.picture-mobile{
+		width: 100%;
+        max-width: 344px;
+        display: block;
+        margin: 30px auto 30px;
+	}
+	footer .menu-footer ul li {
+        display: block;
+    }
+}
+@media only screen and (max-width: 480px) {
+	.main-picture .picture .row{}
+	.main-picture .picture .main-request{
+		padding: 10px;
+		width: 100%;
+		text-align: center;
+	}
+	.main-picture .picture .main-request .visa-logo{
+	}
+    .main-picture .picture .main-request .visa-logo img{
+		width: 130px;
+		margin: 0 auto;
+	}
+	.steps{
+		padding: 0 15px;
+	}
+	.steps .col-lg-3{
+		margin-bottom: 15px;
+	}
+
+	.order-esta{
+		text-align: center;
+		padding: 0 15px;
+	}
+	.order-esta .order-esta-text h2{
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	.order-esta .order-esta-text p{
+		font-size: 14px;
+	}
+	.order-esta .order-esta-text a{
+		margin: 0 auto;
+	}
+	.marquee{
+		padding: 0 10px;
+	}
+	.about-us .about-us-text .esta-map {
+		column-count: 3;
+	}
+	.about-us .about-us-text .map-country ul{
+		column-count: 2;
+	}
+	.page-contact .contact-info .item-contact:last-child{margin-bottom: 30px}
+	footer .contact-footer p a{
+		display: block;
+		margin: -5px 0 10px 0;
+	}
+	footer .contact-footer p a:last-child{
+		margin: -5px 0 0;
+	}
+}
+
