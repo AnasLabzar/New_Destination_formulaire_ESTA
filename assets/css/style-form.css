@@ -1,24 +1,29 @@
 :root {
     --line-border-fill: #3498db;
     --line-border-empty: #e0e0e0;
-  }
+}
 
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
+
 @media only screen and (min-width: 1240px) {
     .container {
         padding: 30px;
     }
 }
 
+.title-circle{
+    font-size: 13px;
+}
 
-h5{
+
+h5 {
     margin: 0px !important;
 }
 
-.container{
+.container {
     background-color: transparent;
 }
 
@@ -38,11 +43,11 @@ h5{
     width: 100%;
 }
 
-.redspan{
+.redspan {
     color: red;
 }
 
-section form .col-xs-12 .col-8{
+section form .col-xs-12 .col-8 {
     gap: 1.5em;
     display: grid;
 }
@@ -64,7 +69,7 @@ section form .col-xs-12 .row .ifp .ifp_label {
     font-size: 1rem;
 }
 
-section form .col-xs-12 .review-exemple{
+section form .col-xs-12 .review-exemple {
     background-color: #EEEEEE;
     height: 100%;
     padding: 2em;
@@ -78,11 +83,11 @@ section form .col-xs-12 .review-exemple img {
     margin: 0 auto;
 }
 
-section form .col-xs-12 .review-exemple h6{
+section form .col-xs-12 .review-exemple h6 {
     font-weight: 700;
 }
 
-section form .col-xs-12 .review-exemple p{
+section form .col-xs-12 .review-exemple p {
     font-size: 13px;
     text-align: left;
     position: relative;
@@ -115,19 +120,19 @@ section form .col-xs-12 .row .ifp_input:focus {
     background-color: rgba(20, 96, 170, .1);
 }
 
-section .warning-alert{
+section .warning-alert {
     background: #e7e0e0;
     border: 1px solid #e08385;
     border-left: 5px solid #E51E20;
     padding: 16px 18px;
 }
 
-section .warning-alert .header-alert{
+section .warning-alert .header-alert {
     position: relative;
     bottom: .3em;
 }
 
-section .warning-alert span{
+section .warning-alert span {
     font-size: 14px;
 }
 
@@ -210,9 +215,22 @@ details[open] summary .icon {
     content: "\f059";
 }
 
-.title-progress{
+.title-progress {
     color: white;
     margin-top: 1em;
+    text-align: center;
+    /* margin: 0 auto; */
+    /* display: inline-flex; */
+}
+
+.title-progress .row{
+    max-width: 93%;
+    margin: 0 auto;
+}
+
+.title-progress .row .col{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 
@@ -226,9 +244,9 @@ details[open] summary .icon {
     width: 80%;
     position: relative;
     margin: 0 auto;
-  }
-  
-  .progress-container::before {
+}
+
+.progress-container::before {
     content: "";
     background-color: var(--line-border-empty);
     position: absolute;
@@ -238,9 +256,9 @@ details[open] summary .icon {
     width: 100%;
     transform: translateY(-50%);
     z-index: 2;
-  }
-  
-  .progress {
+}
+
+.progress {
     background-color: var(--line-border-fill);
     position: absolute;
     top: 50%;
@@ -250,9 +268,9 @@ details[open] summary .icon {
     transform: translateY(-50%);
     z-index: 3;
     transition: .4s ease;
-  }
-  
-  .circle {
+}
+
+.circle {
     background-color: white;
     color: #999;
     border-radius: 50%;
@@ -264,14 +282,14 @@ details[open] summary .icon {
     border: 4px solid var(--line-border-empty);
     transition: .4s ease;
     z-index: 4;
-  }
-  
-  .circle.active {
+}
+
+.circle.active {
     border-color: var(--line-border-fill);
     color: var(--line-border-fill);
-  }
-  
-  .btn {
+}
+
+.btn {
     background-color: var(--line-border-fill);
     color: #fff;
     border: 0;
@@ -281,27 +299,27 @@ details[open] summary .icon {
     padding: 8px 30px;
     margin-top: 15px;
     font-size: 14px;
-  }
-  
-  .btn:active {
+}
+
+.btn:active {
     transform: scale(.98);
-  }
-  
-  .btn:focus {
+}
+
+.btn:focus {
     outline: 0;
-  }
-  
-  .btn:disabled {
+}
+
+.btn:disabled {
     background-color: var(--line-border-empty);
     cursor: not-allowed;
-  }
+}
 
-  .cardID-module{
+.cardID-module {
     margin: 1em auto 0 auto !important;
-  }
+}
 
-  /* tooltip */
-  .wrapper {
+/* tooltip */
+.wrapper {
 
     color: #555;
     cursor: help;
@@ -394,6 +412,7 @@ details[open] summary .icon {
     -o-transform: translateY(0px);
     transform: translateY(0px);
 }
+
 .lte8 .wrapper .tooltip {
     display: none;
 }
@@ -401,25 +420,68 @@ details[open] summary .icon {
 .lte8 .wrapper:hover .tooltip {
     display: block;
 }
-  
+
 
 .footer-form .row .col button {
     padding: 20px 40px;
     background: #0b4691;
     color: white;
+    border: none;
     text-decoration: none;
 }
 
-.footer-form .row .col  button svg{
-    width: 8px; 
+.footer-form .row .col button svg {
+    width: 8px;
     fill: white;
     margin-bottom: 4px;
     margin-left: 4px;
 }
 
 
-.text-danger{
+.text-danger {
     display: none;
+}
+
+.runERRMSG {
+    display: block !important;
+    margin: 4px 1px !important;
+    font-size: 14px !important;
+    color: red !important;
+}
+
+.runSUCSSMSG {
+    color: green !important;
+}
+
+.inputError {
+    border-color: red !important;
+    background-color: #cfb3b44d !important;
+}
+
+.activesummary{
+    border: 1px solid green;
+    background-color: rgba(194, 255, 194, 0.274) !important;
+}
+
+.verifedinput {
+    background-image: url('https://www.svgrepo.com/show/24762/round-done-button.svg');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 96%;
+}
+
+.verifedinputDate {
+    background-image: url('https://www.svgrepo.com/show/24762/round-done-button.svg');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 90%;
+}
+
+.inputValid {
+    border-color: green !important;
+    background-color: rgba(194, 255, 194, 0.274) !important;
 }
 
 
@@ -427,7 +489,7 @@ details[open] summary .icon {
 
 /* ---------------- step 2 --------------- */
 
-#step2{
+#step-2 {
     display: none;
 }
 
@@ -441,6 +503,57 @@ details[open] summary .icon {
 
 /* ---------------- step 3 --------------- */
 
-#step3{
+#step-3 {
     display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 990px) {
+    #step-1 details .col-xs-12 .row {
+        flex-direction: column;
+    }
+
+    #step-1 details .col-xs-12 .row .col-8 {
+        width: 100%;
+    }
+
+    #step-1 details .col-xs-12 .row .col-4 {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    #step-1 details .col-xs-12 .row .col-8 .row {
+        flex-direction: row;
+    }
+
+    .sticky {
+        width: 74% !important;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .title-progress{
+        display: none;
+    }
+
+    .circle{
+        width: 60%;
+        height: 60%;
+        max-width: 30px;
+        max-height: 30px;
+    }
 }
