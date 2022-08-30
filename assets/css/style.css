@@ -21,6 +21,9 @@ header{
     position: relative;
     overflow: hidden;
 }
+.form-control:focus{
+    box-shadow: none !important;
+}
 header .header-bg{
     position: absolute;
     bottom: -10px;

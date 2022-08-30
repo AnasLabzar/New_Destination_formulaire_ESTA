@@ -10,10 +10,26 @@ const textDangerPlaceBirth = document.getElementById('text-danger-placeBirth');
 const textDangerCountry = document.getElementById('text-danger-country');
 
 
+const textDangerAdresse = document.getElementById('text-danger-adresse');
+const textDangerPostcode = document.getElementById('text-danger-postcode');
+const textDangerCity = document.getElementById('text-danger-city');
+const textDangerCountry2 = document.getElementById('text-danger-country2');
+const textDangerPhone = document.getElementById('text-danger-phone');
+const textDangerlandlinephone = document.getElementById('text-danger-landlinephone');
+const textDangerDatedeparture = document.getElementById('text-danger-datedeparture');
+
+
+const textDangerPassport = document.getElementById('text-danger-passport');
+// const textDangerAdresse = document.getElementById('text-danger-adresse');
+// const textDangerAdresse = document.getElementById('text-danger-adresse');
+// const textDangerAdresse = document.getElementById('text-danger-adresse');
+
+
+
 const myForm = document.getElementById('myForm');
 
 // function validation of champ (First champ)
-function OnValidatFirstName() {
+function OnValidatFamilyName() {
     const familyname = document.getElementById('nom').value;
 
     if (familyname.length == 0) {
@@ -52,15 +68,13 @@ function OnValidatFirstName() {
 }
 
 // function validation of champ (Last champ)
-function OnValidatLastName() {
-    console.log("test1");
+function OnValidatFirstName() {
     const firstname = document.getElementById('prenom').value;
-    console.log(firstname);
 
 
     if (firstname.length == 0) {
 
-        textDangerFirstname.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Family name is required';
+        textDangerFirstname.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> First name is required';
         textDangerFirstname.classList.add("runERRMSG");
         document.getElementById('prenom').classList.add("inputError");
 
@@ -96,12 +110,11 @@ function OnValidatLastName() {
 // function validation of champ (Gender champ)
 function OnValidatGender() {
     const sexe = document.getElementById('sexe').value;
-    console.log(sexe);
 
 
     if (sexe.length == 0) {
 
-        textDangerSexe.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Family name is required';
+        textDangerSexe.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Gender champ is required';
         textDangerSexe.classList.add("runERRMSG");
         document.getElementById('sexe').classList.add("inputError");
 
@@ -137,12 +150,11 @@ function OnValidatGender() {
 // function validation of champ (Family Situation champ)
 function OnValidatSituation_f() {
     const situation_familiale = document.getElementById('situation_familiale').value;
-    console.log(situation_familiale);
 
 
     if (situation_familiale.length == 0) {
 
-        textDangerSituation_f.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Family name is required';
+        textDangerSituation_f.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Marital status required';
         textDangerSituation_f.classList.add("runERRMSG");
         document.getElementById('situation_familiale').classList.add("inputError");
 
@@ -178,13 +190,11 @@ function OnValidatSituation_f() {
 // function validation of champ (Email champ)
 function OnValidatEmail() {
     const email = document.getElementById('email').value;
-    const emailconfirm = document.getElementById('emailconfirm').value;
-    console.log(email);
 
 
     if (email.length == 0) {
 
-        textDangerEmail.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Family name is required';
+        textDangerEmail.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Email is required';
         textDangerEmail.classList.add("runERRMSG");
         document.getElementById('email').classList.add("inputError");
 
@@ -234,12 +244,10 @@ function OnValidatEmail() {
 function OnValidatConfirmationEmail() {
     const email = document.getElementById('email').value;
     const emailconfirm = document.getElementById('emailconfirm').value;
-    console.log(emailconfirm);
-
 
     if (emailconfirm.length == 0) {
 
-        textDangerConfirmationEmail.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Family name is required';
+        textDangerConfirmationEmail.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Confirmation of email is required';
         textDangerConfirmationEmail.classList.add("runERRMSG");
         document.getElementById('emailconfirm').classList.add("inputError");
 
@@ -288,13 +296,10 @@ function OnValidatConfirmationEmail() {
 // function validation of champ (Date champ)
 function OnValidatDate() {
     const date_naiss = document.getElementById('date_naiss').value;
-    const date_naiss_confirm = document.getElementById('confirm_date_naissance').value;
-    console.log("anas", date_naiss);
-
 
     if (date_naiss.length == 0) {
 
-        textDangerDate.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Family name is required';
+        textDangerDate.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Date champ is required';
         textDangerDate.classList.add("runERRMSG");
         document.getElementById('date_naiss').classList.add("inputError");
 
@@ -331,12 +336,11 @@ function OnValidatDate() {
 function OnValidatConfirmationDate() {
     const date_naiss = document.getElementById('date_naiss').value;
     const date_naiss_confirm = document.getElementById('confirm_date_naissance').value;
-    console.log("anas", date_naiss_confirm);
 
 
     if (date_naiss_confirm.length == 0) {
 
-        textDangerConfirmationDate.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Family name is required';
+        textDangerConfirmationDate.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Confirmation of date birth is required';
         textDangerConfirmationDate.classList.add("runERRMSG");
         document.getElementById('confirm_date_naissance').classList.add("inputError");
 
@@ -381,7 +385,6 @@ function OnValidatConfirmationDate() {
 
 }
 
-
 // function validation of champ (Place of Birth champ)
 function OnValidatPlaceBirth() {
     const villNaiss = document.getElementById('vill_naiss').value;
@@ -424,12 +427,11 @@ function OnValidatPlaceBirth() {
 // function validation of champ (Country champ)
 function OnValidatCountry() {
     const country = document.getElementById('pays_naiss').value;
-    console.log(country);
 
 
     if (country.length == 0) {
 
-        textDangerCountry.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Family name is required';
+        textDangerCountry.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Country of birth is required';
         textDangerCountry.classList.add("runERRMSG");
         document.getElementById('pays_naiss').classList.add("inputError");
 
@@ -465,8 +467,7 @@ function OnValidatCountry() {
     const placebirthchecked = textDangerPlaceBirth.className;
     const countrychecked = textDangerCountry.className;
 
-
-    console.log("wa anas", familynamechecked);
+    var btnNext = document.getElementById('nextStep');
 
     if ((familynamechecked && firstnamechecked && sexechecked && situation_fchecked && emailchecked && confirmationemailchecked && datechecked && confirmationdatenamechecked && placebirthchecked && countrychecked) === "text-danger field-validation-valid runSUCSSMSG") {
         document.getElementById("summary").classList.add("activesummary");
@@ -474,6 +475,7 @@ function OnValidatCountry() {
         document.getElementById("summary").classList.remove("activesummary");
 
     }
+
     document.getElementById('pays_naiss').classList.add("inputValid");
     textDangerCountry.classList.add("runSUCSSMSG");
     document.getElementById('pays_naiss').classList.add('verifedinput');
@@ -483,6 +485,363 @@ function OnValidatCountry() {
 
 
 
+}
+
+
+
+
+// function validation of champ (Adresse Line 1 champ)
+function OnValidatAdresseLine() {
+    const adresseligne1 = document.getElementById('adresseligne1').value;
+
+    if (adresseligne1.length == 0) {
+        textDangerAdresse.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Adresse Line 1 of birth is required';
+        textDangerAdresse.classList.add("runERRMSG");
+        document.getElementById('adresseligne1').classList.add("inputError");
+
+        textDangerAdresse.classList.remove("runSUCSSMSG");
+        document.getElementById('adresseligne1').classList.remove("inputValid");
+        document.getElementById('adresseligne1').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!adresseligne1.match(/[^*+&èù!=££µ%§_ç?^$<>{}//[\]@#~€¤\\]/)) {
+
+        textDangerAdresse.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> scpecial character not supported';
+        textDangerAdresse.classList.add("runERRMSG");
+        document.getElementById('adresseligne1').classList.add("inputError");
+
+        textDangerAdresse.classList.remove("runSUCSSMSG");
+        document.getElementById('adresseligne1').classList.remove("inputValid");
+        document.getElementById('adresseligne1').classList.remove('verifedinput');
+
+
+        return false;
+    }
+
+    document.getElementById('adresseligne1').classList.add("inputValid");
+    textDangerAdresse.classList.add("runSUCSSMSG");
+    document.getElementById('adresseligne1').classList.add('verifedinput');
+    textDangerAdresse.innerHTML = "";
+
+    return true;
+
+
+
+}
+
+// function validation of champ (Postcode champ)
+function OnValidatPostcode() {
+    const cp = document.getElementById('cp').value;
+
+
+    if (cp.length == 0) {
+
+        textDangerPostcode.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Postcode is required';
+        textDangerPostcode.classList.add("runERRMSG");
+        document.getElementById('cp').classList.add("inputError");
+
+        textDangerPostcode.classList.remove("runSUCSSMSG");
+        document.getElementById('cp').classList.remove("inputValid");
+        document.getElementById('cp').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!cp.match(/[^.*+--&é"'èù!:;=¨££µ%§_çà?^$<>{}()|//[\]@``#~€¤\\]/)) {
+
+        textDangerPostcode.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> scpecial character not supported';
+        textDangerPostcode.classList.add("runERRMSG");
+        document.getElementById('cp').classList.add("inputError");
+
+        textDangerPostcode.classList.remove("runSUCSSMSG");
+        document.getElementById('cp').classList.remove("inputValid");
+        document.getElementById('cp').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    document.getElementById('cp').classList.add("inputValid");
+    textDangerPostcode.classList.add("runSUCSSMSG");
+    document.getElementById('cp').classList.add('verifedinput');
+    textDangerPostcode.innerHTML = "";
+
+    return true;
+
+}
+
+// function validation of champ (City champ)
+function OnValidatCity() {
+    const ville = document.getElementById('ville').value;
+
+
+    if (ville.length == 0) {
+
+        textDangerCity.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Postcode is required';
+        textDangerCity.classList.add("runERRMSG");
+        document.getElementById('ville').classList.add("inputError");
+
+        textDangerCity.classList.remove("runSUCSSMSG");
+        document.getElementById('ville').classList.remove("inputValid");
+        document.getElementById('ville').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!ville.match(/[^.*+--&é"'èù!:;=¨££µ%§_çà?^$<>{}()|//[\]@``#~€¤\\]/)) {
+
+        textDangerCity.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> scpecial character not supported';
+        textDangerCity.classList.add("runERRMSG");
+        document.getElementById('ville').classList.add("inputError");
+
+        textDangerCity.classList.remove("runSUCSSMSG");
+        document.getElementById('ville').classList.remove("inputValid");
+        document.getElementById('ville').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    const Adresseline1checked = textDangerAdresse.className;
+    const postcodechecked = textDangerPostcode.className;
+    const citychecked = textDangerCity.className;
+    const country2checked = textDangerCountry2.className;
+    const phonechecked = textDangerPhone.className;
+    const landlinephonechecked = textDangerlandlinephone.className;
+    const Datedeparturechecked = textDangerDatedeparture.className;
+
+    if ((Adresseline1checked && postcodechecked && citychecked && country2checked && phonechecked && landlinephonechecked && Datedeparturechecked) === "text-danger field-validation-valid runSUCSSMSG") {
+        document.getElementById("summary").classList.add("activesummary");
+    } else {
+        document.getElementById("summary").classList.remove("activesummary");
+
+    }
+
+    document.getElementById('ville').classList.add("inputValid");
+    textDangerCity.classList.add("runSUCSSMSG");
+    document.getElementById('ville').classList.add('verifedinput');
+    textDangerCity.innerHTML = "";
+
+    return true;
+
+}
+
+// function validation of champ (Country 2 champ)
+function OnValidatCountry2() {
+    const pays = document.getElementById('pays').value;
+    console.log("test1", pays);
+
+
+    if (pays.length == 0) {
+        console.log("test2", pays);
+        textDangerCountry2.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Gender champ is required';
+        textDangerCountry2.classList.add("runERRMSG");
+        document.getElementById('pays').classList.add("inputError");
+
+        textDangerCountry2.classList.remove("runSUCSSMSG");
+        document.getElementById('pays').classList.remove("inputValid");
+        document.getElementById('pays').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!pays.match(/[^.*+--&é"'èù!:;=¨££µ%§_çà?^$<>{}()|//[\]@``#~€¤\\[0-9]/)) {
+        console.log("test3", pays);
+        textDangerCountry2.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> scpecial character not supported';
+        textDangerCountry2.classList.add("runERRMSG");
+        document.getElementById('pays').classList.add("inputError");
+
+        textDangerCountry2.classList.remove("runSUCSSMSG");
+        document.getElementById('pays').classList.remove("inputValid");
+        document.getElementById('pays').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    console.log("test4", pays);
+    document.getElementById('pays').classList.add("inputValid");
+    textDangerCountry2.classList.add("runSUCSSMSG");
+    document.getElementById('pays').classList.add('verifedinput');
+    textDangerCountry2.innerHTML = "";
+
+    return true;
+
+}
+
+// function validation of champ (Phone champ)
+function OnValidatPhone() {
+    const tel_portabl = document.getElementById('tel_portabl').value;
+
+
+    if (tel_portabl.length == 0) {
+
+        textDangerPhone.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Postcode is required';
+        textDangerPhone.classList.add("runERRMSG");
+        document.getElementById('tel_portabl').classList.add("inputError");
+
+        textDangerPhone.classList.remove("runSUCSSMSG");
+        document.getElementById('tel_portabl').classList.remove("inputValid");
+        document.getElementById('tel_portabl').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!tel_portabl.match(/[^.*+--&é"'èù!:;=¨££µ%§_çà?^$<>{}()|//[\]@``#~€¤\\]/)) {
+
+        textDangerPhone.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> scpecial character not supported';
+        textDangerPhone.classList.add("runERRMSG");
+        document.getElementById('tel_portabl').classList.add("inputError");
+
+        textDangerPhone.classList.remove("runSUCSSMSG");
+        document.getElementById('tel_portabl').classList.remove("inputValid");
+        document.getElementById('tel_portabl').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    document.getElementById('tel_portabl').classList.add("inputValid");
+    textDangerPhone.classList.add("runSUCSSMSG");
+    document.getElementById('tel_portabl').classList.add('verifedinput');
+    textDangerPhone.innerHTML = "";
+
+    return true;
+
+}
+
+// function validation of champ (Landline phone champ)
+function OnValidatLandlinephone() {
+    const cp = document.getElementById('cp').value;
+
+
+    if (cp.length == 0) {
+
+        textDangerPostcode.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Postcode is required';
+        textDangerPostcode.classList.add("runERRMSG");
+        document.getElementById('cp').classList.add("inputError");
+
+        textDangerPostcode.classList.remove("runSUCSSMSG");
+        document.getElementById('cp').classList.remove("inputValid");
+        document.getElementById('cp').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!cp.match(/[^.*+--&é"'èù!:;=¨££µ%§_çà?^$<>{}()|//[\]@``#~€¤\\]/)) {
+
+        textDangerPostcode.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> scpecial character not supported';
+        textDangerPostcode.classList.add("runERRMSG");
+        document.getElementById('cp').classList.add("inputError");
+
+        textDangerPostcode.classList.remove("runSUCSSMSG");
+        document.getElementById('cp').classList.remove("inputValid");
+        document.getElementById('cp').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    document.getElementById('cp').classList.add("inputValid");
+    textDangerPostcode.classList.add("runSUCSSMSG");
+    document.getElementById('cp').classList.add('verifedinput');
+    textDangerPostcode.innerHTML = "";
+
+    return true;
+
+}
+
+
+
+// function validation of champ (Passport Number champ)
+function OnValidatPassportNumber(){
+    const num_pass = document.getElementById('num_pass').value;
+
+
+    if (num_pass.length == 0) {
+
+        textDangerPassport.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Passport Number is required';
+        textDangerPassport.classList.add("runERRMSG");
+        document.getElementById('num_pass').classList.add("inputError");
+
+        textDangerPassport.classList.remove("runSUCSSMSG");
+        document.getElementById('num_pass').classList.remove("inputValid");
+        document.getElementById('num_pass').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!num_pass.match(/^(?!^0+$)[a-zA-Z0-9]{3,20}$/)) {
+
+        textDangerPassport.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Your passport number must be between 3 and 20';
+        textDangerPassport.classList.add("runERRMSG");
+        document.getElementById('num_pass').classList.add("inputError");
+
+        textDangerPassport.classList.remove("runSUCSSMSG");
+        document.getElementById('num_pass').classList.remove("inputValid");
+        document.getElementById('num_pass').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    document.getElementById('num_pass').classList.add("inputValid");
+    textDangerPassport.classList.add("runSUCSSMSG");
+    document.getElementById('num_pass').classList.add('verifedinput');
+    textDangerPassport.innerHTML = "";
+
+    return true;
+
+}
+
+
+// validation step 1
+function run() {
+    if (OnValidatFamilyName() === true && OnValidatFirstName() === true && OnValidatGender() === true && OnValidatSituation_f() === true && OnValidatEmail() === true && OnValidatConfirmationEmail() === true && OnValidatDate() === true && OnValidatConfirmationDate() === true && OnValidatPlaceBirth() === true && OnValidatCountry() === true) {
+        document.getElementById("section-step1").style.display = "none";
+        document.getElementById("section-step2").style.display = "block";
+    } else {
+        document.getElementById("section-step2").style.display = "none";
+        document.getElementById("section-step1").style.display = "block";
+    }
+}
+
+// validation step 2
+function run2() {
+    if (OnValidatAdresseLine() === true && OnValidatPostcode() === true && OnValidatCity() === true && OnValidatCountry2() === true && OnValidatPhone() === true && OnValidatLandlinephone() === true) {
+        document.getElementById("section-step2").style.display = "none";
+        document.getElementById("section-step3").style.display = "block";
+    } else {
+        document.getElementById("section-step3").style.display = "none";
+        document.getElementById("section-step2").style.display = "block";
+    }
+}
+
+// validation step 3
+function run3() {
+    if (OnValidatAdresseLine() === true && OnValidatPostcode() === true && OnValidatCity() === true && OnValidatCountry2() === true && OnValidatPhone() === true && OnValidatLandlinephone() === true) {
+        document.getElementById("section-step3").style.display = "none";
+        document.getElementById("section-step4").style.display = "block";
+    } else {
+        document.getElementById("section-step4").style.display = "none";
+        document.getElementById("section-step3").style.display = "block";
+    }
+}
+
+
+// previous step 2
+function prevStep2() {
+    document.getElementById("section-step2").style.display = "none";
+    document.getElementById("section-step1").style.display = "block";
+}
+
+// previous step 3
+function prevStep3() {
+    document.getElementById("section-step3").style.display = "none";
+    document.getElementById("section-step2").style.display = "block";
+}
+
+
+// previous step 4
+function prevStep4() {
+    document.getElementById("section-step4").style.display = "none";
+    document.getElementById("section-step3").style.display = "block";
 }
 
 
