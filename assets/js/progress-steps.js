@@ -1,8 +1,11 @@
 const progress = document.getElementById("progress");
 const prev = document.getElementById("prev");
 const prev1 = document.getElementById("prev1");
+const prev2 = document.getElementById("prev2");
+
 const next = document.getElementById("next");
 const next1 = document.getElementById("next1");
+const next2 = document.getElementById("next2");
 const circles = document.querySelectorAll(".circle");
 
 
@@ -31,6 +34,17 @@ next1.addEventListener("click", () => {
 
 })
 
+next2.addEventListener("click", () => {
+  if (document.getElementById("section-step4").style.display === "block") {
+    currentActive++;
+    if (currentActive > circles.length) {
+      currentActive = circles.length;
+    }
+    update();
+  }
+
+})
+
 prev.addEventListener("click", () => {
   currentActive--;
   if (currentActive < 1) {
@@ -40,6 +54,14 @@ prev.addEventListener("click", () => {
 });
 
 prev1.addEventListener("click", () => {
+  currentActive--;
+  if (currentActive < 1) {
+    currentActive = 1;
+  }
+  update();
+});
+
+prev2.addEventListener("click", () => {
   currentActive--;
   if (currentActive < 1) {
     currentActive = 1;
@@ -64,9 +86,14 @@ function update() {
   } else if (currentActive === circles.length) {
     next.disabled = true;
     next1.disabled = true;
+    next2.disabled = true;
   } else {
     prev.disabled = false;
+    prev1.disabled = false;
+    prev2.disabled = false;
+
     next.disabled = false;
     next1.disabled = false;
+    next2.disabled = false;
   }
 }

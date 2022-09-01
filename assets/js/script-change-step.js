@@ -20,9 +20,12 @@ const textDangerDatedeparture = document.getElementById('text-danger-datedepartu
 
 
 const textDangerPassport = document.getElementById('text-danger-passport');
-// const textDangerAdresse = document.getElementById('text-danger-adresse');
-// const textDangerAdresse = document.getElementById('text-danger-adresse');
-// const textDangerAdresse = document.getElementById('text-danger-adresse');
+const textDangerConfirmationPassportNumber = document.getElementById('text-danger-confirmation-passportNumber');
+const textDangerDateDelivrance = document.getElementById('text-danger-date-delivrance');
+const textDangerDateExpiration = document.getElementById('text-danger-date-expiration');
+const textDangerPaysEmission = document.getElementById('text-danger-pays-emission');
+const textDangerNationalite = document.getElementById('text-danger-Nationalite');
+const textDangerNumeroIdentite = document.getElementById('text-danger-numero-identite');
 
 
 
@@ -750,6 +753,7 @@ function OnValidatLandlinephone() {
 
 
 
+
 // function validation of champ (Passport Number champ)
 function OnValidatPassportNumber(){
     const num_pass = document.getElementById('num_pass').value;
@@ -790,6 +794,273 @@ function OnValidatPassportNumber(){
 
 }
 
+// function validation of champ (Confirmation Passport Number champ)
+function OnValidatConfirmationPassportNumber(){
+    const confirm_num_pass = document.getElementById('confirm_num_pass').value;
+    const num_pass = document.getElementById('num_pass').value;
+
+
+    if (confirm_num_pass.length == 0) {
+
+        textDangerConfirmationPassportNumber.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Passport Number is required';
+        textDangerConfirmationPassportNumber.classList.add("runERRMSG");
+        document.getElementById('confirm_num_pass').classList.add("inputError");
+
+        textDangerConfirmationPassportNumber.classList.remove("runSUCSSMSG");
+        document.getElementById('confirm_num_pass').classList.remove("inputValid");
+        document.getElementById('confirm_num_pass').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (confirm_num_pass !== num_pass) {
+
+        textDangerConfirmationPassportNumber.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Confirmation Number Passport is not correct';
+        textDangerConfirmationPassportNumber.classList.add("runERRMSG");
+        document.getElementById('confirm_num_pass').classList.add("inputError");
+
+        textDangerConfirmationPassportNumber.classList.remove("runSUCSSMSG");
+        document.getElementById('confirm_num_pass').classList.remove("inputValid");
+        document.getElementById('confirm_num_pass').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    document.getElementById('confirm_num_pass').classList.add("inputValid");
+    document.getElementById('confirm_num_pass').classList.remove("inputError");
+    textDangerConfirmationPassportNumber.classList.remove("runERRMSG");
+    textDangerConfirmationPassportNumber.classList.add("runSUCSSMSG");
+    document.getElementById('confirm_num_pass').classList.add('verifedinput');
+    textDangerPassport.innerHTML = "";
+
+    return true;
+
+}
+
+// function validation of champ (Date Delivrance champ)
+function OnValidatDateDelivrance() {
+    const date_delivrance = document.getElementById('date_delivrance').value;
+    console.log("test-1", date_delivrance);
+
+    if (date_delivrance.length == 0) {
+
+        textDangerDateDelivrance.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Date champ is required';
+        textDangerDateDelivrance.classList.add("runERRMSG");
+        document.getElementById('date_delivrance').classList.add("inputError");
+
+        textDangerDateDelivrance.classList.remove("runSUCSSMSG");
+        document.getElementById('date_delivrance').classList.remove("inputValid");
+        document.getElementById('date_delivrance').classList.remove('verifedinputDate');
+
+        return false;
+    }
+
+    if (!date_delivrance.match(/^\s*((?:19|20)\d{2})\-(1[012]|0?[1-9])\-(3[01]|[12][0-9]|0?[1-9])\s*$/)) {
+
+        textDangerDateDelivrance.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Then write your date of birth in this form: 31/12/1999';
+        textDangerDateDelivrance.classList.add("runERRMSG");
+        document.getElementById('date_delivrance').classList.add("inputError");
+
+        textDangerDateDelivrance.classList.remove("runSUCSSMSG");
+        document.getElementById('date_delivrance').classList.remove("inputValid");
+        document.getElementById('date_delivrance').classList.remove('verifedinputDate');
+
+        return false;
+    }
+
+    document.getElementById('date_delivrance').classList.add("inputValid");
+    textDangerDateDelivrance.classList.add("runSUCSSMSG");
+    document.getElementById('date_delivrance').classList.add('verifedinputDate');
+    textDangerDateDelivrance.innerHTML = "";
+
+    return true;
+
+}
+
+// function validation of champ (Date Expiration champ)
+function OnValidatDateExpiration() {
+    const date_exp = document.getElementById('date_exp').value;
+    const date_delivrance = document.getElementById('date_delivrance').value;
+
+    if (date_exp.length == 0) {
+
+        textDangerDateExpiration.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Date champ is required';
+        textDangerDateExpiration.classList.add("runERRMSG");
+        document.getElementById('date_exp').classList.add("inputError");
+
+        textDangerDateExpiration.classList.remove("runSUCSSMSG");
+        document.getElementById('date_exp').classList.remove("inputValid");
+        document.getElementById('date_exp').classList.remove('verifedinputDate');
+
+        return false;
+    }
+
+    if (!date_exp.match(/^\s*((?:19|20)\d{2})\-(1[012]|0?[1-9])\-(3[01]|[12][0-9]|0?[1-9])\s*$/)) {
+
+        textDangerDateExpiration.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Then write your date of birth in this form: 31/12/1999';
+        textDangerDateExpiration.classList.add("runERRMSG");
+        document.getElementById('date_exp').classList.add("inputError");
+
+        textDangerDateExpiration.classList.remove("runSUCSSMSG");
+        document.getElementById('date_exp').classList.remove("inputValid");
+        document.getElementById('date_exp').classList.remove('verifedinputDate');
+
+        return false;
+    }
+
+    if (date_exp <= date_delivrance) {
+        textDangerDateExpiration.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Tesst';
+        textDangerDateExpiration.classList.add("runERRMSG");
+        document.getElementById('date_exp').classList.add("inputError");
+
+        textDangerDateExpiration.classList.remove("runSUCSSMSG");
+        document.getElementById('date_exp').classList.remove("inputValid");
+        document.getElementById('date_exp').classList.remove('verifedinputDate');
+
+        return false;
+    }
+
+    document.getElementById('date_exp').classList.add("inputValid");
+    textDangerDateExpiration.classList.add("runSUCSSMSG");
+    document.getElementById('date_exp').classList.add('verifedinputDate');
+    textDangerDateExpiration.innerHTML = "";
+
+    return true;
+
+}
+
+// function validation of champ (Pays Emission champ)
+function OnValidatPaysEmission() {
+    const pays_emission = document.getElementById('pays_emission').value;
+    console.log("test1", pays_emission);
+
+
+    if (pays_emission.length == 0) {
+        console.log("test2", pays_emission);
+        textDangerPaysEmission.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Gender champ is required';
+        textDangerPaysEmission.classList.add("runERRMSG");
+        document.getElementById('pays_emission').classList.add("inputError");
+
+        textDangerPaysEmission.classList.remove("runSUCSSMSG");
+        document.getElementById('pays_emission').classList.remove("inputValid");
+        document.getElementById('pays_emission').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!pays_emission.match(/[^.*+--&é"'èù!:;=¨££µ%§_çà?^$<>{}()|//[\]@``#~€¤\\[0-9]/)) {
+        console.log("test3", pays_emission);
+        textDangerPaysEmission.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> scpecial character not supported';
+        textDangerPaysEmission.classList.add("runERRMSG");
+        document.getElementById('pays_emission').classList.add("inputError");
+
+        textDangerPaysEmission.classList.remove("runSUCSSMSG");
+        document.getElementById('pays_emission').classList.remove("inputValid");
+        document.getElementById('pays_emission').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    document.getElementById('pays_emission').classList.add("inputValid");
+    textDangerPaysEmission.classList.add("runSUCSSMSG");
+    document.getElementById('pays_emission').classList.add('verifedinput');
+    textDangerPaysEmission.innerHTML = "";
+
+    return true;
+
+}
+
+// function validation of champ (Nationalité champ)
+function OnValidatNationalite() {
+    const nationalite = document.getElementById('nationalite').value;
+    console.log("test1", nationalite);
+
+
+    if (nationalite.length == 0) {
+        console.log("test2", nationalite);
+        textDangerNationalite.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Gender champ is required';
+        textDangerNationalite.classList.add("runERRMSG");
+        document.getElementById('nationalite').classList.add("inputError");
+
+        textDangerNationalite.classList.remove("runSUCSSMSG");
+        document.getElementById('nationalite').classList.remove("inputValid");
+        document.getElementById('nationalite').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!nationalite.match(/[^.*+--&é"'èù!:;=¨££µ%§_çà?^$<>{}()|//[\]@``#~€¤\\[0-9]/)) {
+        console.log("test3", nationalite);
+        textDangerNationalite.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> scpecial character not supported';
+        textDangerNationalite.classList.add("runERRMSG");
+        document.getElementById('nationalite').classList.add("inputError");
+
+        textDangerNationalite.classList.remove("runSUCSSMSG");
+        document.getElementById('nationalite').classList.remove("inputValid");
+        document.getElementById('nationalite').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    document.getElementById('nationalite').classList.add("inputValid");
+    textDangerNationalite.classList.add("runSUCSSMSG");
+    document.getElementById('nationalite').classList.add('verifedinput');
+    textDangerNationalite.innerHTML = "";
+
+    return true;
+
+}
+
+// function validation of champ (ID card national champ)
+function OnValidatNumeroIdentite() {
+    const numero_identite = document.getElementById('numero_identite').value;
+    console.log("test1", numero_identite);
+
+
+    if (numero_identite.length == 0) {
+        console.log("test2", numero_identite);
+        textDangerNumeroIdentite.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> Gender champ is required';
+        textDangerNumeroIdentite.classList.add("runERRMSG");
+        document.getElementById('numero_identite').classList.add("inputError");
+
+        textDangerNumeroIdentite.classList.remove("runSUCSSMSG");
+        document.getElementById('numero_identite').classList.remove("inputValid");
+        document.getElementById('numero_identite').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    if (!numero_identite.match(/[^.*+--&é"'èù!:;=¨££µ%§_çà?^$<>{}()|//[\]@``#~€¤\\[0-9]/)) {
+        console.log("test3", numero_identite);
+        textDangerNumeroIdentite.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg> scpecial character not supported';
+        textDangerNumeroIdentite.classList.add("runERRMSG");
+        document.getElementById('numero_identite').classList.add("inputError");
+
+        textDangerNumeroIdentite.classList.remove("runSUCSSMSG");
+        document.getElementById('numero_identite').classList.remove("inputValid");
+        document.getElementById('numero_identite').classList.remove('verifedinput');
+
+        return false;
+    }
+
+    document.getElementById('numero_identite').classList.add("inputValid");
+    textDangerNumeroIdentite.classList.add("runSUCSSMSG");
+    document.getElementById('numero_identite').classList.add('verifedinput');
+    textDangerNumeroIdentite.innerHTML = "";
+
+    return true;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 // validation step 1
 function run() {
@@ -815,7 +1086,7 @@ function run2() {
 
 // validation step 3
 function run3() {
-    if (OnValidatAdresseLine() === true && OnValidatPostcode() === true && OnValidatCity() === true && OnValidatCountry2() === true && OnValidatPhone() === true && OnValidatLandlinephone() === true) {
+    if (OnValidatPassportNumber() === true && OnValidatConfirmationPassportNumber() === true && OnValidatDateDelivrance() === true && OnValidatDateExpiration() === true && OnValidatPaysEmission() === true && OnValidatNationalite() === true && OnValidatNumeroIdentite() === true) {
         document.getElementById("section-step3").style.display = "none";
         document.getElementById("section-step4").style.display = "block";
     } else {

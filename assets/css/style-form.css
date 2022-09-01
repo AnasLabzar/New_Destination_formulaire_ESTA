@@ -18,6 +18,17 @@ body {
     font-size: 13px;
 }
 
+.plsection{
+    padding-left: 0.8em;
+}
+
+.plsection .row{
+    gap: 5em;
+}
+
+.other-citizenship-item{
+    margin-bottom: 1em;
+}
 
 h5 {
     margin: 0px !important;
@@ -111,6 +122,106 @@ section form .col-xs-12 .row .ifp_input {
     transition: border-color 0.2s;
 }
 
+.control-label{
+    font-size: 15px;
+    text-align: left;
+}
+
+.block-form .form-group{
+    margin: 1em 0em;
+    /* border-bottom: 1px solid gray; */
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1em;
+}
+
+.radio-option{
+    border-left: 1px solid gray;
+    text-align: center;
+    display: inline-grid;
+    padding-left: 3em;
+}
+
+.block-form .form-group .col-md-10{
+    padding-right: 5em;
+}
+
+.col-md-10{
+    width: 86% !important;
+}
+
+.smalltitlesection{
+    text-decoration: underline;
+    font-weight: 600;
+    margin: 2em 0;
+}
+
+.rowInput7{
+    display: none !important;
+}
+
+#rowInput7{
+    gap: 4em;
+    width: 75.8%;
+}
+
+.rowInput9{
+    display: none;
+}
+
+.rowInput10{
+    display: none;
+    flex-direction: column;
+}
+
+#rowInput11{
+    display: none;
+    max-width: 100%;
+    width: 86%;
+}
+
+.rowInput13{
+    display: none;
+    max-width: 100%;
+    width: 86%;
+    flex-direction: column;
+    padding-left: 1.5em;
+}
+
+#rowInput9{
+    flex-direction: column;
+    max-width: 80%;
+}
+
+#rowInput15{
+    display: none;
+}
+
+#rowInput16{
+    display: none;
+}
+
+.other-name-items{
+    padding-left: 1.5em;
+}
+
+.titlesection{
+    border-top: 1px solid gray;
+    padding-top: 1em;
+}
+
+.w-col{
+    width: 48.5%;
+}
+
+.display-block{
+    display: flex !important;
+}
+
+.display-none{
+    display: none;
+}
+
 
 section form .col-xs-12 .row .ifp_input:hover {
     background-color: rgba(20, 96, 170, .1);
@@ -177,9 +288,9 @@ summary,
     display: none;
 }
 
-#section-step4{
+/* #section-step4{
     display: none;
-}
+} */
 
 .details-info {
     border-top: 1px solid var(--collapse-line-color);
