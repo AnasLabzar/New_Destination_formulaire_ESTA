@@ -190,3 +190,60 @@ Document_question_no.addEventListener("click", () => {
     rowInput16.classList.remove('display-block');
     return true;
 })
+
+
+// ********************* question 17 **********************
+const rowInput17 = document.getElementById('rowInput17');
+const transit_question_yes = document.getElementById('transit_question_yes');
+const transit_question_no = document.getElementById('transit_question_no');
+
+
+transit_question_no.addEventListener("click", () => {
+
+    console.log("test1");
+    if (transit_question_no.value !== "NO") {
+        console.log("Error");
+    }
+    rowInput17.classList.add('display-block');
+    return true;
+})
+
+transit_question_yes.addEventListener("click", () => {
+
+    console.log("test2");
+    if (transit_question_yes.value !== "YES") {
+        console.log("Error");
+    }
+
+    rowInput17.classList.remove('display-block');
+    return true;
+})
+
+
+
+// ********************* question 18 **********************
+const rowInput18 = document.getElementById('rowInput18');
+const transit_outher_address_yes = document.getElementById('transit_outher_address_yes');
+const transit_outher_address_no = document.getElementById('transit_outher_address_no');
+
+
+transit_outher_address_no.addEventListener("click", () => {
+
+    console.log("test1");
+    if (transit_outher_address_no.value !== "NO") {
+        console.log("Error");
+    }
+    rowInput18.classList.add('display-block');
+    return true;
+})
+
+transit_outher_address_yes.addEventListener("click", () => {
+
+    console.log("test2");
+    if (transit_outher_address_yes.value !== "YES") {
+        console.log("Error");
+    }
+
+    rowInput18.classList.remove('display-block');
+    return true;
+})

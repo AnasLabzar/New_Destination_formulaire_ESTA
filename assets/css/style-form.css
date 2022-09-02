@@ -288,9 +288,33 @@ summary,
     display: none;
 }
 
-/* #section-step4{
+#section-step4{
     display: none;
-} */
+}
+
+#section-step5{
+    display: none;
+}
+
+#rowInput17{
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#rowInput18{
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.text_agree{
+    margin-top: 2em;
+}
+.question-final{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
 
 .details-info {
     border-top: 1px solid var(--collapse-line-color);
@@ -667,6 +691,85 @@ details[open] summary .icon {
     .sticky {
         width: 74% !important;
     }
+}
+
+.ulstep{
+    column-count: 2;
+    padding: 0;
+}
+.ulstep li{
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #e2e2e2;
+    display: inline-block;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.ulstep li label{
+    font-weight: 600;
+    padding: 0 20px 0 0;
+    font-size: 15px;
+}
+.ulstep li span{
+    font-size: 18px;
+}
+
+.ulstep2{
+    list-style: none;
+    padding: 0;
+}
+.ulstep2 li{
+ list-style: none;
+ padding: 10px 0;
+ border-bottom: 1px solid #e2e2e2;
+ display: inline-block;
+ width: 100%;
+ font-family: 'Open Sans', sans-serif;
+ }
+.ulstep2 li label{
+    display: inline-block;
+    width: calc(100% - 50px);
+    font-size: 15px;
+}
+.ulstep2 li span{
+    display: inline-block;
+    float: right;
+    font-weight: 600;
+}
+
+
+.page-form .bock-form.form-buttons{}
+.page-form .bock-form.form-buttons button{
+    border: 1px solid #143253;
+    border-radius: 0;
+    width: 160px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.page-form .bock-form.form-buttons button:hover{
+    background: #143253;
+    color: #ffffff;
+}
+.page-form .bock-form.form-buttons button:focus{outline: 0px auto -webkit-focus-ring-color;outline-offset: 0px;color: #333;background-color: #ffffff;border-color: #143253;}
+.page-form .bock-form.form-buttons .btn-prev{
+    display: none;
+}
+.page-form .bock-form.form-buttons .btn-next{
+    float: right;
+}
+.page-form .bock-form.form-buttons .btn-prev i{
+    display: inline-block;
+    margin-right: 10px;
+}
+.page-form .bock-form.form-buttons .btn-next i{
+    display: inline-block;
+    margin-left: 10px;
+}
+.page-form .bock-form.form-buttons .btn-validate{
+    float: right;
+    display: none;
+    background: #143253;
 }
 
 
