@@ -46,7 +46,7 @@
 
 </head>
 
-<body>
+<body onload="dynamic_Question()">
     <header id="header-page">
         <section class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -179,35 +179,6 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-6">
-                                                <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Please indicate your gender. Required to
-                                                        complete the application.</span></div>
-                                                <label class="control-label">Gender <span class="redspan">*</span></label>
-                                                <select class="form-control" name="sexe" onchange="OnValidatGender()" id="sexe" placeholder="Sex" data-bind="value: sexe" data-val="true" aria-required="true">
-                                                    <option value="" selected disabled>Choose your gender</option>
-                                                    <option value="Female">Female</option>
-                                                    <option value="Male">Male</option>
-                                                </select><span id="text-danger-Sexe" class="text-danger field-validation-valid" data-valmsg-for="sexe" data-valmsg-replace="true">
-                                                </span>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-6">
-                                                <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Please indicate your marital status</span></div>
-                                                <label class="control-label">Marital Status <span class="redspan">*</span></label>
-                                                <select class="form-control" name="situation_familiale" onchange="OnValidatSituation_f()" id="situation_familiale" placeholder="Marital Status" data-bind="value: situation_familiale" data-val="true" aria-required="true">
-                                                    <option value="" selected disabled>Choose your marital status
-                                                    </option>
-                                                    <option value="Single">Single</option>
-                                                    <option value="Married">Married</option>
-                                                    <option value="In civil union">In civil union</option>
-                                                    <option value="Divorced">Divorced</option>
-                                                    <option value="Widower">Widower</option>
-                                                    <option value="separated">Separated</option>
-                                                    <option value="Other">Other</option>
-                                                </select><span id="text-danger-situation_f" class="text-danger field-validation-valid" data-valmsg-for="situation_familiale" data-valmsg-replace="true">
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-6">
                                                 <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Enter the email address at which you can be
                                                         contacted. The email address is required to complete the
                                                         request. If you don't have an e-mail address, you may provide
@@ -228,7 +199,18 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-xs-12 col-sm-6">
+                                        <div class="col-xs-12 col-sm-3">
+                                                <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Please indicate your gender. Required to
+                                                        complete the application.</span></div>
+                                                <label class="control-label">Gender <span class="redspan">*</span></label>
+                                                <select class="form-control" name="sexe" onchange="OnValidatGender()" id="sexe" placeholder="Sex" data-bind="value: sexe" data-val="true" aria-required="true">
+                                                    <option value="" selected disabled>Choose your gender</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Male">Male</option>
+                                                </select><span id="text-danger-Sexe" class="text-danger field-validation-valid" data-valmsg-for="sexe" data-valmsg-replace="true">
+                                                </span>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4">
                                                 <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Indicate your date of birth. Date of birth is
                                                         required to complete the request.</span></div>
                                                 <label class="control-label">Date of birth <span class="redspan">*</span></label>
@@ -236,7 +218,7 @@
                                                 <span id="text-danger-date" class="text-danger field-validation-valid" data-valmsg-for="date_naiss" data-valmsg-replace="true">
                                                 </span>
                                             </div>
-                                            <div class="col-xs-12 col-sm-6">
+                                            <div class="col-xs-12 col-sm-5">
                                                 <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Please confirm your date of birth</span></div>
                                                 <label class="control-label">Confirmation of birth date
                                                     <span>*</span></label>
@@ -499,7 +481,7 @@
                                 <div class="container text-center my-5 footer-form">
                                     <div class="row">
                                         <div class="col">
-                                            <button id="prev disabled" disabled>Previous</button>
+                                            <button id="prev" class="prevdisabled" disabled>Previous</button>
                                         </div>
                                         <div class="col-6">
                                             <strong>Step 1 of 6</strong>
@@ -794,7 +776,7 @@
                                                         friend or colleague). The telephone number is required to
                                                         complete the application.</span></div>
                                                 <label class="control-label">Mobile phone <span class="redspan">*</span></label>
-                                                <input type="text" class="form-control" onkeyup="OnValidatPhone()" autocomplete="nope" id="tel_portabl" name="tel_portabl" placeholder="Mobile phone" pattern="^[ ()+]*([0-9][ ()+]*)*" data-val-regex="" data-msg-pattern="The phone number can only contain (numbers, spaces, (, ), +)" data-bind="value: tel_portabl" data-val="true" aria-required="true">
+                                                <input type="text" class="form-control" onkeyup="OnValidatPhone()" autocomplete="nope" id="tel_portabl" name="tel_portabl" placeholder="Mobile phone" data-bind="value: tel_portabl" data-val="true">
                                                 <span id="text-danger-phone" class="text-danger field-validation-valid" data-valmsg-for="tel_portabl" data-valmsg-replace="true">
                                                 </span>
                                             </div>
@@ -806,7 +788,7 @@
                                                         friend or colleague). The telephone number is required to
                                                         complete the application.</span></div>
                                                 <label class="control-label">Landline Phone <span> </span></label>
-                                                <input type="text" class="form-control" onkeyup="OnValidatLandlinephone()" autocomplete="nope" id="tel_fix" name="tel_fix" placeholder="Landline" pattern="^[ ()+]*([0-9][ ()+]*)*" data-val-regex="" data-msg-pattern="The phone number can only contain (numbers, spaces, (, ), +)" data-bind="value: tel_fix" data-val="true">
+                                                <input type="text" class="form-control" onkeyup="OnValidatLandlinephone()" autocomplete="nope" id="tel_fix" name="tel_fix" placeholder="Landline" data-bind="value: tel_fix" data-val="true">
                                                 <span id="text-danger-landlinephone" class="text-danger field-validation-valid" data-valmsg-for="tel_fix" data-valmsg-replace="true">
                                                 </span>
                                             </div>
@@ -1086,7 +1068,7 @@
 
                                         </div>
 
-                                        <div class="row">
+                                        <div class="row" id="champ_taiwan">
                                             <div class="form-group col-sm-6" style="/* display: none; */">
                                                 <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Please enter your national ID number</span>
                                                 </div>
@@ -2646,6 +2628,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div id="section-step5">
                             <div class="col-md-12">
                                 <h3 class="result-h3">General information</h3>
@@ -2679,237 +2662,237 @@
                                 <div class="col-md-12 col-xs-12 col-sm-12 result-div">
                                     <div class="col-md-12">
                                         <ul class="ulstep2">
-                                            <li class="alert_elig">
+                                            <li class="alert_elig questionNone">
                                                 <label class="bind-label">Please check your answers, as Authorization may be denied if you answer 'Yes' to any of the following questions :</label>
                                                 <span class="bind-span" data-bind="text: alert_elig"></span>
                                             </li>
-                                            <li class="q1">
+                                            <li class="q1 questionNone">
                                                 <label class="bind-label">Do you have a physical or mental disorder; or are you a drug abuser or addict; or do you currently have any of the following diseases: Diphtheria, Infectious Tuberculosis, Plague, Smallpox, Yellow Fever, Viral Hemorrhagic Fevers, including Ebola, Lassa, Marburg, Crimean- CongoSevere acute respiratory illnesses capable of transmission to other persons and likely to cause mortality ?</label>
-                                                <span class="bind-span" data-bind="text: q1">YES</span>
+                                                <span class="bind-span" id="getq1" data-bind="text: q1"></span>
                                             </li>
-                                            <li class="questionusa2">
+                                            <li class="questionusa2 questionNone">
                                                 <label class="bind-label">Have you ever been arrested or convicted for a crime that resulted in serious damage to property, or serious harm to another person or government authority ?</label>
-                                                <span class="bind-span" data-bind="text: questionusa2">NO</span>
+                                                <span class="bind-span" id="getquestionusa2" data-bind="text: questionusa2">NO</span>
                                             </li>
-                                            <li class="questionusa3">
+                                            <li class="questionusa3 questionNone">
                                                 <label class="bind-label">Have you ever violated any law related to possessing, using, or distributing illegal drugs ?</label>
-                                                <span class="bind-span" data-bind="text: questionusa3">YES</span>
+                                                <span class="bind-span" id="getquestionusa3" data-bind="text: questionusa3">YES</span>
                                             </li>
-                                            <li class="questionusa4">
+                                            <li class="questionusa4 questionNone">
                                                 <label class="bind-label">Do you seek to engage in or have you ever engaged in terrorist activities, espionage, sabotage, or genocide ?</label>
-                                                <span class="bind-span" data-bind="text: questionusa4">NO</span>
+                                                <span class="bind-span" id="getquestionusa4" data-bind="text: questionusa4">NO</span>
                                             </li>
-                                            <li class="questionusa5">
+                                            <li class="questionusa5 questionNone">
                                                 <label class="bind-label">Have you ever committed fraud or made a false declaration to obtain or help a third-party obtain a Authorization for or entry into the United States ?</label>
-                                                <span class="bind-span" data-bind="text: questionusa5">NO</span>
+                                                <span class="bind-span" id="getquestionusa5" data-bind="text: questionusa5">NO</span>
                                             </li>
-                                            <li class="questionusa6">
+                                            <li class="questionusa6 questionNone">
                                                 <label class="bind-label">Are you currently seeking employment in the United States or have you been employed in the United States without the prior authorisation of the US Government ?</label>
-                                                <span class="bind-span" data-bind="text: questionusa6">NO</span>
+                                                <span class="bind-span" id="getquestionusa6" data-bind="text: questionusa6">NO</span>
                                             </li>
-                                            <li class="questionusa7">
+                                            <li class="questionusa7 questionNone">
                                                 <label class="bind-label">Have you ever been denied a U.S. Authorization you applied for with your current or previous passport, or have you ever been refused admission to the United States or withdrawn your application for admission at a U.S. port of entry ?</label>
-                                                <span class="bind-span" data-bind="text: questionusa7">YES</span>
+                                                <span class="bind-span" id="getquestionusa7" data-bind="text: questionusa7">YES</span>
                                             </li>
-                                            <li class="whenrefususa">
+                                            <li class="whenrefususa questionNone">
                                                 <label class="bind-label">When :</label>
-                                                <span class="bind-span" data-bind="text: whenrefususa">Et est assumenda rem</span>
+                                                <span class="bind-span" id="getwhenrefususa" data-bind="text: whenrefususa">Et est assumenda rem</span>
                                             </li>
-                                            <li class="whererefususa">
+                                            <li class="whererefususa questionNone">
                                                 <label class="bind-label">Where :</label>
-                                                <span class="bind-span" data-bind="text: whererefususa">Atque laborum Volup</span>
+                                                <span class="bind-span" id="getwhererefususa" data-bind="text: whererefususa">Atque laborum Volup</span>
                                             </li>
-                                            <li class="questionusa8">
+                                            <li class="questionusa8 questionNone">
                                                 <label class="bind-label">Have you ever overstayed the period of residence granted to you by the US Government ?</label>
-                                                <span class="bind-span" data-bind="text: questionusa8">YES</span>
+                                                <span class="bind-span" id="getquestionusa8" data-bind="text: questionusa8">YES</span>
                                             </li>
-                                            <li class="questionusa9">
+                                            <li class="questionusa9 questionNone">
                                                 <label class="bind-label">Have you traveled to, or been present in Iraq, Syria, Iran, Sudan, Libya, Somalia or Yemen on or after March 1, 2011 ?</label>
-                                                <span class="bind-span" data-bind="text: questionusa9">NO</span>
+                                                <span class="bind-span" id="getquestionusa9" data-bind="text: questionusa9">NO</span>
                                             </li>
-                                            <li class="q_country">
+                                            <li class="q_country questionNone">
                                                 <label class="bind-label">Country :</label>
-                                                <span class="bind-span" data-bind="text: q_country"></span>
+                                                <span class="bind-span" id="getq_country" data-bind="text: q_country"></span>
                                             </li>
-                                            <li class="q_from">
+                                            <li class="q_from questionNone">
                                                 <label class="bind-label">From :</label>
-                                                <span class="bind-span" data-bind="text: q_from"></span>
+                                                <span class="bind-span" id="getq_from" data-bind="text: q_from"></span>
                                             </li>
-                                            <li class="q_to">
+                                            <li class="q_to questionNone">
                                                 <label class="bind-label">To :</label>
-                                                <span class="bind-span" data-bind="text: q_to"></span>
+                                                <span class="bind-span" id="getq_to" data-bind="text: q_to"></span>
                                             </li>
-                                            <li class="q_reason">
+                                            <li class="q_reason questionNone">
                                                 <label class="bind-label">Reason :</label>
-                                                <span class="bind-span" data-bind="text: q_reason"></span>
+                                                <span class="bind-span" id="getq_reason" data-bind="text: q_reason"></span>
                                             </li>
-                                            <li class="comp_q">
+                                            <li class="comp_q questionNone">
                                                 <label class="bind-label">Please identify the business entity on behalf of which you traveled :</label>
-                                                <span class="bind-span" data-bind="text: comp_q"></span>
+                                                <span class="bind-span" id="getcomp_q" data-bind="text: comp_q"></span>
                                             </li>
-                                            <li class="un_stat">
+                                            <li class="un_stat questionNone">
                                                 <label class="bind-label">Does your organization have consultative status with the United Nations :</label>
-                                                <span class="bind-span" data-bind="text: un_stat"></span>
+                                                <span class="bind-span" id="getun_stat" data-bind="text: un_stat"></span>
                                             </li>
-                                            <li class="position_q">
+                                            <li class="position_q questionNone">
                                                 <label class="bind-label">What was your official position :</label>
-                                                <span class="bind-span" data-bind="text: position_q"></span>
+                                                <span class="bind-span" id="getposition_q" data-bind="text: position_q"></span>
                                             </li>
-                                            <li class="i_document">
+                                            <li class="i_document questionNone">
                                                 <label class="bind-label">Have you ever been issued an I-Authorization by a US. Consulate?</label>
-                                                <span class="bind-span" data-bind="text: i_document"></span>
+                                                <span class="bind-span" id="geti_document" data-bind="text: i_document"></span>
                                             </li>
-                                            <li class="cont_q">
+                                            <li class="cont_q questionNone">
                                                 <label class="bind-label">Please provide contact information for the entity identified :</label>
-                                                <span class="bind-span" data-bind="text: cont_q"></span>
+                                                <span class="bind-span" id="getcont_q" data-bind="text: cont_q"></span>
                                             </li>
-                                            <li class="document_iran">
+                                            <li class="document_iran questionNone">
                                                 <label class="bind-label">Business Number Iranian Authorization :</label>
-                                                <span class="bind-span" data-bind="text: document_iran"></span>
+                                                <span class="bind-span" id="getdocument_iran" data-bind="text: document_iran"></span>
                                             </li>
-                                            <li class="all_comp">
+                                            <li class="all_comp questionNone">
                                                 <label class="bind-label">List all companies in Iran with which you had business :</label>
-                                                <span class="bind-span" data-bind="text: all_comp"></span>
+                                                <span class="bind-span" id="getall_comp" data-bind="text: all_comp"></span>
                                             </li>
-                                            <li class="human_document">
+                                            <li class="human_document questionNone">
                                                 <label class="bind-label">Please provide your Authorization Number related to your humanitarian trip :</label>
-                                                <span class="bind-span" data-bind="text: human_document"></span>
+                                                <span class="bind-span" id="gethuman_document" data-bind="text: human_document"></span>
                                             </li>
-                                            <li class="us_fund">
+                                            <li class="us_fund questionNone">
                                                 <label class="bind-label">If your organization has been a recipient of U.S. government funding for humanitarian, please provide the recent grant number. :</label>
-                                                <span class="bind-span" data-bind="text: us_fund"></span>
+                                                <span class="bind-span" id="getus_fund" data-bind="text: us_fund"></span>
                                             </li>
-                                            <li class="hum_work">
+                                            <li class="hum_work questionNone">
                                                 <label class="bind-label">Please provide information about the work you were doing in this country :</label>
-                                                <span class="bind-span" data-bind="text: hum_work"></span>
+                                                <span class="bind-span" id="gethum_work" data-bind="text: hum_work"></span>
                                             </li>
-                                            <li class="autre_alias">
+                                            <li class="autre_alias questionNone">
                                                 <label class="bind-label">Are you known by any other names or aliases ?</label>
-                                                <span class="bind-span" data-bind="text: autre_alias">NO</span>
+                                                <span class="bind-span" id="getautre_alias" data-bind="text: autre_alias">NO</span>
                                             </li>
-                                            <li class="familyname_alias">
+                                            <li class="familyname_alias questionNone">
                                                 <div class="" style="display: inline-block; width: 48%;">
                                                     <label class="bind-label">Family Name :</label>
-                                                    <span class="bind-span" data-bind="text: familyname_alias" style="float: inherit;"></span>
+                                                    <span class="bind-span" id="getfamilyname_alias" data-bind="text: familyname_alias" style="float: inherit;"></span>
                                                 </div>
                                                 <div class="" style="display: inline-block; width: 48%;">
                                                     <label class="bind-label">First (Given) Name :</label>
-                                                    <span class="bind-span" data-bind="text: firstname_alias" style="float: inherit;"></span>
+                                                    <span class="bind-span" id="getfirstname_alias" data-bind="text: firstname_alias" style="float: inherit;"></span>
                                                 </div>
                                             </li>
-                                            <li class="emploi">
+                                            <li class="emploi questionNone">
                                                 <label class="bind-label">Do you have a current or previous employer ?</label>
-                                                <span class="bind-span" data-bind="text: emploi">YES</span>
+                                                <span class="bind-span" id="getemploi" data-bind="text: emploi"></span>
                                             </li>
-                                            <li class="employeur">
+                                            <li class="employeur questionNone">
                                                 <label class="bind-label">Employer Name :</label>
-                                                <span class="bind-span" data-bind="text: employeur">Autem sint ipsum qu</span>
+                                                <span class="bind-span" id="getemployeur" data-bind="text: employeur">Autem sint ipsum qu</span>
                                             </li>
-                                            <li class="address_empl">
+                                            <li class="address_empl questionNone">
                                                 <label class="bind-label">Employer Address :</label>
-                                                <span class="bind-span" data-bind="text: address_empl">Qui necessitatibus r</span>
+                                                <span class="bind-span" id="getaddress_empl" data-bind="text: address_empl">Qui necessitatibus r</span>
                                             </li>
-                                            <li class="ville_empl">
+                                            <li class="ville_empl questionNone">
                                                 <label class="bind-label">City :</label>
-                                                <span class="bind-span" data-bind="text: ville_empl">Et Nam at sunt dolor</span>
+                                                <span class="bind-span" id="getville_empl" data-bind="text: ville_empl">Et Nam at sunt dolor</span>
                                             </li>
-                                            <li class="pays_empl">
+                                            <li class="pays_empl questionNone">
                                                 <label class="bind-label">Country :</label>
-                                                <span class="bind-span" data-bind="text: pays_empl">Macedonia</span>
+                                                <span class="bind-span" id="getpays_empl" data-bind="text: pays_empl">Macedonia</span>
                                             </li>
-                                            <li class="parent1_nom">
+                                            <li class="parent1_nom questionNone">
                                                 <label class="bind-label">Parent 1: Last name :</label>
-                                                <span class="bind-span" data-bind="text: parent1_nom">Molestias quis volup</span>
+                                                <span class="bind-span" id="getparent1_nom" data-bind="text: parent1_nom">Molestias quis volup</span>
                                             </li>
-                                            <li class="parent1_prenom">
+                                            <li class="parent1_prenom questionNone">
                                                 <label class="bind-label">Parent 1: First name :</label>
-                                                <span class="bind-span" data-bind="text: parent1_prenom">Fugiat est aute moll</span>
+                                                <span class="bind-span" id="getparent1_prenom" data-bind="text: parent1_prenom">Fugiat est aute moll</span>
                                             </li>
-                                            <li class="parent2_nom">
+                                            <li class="parent2_nom questionNone">
                                                 <label class="bind-label">Parent 2: Last name :</label>
-                                                <span class="bind-span" data-bind="text: parent2_nom">Nobis sed laborum ei</span>
+                                                <span class="bind-span" id="getparent2_nom" data-bind="text: parent2_nom">Nobis sed laborum ei</span>
                                             </li>
-                                            <li class="parent2_prenom">
+                                            <li class="parent2_prenom questionNone">
                                                 <label class="bind-label">Parent 2: First name :</label>
-                                                <span class="bind-span" data-bind="text: parent2_prenom">Rerum deserunt volup</span>
+                                                <span class="bind-span" id="parent2_prenom" data-bind="text: parent2_prenom">Rerum deserunt volup</span>
                                             </li>
-                                            <li class="other_citizenship">
+                                            <li class="other_citizenship questionNone">
                                                 <label class="bind-label">Are you now, a citizen of any other country ?</label>
-                                                <span class="bind-span" data-bind="text: other_citizenship">NO</span>
+                                                <span class="bind-span" id="getother_citizenship" data-bind="text: other_citizenship">NO</span>
                                             </li>
-                                            <li class="another_country">
+                                            <li class="another_country questionNone">
                                                 <div style="display: inline-block; width: 300px;">
                                                     <label class="bind-label">Country of Citizenship</label>
-                                                    <span class="bind-span" data-bind="text: another_country" style="float: inherit;"></span>
+                                                    <span class="bind-span" id="getanother_country" data-bind="text: another_country" style="float: inherit;"></span>
                                                 </div>
                                                 <div style="display: inline-block; width: calc(100% - 305px);">
                                                     <label class="bind-label">How did you acquire citizenship from this country ?</label>
-                                                    <span class="bind-span" data-bind="text: how_acquired" style="float: inherit;">Autre</span>
+                                                    <span class="bind-span" id="gethow_acquired" data-bind="text: how_acquired" style="float: inherit;">Autre</span>
                                                 </div>
                                             </li>
-                                            <li class="Document_question">
+                                            <li class="Document_question questionNone">
                                                 <label class="bind-label">Have you already held a passport or identity card to get into another country ?</label>
-                                                <span class="bind-span" data-bind="text: Document_question"></span>
+                                                <span class="bind-span" id="getDocument_question" data-bind="text: Document_question"></span>
                                             </li>
-                                            <li class="NDOCU">
+                                            <li class="NDOCU questionNone">
                                                 <div style="display: inline-block; width: 300px;">
                                                     <label class="bind-label">Document number :</label>
-                                                    <span class="bind-span" data-bind="text: NDOCU" style="float: inherit;"></span>
+                                                    <span class="bind-span" id="getNDOCU" data-bind="text: NDOCU" style="float: inherit;"></span>
                                                 </div>
                                                 <div style="display: inline-block; width: 260px;">
                                                     <label class="bind-label">Document type :</label>
-                                                    <span class="bind-span" data-bind="text: type_doc" style="float: inherit;"></span>
+                                                    <span class="bind-span" id="gettype_doc" data-bind="text: type_doc" style="float: inherit;"></span>
                                                 </div>
                                                 <div style="display: inline-block; width: 250px;">
                                                     <label class="bind-label">Issued country :</label>
-                                                    <span class="bind-span" data-bind="text: pays_doc" style="float: inherit;"></span>
+                                                    <span class="bind-span" id="getpays_doc" data-bind="text: pays_doc" style="float: inherit;"></span>
                                                 </div>
                                                 <div style="display: inline-block; width: 250px;">
                                                     <label class="bind-label">Expiration date :</label>
-                                                    <span class="bind-span" data-bind="text: date_doc" style="float: inherit;"></span>
+                                                    <span class="bind-span" id="getdate_doc" data-bind="text: date_doc" style="float: inherit;"></span>
                                                 </div>
                                             </li>
-                                            <li class="been_other_citizen">
+                                            <li class="been_other_citizen questionNone">
                                                 <label class="bind-label">Have you been a citizen of another country?</label>
-                                                <span class="bind-span" data-bind="text: been_other_citizen">YES</span>
+                                                <span class="bind-span" id="getbeen_other_citizen" data-bind="text: been_other_citizen">YES</span>
                                             </li>
-                                            <li class="country_other2">
+                                            <li class="country_other2 questionNone">
                                                 <div style="display: inline-block; width: 400px;">
                                                     <label class="bind-label">Country of Citizenship :</label>
-                                                    <span class="bind-span" data-bind="text: country_other2" style="float: inherit;">Slovenia</span>
+                                                    <span class="bind-span" id="getcountry_other2" data-bind="text: country_other2" style="float: inherit;">Slovenia</span>
                                                 </div>
                                                 <div style="display: inline-block; width: 330px;">
                                                     <label class="bind-label">From :</label>
-                                                    <span class="bind-span" data-bind="text: country_other2_start" style="float: inherit;"></span>
+                                                    <span class="bind-span" id="getcountry_other2_start" data-bind="text: country_other2_start" style="float: inherit;"></span>
                                                 </div>
                                                 <div style="display: inline-block; width: 330px;">
                                                     <label class="bind-label">To :</label>
-                                                    <span class="bind-span" data-bind="text: country_other2_end" style="float: inherit;"></span>
+                                                    <span class="bind-span" id="getcountry_other2_end" data-bind="text: country_other2_end" style="float: inherit;"></span>
                                                 </div>
                                             </li>
-                                            <li class="nom_urgence">
+                                            <li class="nom_urgence questionNone">
                                                 <label class="bind-label">Name :</label>
-                                                <span class="bind-span" data-bind="text: nom_urgence">Exercitationem corpo</span>
+                                                <span class="bind-span" id="getnom_urgence" data-bind="text: nom_urgence">Exercitationem corpo</span>
                                             </li>
-                                            <li class="prenom_urg">
+                                            <li class="prenom_urg questionNone">
                                                 <label class="bind-label">First name :</label>
-                                                <span class="bind-span" data-bind="text: prenom_urg">Fugiat deserunt non</span>
+                                                <span class="bind-span" id="getprenom_urg" data-bind="text: prenom_urg">Fugiat deserunt non</span>
                                             </li>
-                                            <li class="tel_urgence">
+                                            <li class="tel_urgence questionNone">
                                                 <label class="bind-label">Telephone :</label>
-                                                <span class="bind-span" data-bind="text: tel_urgence">Non aut amet et in </span>
+                                                <span class="bind-span" id="gettel_urgence" data-bind="text: tel_urgence">Non aut amet et in </span>
                                             </li>
-                                            <li class="email_urg">
+                                            <li class="email_urg questionNone">
                                                 <label class="bind-label">Email :</label>
-                                                <span class="bind-span" data-bind="text: email_urg">myjyribeta@mailinator.com</span>
+                                                <span class="bind-span" id="getemail_urg" data-bind="text: email_urg">myjyribeta@mailinator.com</span>
                                             </li>
-                                            <li class="date_arriv">
+                                            <li class="date_arriv questionNone">
                                                 <label class="bind-label">Date of departure :</label>
-                                                <span class="bind-span" data-bind="text: date_arriv">02/1_/____</span>
+                                                <span class="bind-span" id="getdate_arriv" data-bind="text: date_arriv">02/1_/____</span>
                                             </li>
-                                            <li class="transit_question">
+                                            <li class="transit_question questionNone">
                                                 <label class="bind-label">Is your trip to the United States a transit to another country ?</label>
-                                                <span class="bind-span" data-bind="text: transit_question">YES</span>
+                                                <span class="bind-span" id="gettransit_question" data-bind="text: transit_question">YES</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -2923,12 +2906,73 @@
                                     <span class="text-danger field-validation-valid" data-valmsg-for="acceptdata" data-valmsg-replace="true"></span>
                                 </div>
                             </div>
+                            <div class="container text-center my-5 footer-form">
+                                <div class="row">
+                                    <div class="col">
+                                        <button id="prev prev3" onclick="prevStep5()">Previous</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <strong>Step 5 of 6</strong>
+                                    </div>
+                                    <div class="col">
+                                        <button id="next3" type="button" onclick="run5()">Next
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                                <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                                <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="section-step6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="item-block">
+                                        <div class="title-block">
+                                            <h3>PAYMENT DETAILS</h3>
+                                        </div>
+                                        <div class="form-payment">
+                                            <form id="payment-form" method="POST" action="PSP/Checkout-new/checkout.php" style="text-align:center;" target="_parent">
+                                                <div class="frames-container" style="width: 100%; margin: 0 auto; padding: 5px 15px 15px;"><iframe class="cko-iframe theme-simple loaded ready" id="cko-iframe-id" src="https://js.checkout.com/frames/?v=1.0.16&amp;publicKey=pk_46c24aaf-59ea-44d4-b225-7aea48c9c4e5&amp;theme=simple"></iframe></div>
+                                                <button id="pay-now-button" type="submit" disabled="" style="margin: 20px; background: #03a84e; font-weight: 500; color: #fff; border: 0; padding: 10px 30px; text-transform: uppercase;">Confirm payment</button>
+                                            </form>
+                                        </div>
+                                        <div class="image-payment">
+                                            <img src="assets/images/paymant-picture.png" alt="payment secure">
+                                            <p>The padlock symbol and the https:// in the address bar guarantee secure payment.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item-block">
+                                        <div class="title-block">
+                                            <h3>ORDER DETAILS</h3>
+                                        </div>
+                                        <div class="info-block">
+                                            <p><strong>Product Name</strong><span> : ESTA USA</span></p>
+                                            <p><strong>Amount</strong><span> : 89<span id="devise_service">£ </span><br></span></p>
+                                            <div id="curdiv" style="display:none;"><span id="amountCurspan"></span><span id="symbolCurspan"></span></div>
+                                            <p></p>
+                                            <p><strong>Date</strong><span> : 03/09/2022</span></p>
+                                        </div>
+                                        <div class="title-block">
+                                            <h3>CUSTOMER INFORMATION</h3>
+                                        </div>
+                                        <div class="info-block">
+                                            <p><strong>Name</strong><span> : Quidem ex aut ducimu Rerum ducimus et et</span></p>
+                                            <p><strong>Address</strong><span> : Ut earum consequuntu<br>&nbsp;&nbsp;Ut proident non non<br>&nbsp;&nbsp;Fugiat saepe veritat Necessitatibus velit UK</span></p>
+                                            <p><strong>Tel</strong><span> : 56454</span></p>
+                                            <p><strong>E-mail</strong><span> : cizeveruj@mailinator.com</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-        </div>
-        </div>
-        </form>
-        </section>
+                </form>
+            </section>
         </div>
     </main>
 
@@ -2974,6 +3018,7 @@
     <script src="assets/js/question-dynamic.js"></script>
     <script src="assets/js/dynamic-button.js"></script>
     <script src="assets/js/insert-data-session.js"></script>
+    <script src="assets/js/dynamic-view-question.js"></script>
 </body>
 
 </html>

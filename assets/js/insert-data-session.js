@@ -1,10 +1,9 @@
 
 
-document.getElementById('next2').addEventListener('click', () => {
+document.getElementById('next3').addEventListener('click', () => {
     const nom = document.getElementById('nom').value;
     const prenom = document.getElementById('prenom').value;
     const sexe = document.getElementById('sexe').value;
-    const situation_familiale = document.getElementById('situation_familiale').value;
     const email = document.getElementById('email').value;
     const date_naiss = document.getElementById('date_naiss').value;
     const vill_naiss = document.getElementById('vill_naiss').value;
@@ -28,11 +27,11 @@ document.getElementById('next2').addEventListener('click', () => {
     const questionusa4 = document.getElementById('questionusa4').value;
     const questionusa5 = document.getElementById('questionusa5').value;
     const questionusa6 = document.getElementById('questionusa6').value;
-    const questionusa7 = document.getElementsByName('questionusa7').value;
+    // const questionusa7 = document.getElementsByName('questionusa7').value;
     const whenrefususa = document.getElementById('whenrefususa').value;
     const whererefususa = document.getElementById('whererefususa').value;
-    const questionusa8 = document.getElementsByName('questionusa8').value;
-    const questionusa9 = document.getElementsByName('questionusa9').value;
+    // const questionusa8 = document.getElementsByName('questionusa8').value;
+    // const questionusa9 = document.getElementsByName('questionusa9').value;
     const q_country = document.getElementById('q_country').value;
     const q_from = document.getElementById('q_from').value;
     const q_to = document.getElementById('q_to').value;
@@ -53,11 +52,11 @@ document.getElementById('next2').addEventListener('click', () => {
     const human_document = document.getElementById('human_document').value;
     const us_fund = document.getElementById('us_fund').value;
     const hum_work = document.getElementById('hum_work').value;
-    const autre_alias = document.getElementsByName('autre_alias').value;
+    // const autre_alias = document.getElementsByName('autre_alias').value;
     const familyname_alias = document.getElementById('familyname_alias').value;
     const firstname_alias = document.getElementById('firstname_alias').value;
     const firstitem = document.getElementById('first-item').value;
-    const emploi = document.getElementsByName('emploi').value;
+    // const emploi = document.getElementsByName('emploi').value;
     const employeur = document.getElementById('employeur').value;
     const address_empl = document.getElementById('address_empl').value;
     const pays_empl = document.getElementById('pays_empl').value;
@@ -65,11 +64,11 @@ document.getElementById('next2').addEventListener('click', () => {
     const parent1_prenom = document.getElementById('parent1_prenom').value;
     const parent2_nom = document.getElementById('parent2_nom').value;
     const parent2_prenom = document.getElementById('parent2_prenom').value;
-    const other_citizenship = document.getElementByName('other_citizenship').value;
+    // const other_citizenship = document.getElementByTagName('other_citizenship').value;
     const another_country = document.getElementById('another_country').value;
     const how_acquired = document.getElementById('how_acquired').value;
     const other_how_acquired = document.getElementById('other_how_acquired').value;
-    const Document_question = document.getElementByName('Document_question').value;
+    // const Document_question = document.getElementByName('Document_question').value;
 
 
 
@@ -77,7 +76,6 @@ document.getElementById('next2').addEventListener('click', () => {
     sessionStorage.setItem("nom", nom);
     sessionStorage.setItem("prenom", prenom);
     sessionStorage.setItem("sexe", sexe);
-    sessionStorage.setItem("situation_familiale", situation_familiale);
     sessionStorage.setItem("email", email);
     sessionStorage.setItem("date_naiss", date_naiss);
     sessionStorage.setItem("vill_naiss", vill_naiss);
@@ -101,11 +99,11 @@ document.getElementById('next2').addEventListener('click', () => {
     sessionStorage.setItem("questionusa4", questionusa4);
     sessionStorage.setItem("questionusa5", questionusa5);
     sessionStorage.setItem("questionusa6", questionusa6);
-    sessionStorage.setItem("questionusa7", questionusa7);
+    // sessionStorage.setItem("questionusa7", questionusa7);
     sessionStorage.setItem("whenrefususa", whenrefususa);
     sessionStorage.setItem("whererefususa", whererefususa);
-    sessionStorage.setItem("questionusa8", questionusa8);
-    sessionStorage.setItem("questionusa9", questionusa9);
+    // sessionStorage.setItem("questionusa8", questionusa8);
+    // sessionStorage.setItem("questionusa9", questionusa9);
     sessionStorage.setItem("q_country", q_country);
     sessionStorage.setItem("q_from", q_from);
     sessionStorage.setItem("q_to", q_to);
@@ -125,11 +123,11 @@ document.getElementById('next2').addEventListener('click', () => {
     sessionStorage.setItem("human_document", human_document);
     sessionStorage.setItem("us_fund", us_fund);
     sessionStorage.setItem("hum_work", hum_work);
-    sessionStorage.setItem("autre_alias", autre_alias);
+    // sessionStorage.setItem("autre_alias", autre_alias);
     sessionStorage.setItem("familyname_alias", familyname_alias);
     sessionStorage.setItem("firstname_alias", firstname_alias);
     sessionStorage.setItem("firstitem", firstitem);
-    sessionStorage.setItem("emploi", emploi);
+    // sessionStorage.setItem("emploi", emploi);
     sessionStorage.setItem("employeur", employeur);
     sessionStorage.setItem("address_empl", address_empl);
     sessionStorage.setItem("pays_empl", pays_empl);
@@ -137,11 +135,11 @@ document.getElementById('next2').addEventListener('click', () => {
     sessionStorage.setItem("parent1_prenom", parent1_prenom);
     sessionStorage.setItem("parent2_nom", parent2_nom);
     sessionStorage.setItem("parent2_prenom", parent2_prenom);
-    sessionStorage.setItem("other_citizenship", other_citizenship);
+    // sessionStorage.setItem("other_citizenship", other_citizenship);
     sessionStorage.setItem("another_country", another_country);
     sessionStorage.setItem("how_acquired", how_acquired);
     sessionStorage.setItem("other_how_acquired", other_how_acquired);
-    sessionStorage.setItem("Document_question", Document_question);
+    // sessionStorage.setItem("Document_question", Document_question);
 
 
 
@@ -153,7 +151,6 @@ document.getElementById('next2').addEventListener('click', () => {
     let Getprenom = sessionStorage.getItem("prenom");
     let Getsexe = sessionStorage.getItem("sexe");
     let GetEmail = sessionStorage.getItem("email");
-    let Getsituation_familiale = sessionStorage.getItem("situation_familiale");
     let Getdate_naiss = sessionStorage.getItem("date_naiss");
     let Getvill_naiss = sessionStorage.getItem("vill_naiss");
     let Getpays_naiss = sessionStorage.getItem("pays_naiss");
@@ -176,11 +173,11 @@ document.getElementById('next2').addEventListener('click', () => {
     let Getquestionusa4 = sessionStorage.getItem("questionusa4");
     let Getquestionusa5 = sessionStorage.getItem("questionusa5");
     let Getquestionusa6 = sessionStorage.getItem("questionusa6");
-    let Getquestionusa7 = sessionStorage.getItem("questionusa7");
+    // let Getquestionusa7 = sessionStorage.getItem("questionusa7");
     let Getwhenrefususa = sessionStorage.getItem("whenrefususa");
     let Getwhererefususa = sessionStorage.getItem("whererefususa");
-    let Getquestionusa8 = sessionStorage.getItem("questionusa8");
-    let Getquestionusa9 = sessionStorage.getItem("questionusa9");
+    // let Getquestionusa8 = sessionStorage.getItem("questionusa8");
+    // let Getquestionusa9 = sessionStorage.getItem("questionusa9");
     let Getq_country = sessionStorage.getItem("q_country");
     let Getq_from = sessionStorage.getItem("q_from");
     let Getq_to = sessionStorage.getItem("q_to");
@@ -200,10 +197,10 @@ document.getElementById('next2').addEventListener('click', () => {
     let Gethuman_document = sessionStorage.getItem("human_document");
     let Getus_fund = sessionStorage.getItem("us_fund");
     let Gethum_work = sessionStorage.getItem("hum_work");
-    let Getautre_alias = sessionStorage.getItem("autre_alias");
+    // let Getautre_alias = sessionStorage.getItem("autre_alias");
     let Getfamilyname_alias = sessionStorage.getItem("familyname_alias");
     let Getfirstname_alias = sessionStorage.getItem("firstname_alias");
-    let Getfirstitem = sessionStorage.getItem("firstitem");
+    // let Getfirstitem = sessionStorage.getItem("firstitem");
     let Getemploi = sessionStorage.getItem("emploi");
     let Getemployeur = sessionStorage.getItem("employeur");
     let Getaddress_empl = sessionStorage.getItem("address_empl");
@@ -215,7 +212,7 @@ document.getElementById('next2').addEventListener('click', () => {
     let Getother_citizenship = sessionStorage.getItem("other_citizenship");
     let Getanother_country = sessionStorage.getItem("another_country");
     let Gethow_acquired = sessionStorage.getItem("how_acquired");
-    let Getother_how_acquired = sessionStorage.getItem("other_how_acquired");
+    // let Getother_how_acquired = sessionStorage.getItem("other_how_acquired");
     let GetDocument_question = sessionStorage.getItem("Document_question");
 
 
@@ -244,60 +241,59 @@ document.getElementById('next2').addEventListener('click', () => {
     document.getElementById("getPays_emission").innerHTML = Getpays_emission;
     document.getElementById("getNationalite").innerHTML = Getnationalite;
     document.getElementById("getNumero_identite").innerHTML = Getnumero_identite;
-    document.getElementById("getNom").innerHTML = Getq1;
-    document.getElementById("getNom").innerHTML = Getquestionusa2;
-    document.getElementById("getNom").innerHTML = Getquestionusa3;
-    document.getElementById("getNom").innerHTML = Getquestionusa4;
-    document.getElementById("getNom").innerHTML = Getquestionusa5;
-    document.getElementById("getNom").innerHTML = Getquestionusa6;
-    document.getElementById("getNom").innerHTML = Getquestionusa7;
-    document.getElementById("getNom").innerHTML = Getwhenrefususa;
-    document.getElementById("getNom").innerHTML = Getwhererefususa;
-    document.getElementById("getNom").innerHTML = Getquestionusa8;
-    document.getElementById("getNom").innerHTML = Getquestionusa9;
-    document.getElementById("getNom").innerHTML = Getq_country;
-    document.getElementById("getNom").innerHTML = Getq_from;
-    document.getElementById("getNom").innerHTML = Getq_to;
-    document.getElementById("getNom").innerHTML = Getq_reason;
-    document.getElementById("getNom").innerHTML = Getcomp_q;
-    document.getElementById("getNom").innerHTML = Getcomp_q2;
-    document.getElementById("getNom").innerHTML = Getcomp_q3;
-    document.getElementById("getNom").innerHTML = Getun_stat;
-    document.getElementById("getNom").innerHTML = Getposition_q;
-    document.getElementById("getNom").innerHTML = Getposition_q2;
-    document.getElementById("getNom").innerHTML = Getposition_q3;
-    document.getElementById("getNom").innerHTML = Geti_document;
-    document.getElementById("getNom").innerHTML = Getcont_q;
-    document.getElementById("getNom").innerHTML = Getcont_q2;
-    document.getElementById("getNom").innerHTML = Getdocument_iran;
-    document.getElementById("getNom").innerHTML = Getall_comp;
-    document.getElementById("getNom").innerHTML = Gethuman_document;
-    document.getElementById("getNom").innerHTML = Getus_fund;
-    document.getElementById("getNom").innerHTML = Gethum_work;
-    document.getElementById("getNom").innerHTML = Getautre_alias;
-    document.getElementById("getNom").innerHTML = Getfamilyname_alias;
-    document.getElementById("getNom").innerHTML = Getfirstname_alias;
-    document.getElementById("getNom").innerHTML = Getfirstitem;
-    document.getElementById("getNom").innerHTML = Getemploi;
-    document.getElementById("getNom").innerHTML = Getemployeur;
-    document.getElementById("getNom").innerHTML = Getaddress_empl;
-    document.getElementById("getNom").innerHTML = Getpays_empl;
-    document.getElementById("getNom").innerHTML = Getparent1_nom;
-    document.getElementById("getNom").innerHTML = Getparent1_prenom;
-    document.getElementById("getNom").innerHTML = Getparent2_nom;
-    document.getElementById("getNom").innerHTML = Getparent2_prenom;
-    document.getElementById("getNom").innerHTML = Getother_citizenship;
-    document.getElementById("getNom").innerHTML = Getanother_country;
-    document.getElementById("getNom").innerHTML = Gethow_acquired;
-    document.getElementById("getNom").innerHTML = Getother_how_acquired;
-    document.getElementById("getNom").innerHTML = GetDocument_question;
+    document.getElementById("getq1").innerHTML = Getq1;
+    document.getElementById("getquestionusa2").innerHTML = Getquestionusa2;
+    document.getElementById("getquestionusa3").innerHTML = Getquestionusa3;
+    document.getElementById("getquestionusa4").innerHTML = Getquestionusa4;
+    document.getElementById("getquestionusa5").innerHTML = Getquestionusa5;
+    document.getElementById("getquestionusa6").innerHTML = Getquestionusa6;
+    document.getElementById("getquestionusa7").innerHTML = Getquestionusa7;
+    document.getElementById("getwhenrefususa").innerHTML = Getwhenrefususa;
+    document.getElementById("getwhererefususa").innerHTML = Getwhererefususa;
+    // document.getElementById("getquestionusa8").innerHTML = Getquestionusa8;
+    // document.getElementById("getquestionusa9").innerHTML = Getquestionusa9;
+    document.getElementById("getq_country").innerHTML = Getq_country;
+    document.getElementById("getq_from").innerHTML = Getq_from;
+    document.getElementById("getq_to").innerHTML = Getq_to;
+    document.getElementById("getq_reason").innerHTML = Getq_reason;
+    document.getElementById("getcomp_q").innerHTML = Getcomp_q;
+    // document.getElementById("getNom").innerHTML = Getcomp_q2;************
+    // document.getElementById("getNom").innerHTML = Getcomp_q3;************
+    document.getElementById("getun_stat").innerHTML = Getun_stat;
+    document.getElementById("getposition_q").innerHTML = Getposition_q;
+    // document.getElementById("getNom").innerHTML = Getposition_q2;**********
+    // document.getElementById("getNom").innerHTML = Getposition_q3;**********
+    document.getElementById("geti_document").innerHTML = Geti_document;
+    document.getElementById("getcont_q").innerHTML = Getcont_q;
+    // document.getElementById("getNom").innerHTML = Getcont_q2;**************
+    document.getElementById("getdocument_iran").innerHTML = Getdocument_iran;
+    document.getElementById("getall_comp").innerHTML = Getall_comp;
+    document.getElementById("gethuman_document").innerHTML = Gethuman_document;
+    document.getElementById("getus_fund").innerHTML = Getus_fund;
+    document.getElementById("gethum_work").innerHTML = Gethum_work;
+    document.getElementById("getautre_alias").innerHTML = Getautre_alias;
+    document.getElementById("getfamilyname_alias").innerHTML = Getfamilyname_alias;
+    document.getElementById("getfirstname_alias").innerHTML = Getfirstname_alias;
+    // document.getElementById("getNom").innerHTML = Getfirstitem;**************
+    document.getElementById("getemploi").innerHTML = Getemploi;
+    document.getElementById("getemployeur").innerHTML = Getemployeur;
+    document.getElementById("getaddress_empl").innerHTML = Getaddress_empl;
+    document.getElementById("getpays_empl").innerHTML = Getpays_empl;
+    document.getElementById("getparent1_nom").innerHTML = Getparent1_nom;
+    document.getElementById("getparent1_prenom").innerHTML = Getparent1_prenom;
+    document.getElementById("getparent2_nom").innerHTML = Getparent2_nom;
+    document.getElementById("parent2_prenom").innerHTML = Getparent2_prenom;
+    document.getElementById("getother_citizenship").innerHTML = Getother_citizenship;
+    document.getElementById("getanother_country").innerHTML = Getanother_country;
+    document.getElementById("gethow_acquired").innerHTML = Gethow_acquired;
+    // document.getElementById("getNom").innerHTML = Getother_how_acquired;*************
+    document.getElementById("getDocument_question").innerHTML = GetDocument_question;
 
 
     console.log(
         Getnom, 
         Getprenom, 
         Getsexe, 
-        Getsituation_familiale, 
         Getdate_naiss, 
         Getvill_naiss, 
         Getpays_naiss,
@@ -323,8 +319,8 @@ document.getElementById('next2').addEventListener('click', () => {
         Getquestionusa7,
         Getwhenrefususa,
         Getwhererefususa,
-        Getquestionusa8,
-        Getquestionusa9,
+        // Getquestionusa8,
+        // Getquestionusa9,
         Getq_country,
         Getq_from,
         Getq_to,

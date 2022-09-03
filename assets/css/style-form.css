@@ -279,6 +279,10 @@ summary,
     width: 100%;
 }
 
+.result-h3{
+    margin-top: 2em;
+}
+
 #section-step2,
 #section-step3{
     display: none;
@@ -293,6 +297,10 @@ summary,
 }
 
 #section-step5{
+    display: none;
+}
+
+#section-step6{
     display: none;
 }
 
@@ -486,6 +494,7 @@ details[open] summary .icon {
     position: relative;
     display: inline-block;
     float: right;
+    width: fit-content;
 }
 
 .wrapper i.hlp {
@@ -628,7 +637,7 @@ details[open] summary .icon {
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position-y: 50%;
-    background-position-x: 90%;
+    background-position-x: 86%;
 }
 
 .inputValid {
@@ -771,7 +780,20 @@ details[open] summary .icon {
     display: none;
     background: #143253;
 }
+.prevdisabled{
+    background: gray !important;
+    cursor: no-drop;
+}
 
+#champ_taiwan{
+    display: none;
+}
+
+.col-8 {
+    flex: 0 0 auto;
+    width: 66.666667%;
+    height: 18em !important;
+}
 
 
 

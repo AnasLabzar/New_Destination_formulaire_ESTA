@@ -58,14 +58,6 @@ next3.addEventListener("click", () => {
 
 })
 
-prev.addEventListener("click", () => {
-  currentActive--;
-  if (currentActive < 1) {
-    currentActive = 1;
-  }
-  update();
-});
-
 prev1.addEventListener("click", () => {
   currentActive--;
   if (currentActive < 1) {
@@ -81,6 +73,7 @@ prev2.addEventListener("click", () => {
   }
   update();
 });
+
 prev3.addEventListener("click", () => {
   currentActive--;
   if (currentActive < 1) {
@@ -88,6 +81,44 @@ prev3.addEventListener("click", () => {
   }
   update();
 });
+
+prev4.addEventListener("click", () => {
+  currentActive--;
+  if (currentActive < 1) {
+    currentActive = 1;
+  }
+  update();
+});
+
+// prev1.addEventListener("click", () => {
+//   if (document.getElementById("section-step2").style.display === "block") {
+//     currentActive--;
+//     if (currentActive < 1) {
+//       currentActive = 1;
+//     }
+//     update();
+//   }
+// });
+
+// prev2.addEventListener("click", () => {
+//   if (document.getElementById("section-step3").style.display === "block") {
+//   currentActive--;
+//   if (currentActive < 1) {
+//     currentActive = 1;
+//   }
+//   update();
+// }
+// });
+
+// prev3.addEventListener("click", () => {
+//   if (document.getElementById("section-step4").style.display === "block") {
+//   currentActive--;
+//   if (currentActive < 1) {
+//     currentActive = 1;
+//   }
+//   update();
+// }
+// });
 
 function update() {
   circles.forEach((circle, index) => {
@@ -105,18 +136,9 @@ function update() {
     prev.disabled = true;
   } else if (currentActive === circles.length) {
     next.disabled = true;
-    next1.disabled = true;
-    next2.disabled = true;
-    next3.disabled = true;
   } else {
     prev.disabled = false;
-    prev1.disabled = false;
-    prev2.disabled = false;
-    prev3.disabled = false;
 
     next.disabled = false;
-    next1.disabled = false;
-    next2.disabled = false;
-    next3.disabled = false;
   }
 }
