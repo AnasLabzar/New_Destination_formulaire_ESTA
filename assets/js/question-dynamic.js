@@ -128,8 +128,6 @@ other_citizenshipyes.addEventListener("click", () => {
 
 
     been_other_citizen_yes.addEventListener("click", () => {
-
-        console.log("test1");
         if (been_other_citizen_yes.value !== "YES") {
             console.log("Error");
         }
@@ -138,8 +136,6 @@ other_citizenshipyes.addEventListener("click", () => {
     })
 
     been_other_citizen_no.addEventListener("click", () => {
-
-        console.log("test2");
         if (been_other_citizen_no.value !== "NO") {
             console.log("Error");
         }
@@ -171,8 +167,6 @@ const Document_question_no = document.getElementById('Document_question_no');
 
 
 Document_question_yes.addEventListener("click", () => {
-
-    console.log("test1");
     if (Document_question_yes.value !== "YES") {
         console.log("Error");
     }
@@ -181,8 +175,6 @@ Document_question_yes.addEventListener("click", () => {
 })
 
 Document_question_no.addEventListener("click", () => {
-
-    console.log("test2");
     if (Document_question_no.value !== "NO") {
         console.log("Error");
     }
@@ -199,8 +191,6 @@ const transit_question_no = document.getElementById('transit_question_no');
 
 
 transit_question_no.addEventListener("click", () => {
-
-    console.log("test1");
     if (transit_question_no.value !== "NO") {
         console.log("Error");
     }
@@ -209,8 +199,6 @@ transit_question_no.addEventListener("click", () => {
 })
 
 transit_question_yes.addEventListener("click", () => {
-
-    console.log("test2");
     if (transit_question_yes.value !== "YES") {
         console.log("Error");
     }
@@ -228,8 +216,6 @@ const transit_outher_address_no = document.getElementById('transit_outher_addres
 
 
 transit_outher_address_no.addEventListener("click", () => {
-
-    console.log("test1");
     if (transit_outher_address_no.value !== "NO") {
         console.log("Error");
     }
@@ -238,8 +224,6 @@ transit_outher_address_no.addEventListener("click", () => {
 })
 
 transit_outher_address_yes.addEventListener("click", () => {
-
-    console.log("test2");
     if (transit_outher_address_yes.value !== "YES") {
         console.log("Error");
     }

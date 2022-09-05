@@ -97,9 +97,13 @@
                         <div class="circle">4</div>
                         <div class="circle">5</div>
                         <div class="circle">6</div>
+                        <div class="circle">7</div>
                     </div>
                     <div class="title-progress">
                         <div class="row">
+                            <div class="col">
+                                <span class="title-circle">Renonciations</span>
+                            </div>
                             <div class="col">
                                 <span class="title-circle">Information Personal</span>
                             </div>
@@ -149,6 +153,44 @@
                 <form action="" name="myForm" id="myForm" method="post">
                     <div id="step-1" class="step">
                         <div id="section-step1">
+                            <div class="collapse-holder  p-1" style="color: #333; border: 1px solid #ddd; padding: auto; margin: 0 0 40px;">
+                                <div class="row">
+                                    <div class="col-6 d-flex gap-2">
+                                        <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z" />
+                                        </svg>
+                                        <p>APPLY</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <button>test</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button>test</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse-holder" style="color: #333; border-color: #ddd;margin: 0 0 40px;">
+                                <p style="margin: 0; margin: 0; background-color: #f5f5f5; border: 1px solid #ddd;">
+                                    <a class="btn" data-bs-toggle="collapse" href="#collapseDisclaimer" role="button" aria-expanded="false" aria-controls="collapseDisclaimer" style="color: #333; font-weight: 600; width: 100%; height: 113%; text-align: left; background: transparent; margin: 0;">
+                                        Disclaimer
+                                    </a>
+                                </p>
+                                <div class="collapse show" id="collapseDisclaimer">
+                                    <div class="card card-body" style="font-size: 14px; font-family: open sans,sans-serif; text-align: justify; padding-bottom: 0; border-radius: 0; border-top: 0; background: transparent;">
+                                        <p>The Electronic System for Travel Authorization performs checks against law enforcement databases. All travelers seeking admission to the United States under the Visa Waiver Program are required to obtain an electronic travel authorization using this system prior to being granted boarding.</p>
+
+                                        <p>If your electronic travel authorization application is approved, it establishes that you are eligible to travel, but does not establish that you are admissible to the United States under the Visa Waiver Program. Upon arrival to the United States, you will be inspected by a U.S. Customs and Border Protection Officer at a port of entry who may determine that you are inadmissible under the Visa Waiver Program or for any reason under United States law.</p>
+
+                                        <p>A determination that you are not eligible for electronic travel authorization does not preclude you from applying for a visa to travel to the United States.</p>
+                                        <p></p>
+
+                                        <p>All information provided by you, or on your behalf by a designated third party, must be true and correct. An electronic travel authorization may be revoked at any time and for any reason, such as new information influencing eligibility. You may be subject to administrative or criminal penalties if you knowingly and willfully make a materially false, fictitious, or fraudulent statement or representation in an electronic travel authorization application submitted by you or on your behalf.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="section-step2">
 
                             <summary id="summary">
                                 <h5>Information Personal</h5>
@@ -199,7 +241,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="col-xs-12 col-sm-3">
                                                 <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Please indicate your gender. Required to
                                                         complete the application.</span></div>
                                                 <label class="control-label">Gender <span class="redspan">*</span></label>
@@ -499,7 +541,7 @@
                             </div>
                         </div>
 
-                        <div id="section-step2">
+                        <div id="section-step3">
                             <summary id="summary">
                                 <h5>Address</h5>
                             </summary>
@@ -844,7 +886,7 @@
 
                         </div>
 
-                        <div id="section-step3">
+                        <div id="section-step4">
                             <summary id="summary">
                                 <h5>Passport information</h5>
                             </summary>
@@ -1111,7 +1153,7 @@
                             </div>
                         </div>
 
-                        <div id="section-step4">
+                        <div id="section-step5">
                             <summary id="summary">
                                 <h5>Eligibility Questions</h5>
                             </summary>
@@ -1275,8 +1317,8 @@
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Country</span></div>
                                             <label class="control-label">Country <span>*</span> </label>
 
-                                            <select class="form-control q_country" onchange="OnValidatCountry3()" name="q_country" id="q_country" placeholder="" data-bind="value: q_country" data-val="true" required="required">
-                                                <option value="" selected disabled>select country</option>
+                                            <select class="form-control q_country" onchange="OnValidatCountry3()" name="q_country" id="q_country" placeholder="" data-bind="value: q_country" data-val="true" required="required" aria-required="true" aria-describedby="q_country-error" aria-invalid="false">
+                                                <option value=""></option>
                                                 <option value="Iran">Iran</option>
                                                 <option value="Iraq">Iraq</option>
                                                 <option value="Libya">Libya</option>
@@ -2629,7 +2671,7 @@
                             </div>
                         </div>
 
-                        <div id="section-step5">
+                        <div id="section-step6">
                             <div class="col-md-12">
                                 <h3 class="result-h3">General information</h3>
                                 <div class="col-md-12 col-xs-12 col-sm-12 result-div">
@@ -2672,43 +2714,43 @@
                                             </li>
                                             <li class="questionusa2 questionNone">
                                                 <label class="bind-label">Have you ever been arrested or convicted for a crime that resulted in serious damage to property, or serious harm to another person or government authority ?</label>
-                                                <span class="bind-span" id="getquestionusa2" data-bind="text: questionusa2">NO</span>
+                                                <span class="bind-span" id="getquestionusa2" data-bind="text: questionusa2"></span>
                                             </li>
                                             <li class="questionusa3 questionNone">
                                                 <label class="bind-label">Have you ever violated any law related to possessing, using, or distributing illegal drugs ?</label>
-                                                <span class="bind-span" id="getquestionusa3" data-bind="text: questionusa3">YES</span>
+                                                <span class="bind-span" id="getquestionusa3" data-bind="text: questionusa3"></span>
                                             </li>
                                             <li class="questionusa4 questionNone">
                                                 <label class="bind-label">Do you seek to engage in or have you ever engaged in terrorist activities, espionage, sabotage, or genocide ?</label>
-                                                <span class="bind-span" id="getquestionusa4" data-bind="text: questionusa4">NO</span>
+                                                <span class="bind-span" id="getquestionusa4" data-bind="text: questionusa4"></span>
                                             </li>
                                             <li class="questionusa5 questionNone">
                                                 <label class="bind-label">Have you ever committed fraud or made a false declaration to obtain or help a third-party obtain a Authorization for or entry into the United States ?</label>
-                                                <span class="bind-span" id="getquestionusa5" data-bind="text: questionusa5">NO</span>
+                                                <span class="bind-span" id="getquestionusa5" data-bind="text: questionusa5"></span>
                                             </li>
                                             <li class="questionusa6 questionNone">
                                                 <label class="bind-label">Are you currently seeking employment in the United States or have you been employed in the United States without the prior authorisation of the US Government ?</label>
-                                                <span class="bind-span" id="getquestionusa6" data-bind="text: questionusa6">NO</span>
+                                                <span class="bind-span" id="getquestionusa6" data-bind="text: questionusa6"></span>
                                             </li>
                                             <li class="questionusa7 questionNone">
                                                 <label class="bind-label">Have you ever been denied a U.S. Authorization you applied for with your current or previous passport, or have you ever been refused admission to the United States or withdrawn your application for admission at a U.S. port of entry ?</label>
-                                                <span class="bind-span" id="getquestionusa7" data-bind="text: questionusa7">YES</span>
+                                                <span class="bind-span" id="getquestionusa7" data-bind="text: questionusa7"></span>
                                             </li>
                                             <li class="whenrefususa questionNone">
                                                 <label class="bind-label">When :</label>
-                                                <span class="bind-span" id="getwhenrefususa" data-bind="text: whenrefususa">Et est assumenda rem</span>
+                                                <span class="bind-span" id="getwhenrefususa" data-bind="text: whenrefususa"></span>
                                             </li>
                                             <li class="whererefususa questionNone">
                                                 <label class="bind-label">Where :</label>
-                                                <span class="bind-span" id="getwhererefususa" data-bind="text: whererefususa">Atque laborum Volup</span>
+                                                <span class="bind-span" id="getwhererefususa" data-bind="text: whererefususa"></span>
                                             </li>
                                             <li class="questionusa8 questionNone">
                                                 <label class="bind-label">Have you ever overstayed the period of residence granted to you by the US Government ?</label>
-                                                <span class="bind-span" id="getquestionusa8" data-bind="text: questionusa8">YES</span>
+                                                <span class="bind-span" id="getquestionusa8" data-bind="text: questionusa8"></span>
                                             </li>
                                             <li class="questionusa9 questionNone">
                                                 <label class="bind-label">Have you traveled to, or been present in Iraq, Syria, Iran, Sudan, Libya, Somalia or Yemen on or after March 1, 2011 ?</label>
-                                                <span class="bind-span" id="getquestionusa9" data-bind="text: questionusa9">NO</span>
+                                                <span class="bind-span" id="getquestionusa9" data-bind="text: questionusa9"></span>
                                             </li>
                                             <li class="q_country questionNone">
                                                 <label class="bind-label">Country :</label>
@@ -2768,7 +2810,7 @@
                                             </li>
                                             <li class="autre_alias questionNone">
                                                 <label class="bind-label">Are you known by any other names or aliases ?</label>
-                                                <span class="bind-span" id="getautre_alias" data-bind="text: autre_alias">NO</span>
+                                                <span class="bind-span" id="getautre_alias" data-bind="text: autre_alias"></span>
                                             </li>
                                             <li class="familyname_alias questionNone">
                                                 <div class="" style="display: inline-block; width: 48%;">
@@ -2786,39 +2828,39 @@
                                             </li>
                                             <li class="employeur questionNone">
                                                 <label class="bind-label">Employer Name :</label>
-                                                <span class="bind-span" id="getemployeur" data-bind="text: employeur">Autem sint ipsum qu</span>
+                                                <span class="bind-span" id="getemployeur" data-bind="text: employeur"></span>
                                             </li>
                                             <li class="address_empl questionNone">
                                                 <label class="bind-label">Employer Address :</label>
-                                                <span class="bind-span" id="getaddress_empl" data-bind="text: address_empl">Qui necessitatibus r</span>
+                                                <span class="bind-span" id="getaddress_empl" data-bind="text: address_empl"></span>
                                             </li>
                                             <li class="ville_empl questionNone">
                                                 <label class="bind-label">City :</label>
-                                                <span class="bind-span" id="getville_empl" data-bind="text: ville_empl">Et Nam at sunt dolor</span>
+                                                <span class="bind-span" id="getville_empl" data-bind="text: ville_empl"></span>
                                             </li>
                                             <li class="pays_empl questionNone">
                                                 <label class="bind-label">Country :</label>
-                                                <span class="bind-span" id="getpays_empl" data-bind="text: pays_empl">Macedonia</span>
+                                                <span class="bind-span" id="getpays_empl" data-bind="text: pays_empl"></span>
                                             </li>
                                             <li class="parent1_nom questionNone">
                                                 <label class="bind-label">Parent 1: Last name :</label>
-                                                <span class="bind-span" id="getparent1_nom" data-bind="text: parent1_nom">Molestias quis volup</span>
+                                                <span class="bind-span" id="getparent1_nom" data-bind="text: parent1_nom"></span>
                                             </li>
                                             <li class="parent1_prenom questionNone">
                                                 <label class="bind-label">Parent 1: First name :</label>
-                                                <span class="bind-span" id="getparent1_prenom" data-bind="text: parent1_prenom">Fugiat est aute moll</span>
+                                                <span class="bind-span" id="getparent1_prenom" data-bind="text: parent1_prenom"></span>
                                             </li>
                                             <li class="parent2_nom questionNone">
                                                 <label class="bind-label">Parent 2: Last name :</label>
-                                                <span class="bind-span" id="getparent2_nom" data-bind="text: parent2_nom">Nobis sed laborum ei</span>
+                                                <span class="bind-span" id="getparent2_nom" data-bind="text: parent2_nom"></span>
                                             </li>
                                             <li class="parent2_prenom questionNone">
                                                 <label class="bind-label">Parent 2: First name :</label>
-                                                <span class="bind-span" id="parent2_prenom" data-bind="text: parent2_prenom">Rerum deserunt volup</span>
+                                                <span class="bind-span" id="parent2_prenom" data-bind="text: parent2_prenom"></span>
                                             </li>
                                             <li class="other_citizenship questionNone">
                                                 <label class="bind-label">Are you now, a citizen of any other country ?</label>
-                                                <span class="bind-span" id="getother_citizenship" data-bind="text: other_citizenship">NO</span>
+                                                <span class="bind-span" id="getother_citizenship" data-bind="text: other_citizenship"></span>
                                             </li>
                                             <li class="another_country questionNone">
                                                 <div style="display: inline-block; width: 300px;">
@@ -2827,7 +2869,7 @@
                                                 </div>
                                                 <div style="display: inline-block; width: calc(100% - 305px);">
                                                     <label class="bind-label">How did you acquire citizenship from this country ?</label>
-                                                    <span class="bind-span" id="gethow_acquired" data-bind="text: how_acquired" style="float: inherit;">Autre</span>
+                                                    <span class="bind-span" id="gethow_acquired" data-bind="text: how_acquired" style="float: inherit;"></span>
                                                 </div>
                                             </li>
                                             <li class="Document_question questionNone">
@@ -2852,14 +2894,14 @@
                                                     <span class="bind-span" id="getdate_doc" data-bind="text: date_doc" style="float: inherit;"></span>
                                                 </div>
                                             </li>
-                                            <li class="been_other_citizen questionNone">
+                                            <!-- <li class="been_other_citizen questionNone">
                                                 <label class="bind-label">Have you been a citizen of another country?</label>
-                                                <span class="bind-span" id="getbeen_other_citizen" data-bind="text: been_other_citizen">YES</span>
-                                            </li>
+                                                <span class="bind-span" id="getbeen_other_citizen" data-bind="text: been_other_citizen"></span>
+                                            </li> -->
                                             <li class="country_other2 questionNone">
                                                 <div style="display: inline-block; width: 400px;">
                                                     <label class="bind-label">Country of Citizenship :</label>
-                                                    <span class="bind-span" id="getcountry_other2" data-bind="text: country_other2" style="float: inherit;">Slovenia</span>
+                                                    <span class="bind-span" id="getcountry_other2" data-bind="text: country_other2" style="float: inherit;"></span>
                                                 </div>
                                                 <div style="display: inline-block; width: 330px;">
                                                     <label class="bind-label">From :</label>
@@ -2872,27 +2914,27 @@
                                             </li>
                                             <li class="nom_urgence questionNone">
                                                 <label class="bind-label">Name :</label>
-                                                <span class="bind-span" id="getnom_urgence" data-bind="text: nom_urgence">Exercitationem corpo</span>
+                                                <span class="bind-span" id="getnom_urgence" data-bind="text: nom_urgence"></span>
                                             </li>
                                             <li class="prenom_urg questionNone">
                                                 <label class="bind-label">First name :</label>
-                                                <span class="bind-span" id="getprenom_urg" data-bind="text: prenom_urg">Fugiat deserunt non</span>
+                                                <span class="bind-span" id="getprenom_urg" data-bind="text: prenom_urg"></span>
                                             </li>
                                             <li class="tel_urgence questionNone">
                                                 <label class="bind-label">Telephone :</label>
-                                                <span class="bind-span" id="gettel_urgence" data-bind="text: tel_urgence">Non aut amet et in </span>
+                                                <span class="bind-span" id="gettel_urgence" data-bind="text: tel_urgence"></span>
                                             </li>
                                             <li class="email_urg questionNone">
                                                 <label class="bind-label">Email :</label>
-                                                <span class="bind-span" id="getemail_urg" data-bind="text: email_urg">myjyribeta@mailinator.com</span>
+                                                <span class="bind-span" id="getemail_urg" data-bind="text: email_urg"></span>
                                             </li>
                                             <li class="date_arriv questionNone">
                                                 <label class="bind-label">Date of departure :</label>
-                                                <span class="bind-span" id="getdate_arriv" data-bind="text: date_arriv">02/1_/____</span>
+                                                <span class="bind-span" id="getdate_arriv" data-bind="text: date_arriv"></span>
                                             </li>
                                             <li class="transit_question questionNone">
                                                 <label class="bind-label">Is your trip to the United States a transit to another country ?</label>
-                                                <span class="bind-span" id="gettransit_question" data-bind="text: transit_question">YES</span>
+                                                <span class="bind-span" id="gettransit_question" data-bind="text: transit_question"></span>
                                             </li>
                                         </ul>
                                     </div>
@@ -2909,13 +2951,13 @@
                             <div class="container text-center my-5 footer-form">
                                 <div class="row">
                                     <div class="col">
-                                        <button id="prev prev3" onclick="prevStep5()">Previous</button>
+                                        <button id="prev5">Previous</button>
                                     </div>
                                     <div class="col-6">
                                         <strong>Step 5 of 6</strong>
                                     </div>
                                     <div class="col">
-                                        <button id="next3" type="button" onclick="run5()">Next
+                                        <button id="next4" type="button" onclick="run5()">Next
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                                 <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                                 <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
@@ -2926,7 +2968,7 @@
                             </div>
                         </div>
 
-                        <div id="section-step6">
+                        <div id="section-step7">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="item-block">
@@ -2981,13 +3023,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 info-footer">
-                    <img src="/assets/images/en/footer.png" alt="">
+                    <img src="assets/images/en/footer.png" alt="">
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-12 mb-5">
                     <div class="ssl-logo">
-                        <img src="/assets/images/en/ssl-logo.png" alt="" style="display: inline-block;">
+                        <img src="assets/images/en/ssl-logo.png" alt="" style="display: inline-block;">
                         <p style="margin: 0; display: inline-block; color: #fff; font-size: 14px;">Your personal
                             information is securely encrypted by Secure Sockets Layer (SSL) software.</p>
                     </div>

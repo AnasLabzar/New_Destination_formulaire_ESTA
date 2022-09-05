@@ -14,7 +14,14 @@ body {
     }
 }
 
+.error-checkbox{
+    accent-color: red;
+    color: red;
+    background-color: red;
+}
+
 .title-circle{
+    font-weight: 200 !important;
     font-size: 13px;
 }
 
@@ -39,7 +46,7 @@ h5 {
 }
 
 .header {
-    background-color: #929292;
+    background-color: #eee;
     z-index: 1;
 }
 
@@ -304,6 +311,10 @@ summary,
     display: none;
 }
 
+#section-step7{
+    display: none;
+}
+
 #rowInput17{
     display: none;
     flex-direction: column;
@@ -376,7 +387,7 @@ details[open] summary .icon {
 }
 
 .title-progress {
-    color: white;
+    color: #000000c4;
     margin-top: 1em;
     text-align: center;
     /* margin: 0 auto; */
@@ -384,7 +395,7 @@ details[open] summary .icon {
 }
 
 .title-progress .row{
-    max-width: 93%;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -408,7 +419,7 @@ details[open] summary .icon {
 
 .progress-container::before {
     content: "";
-    background-color: var(--line-border-empty);
+    background-color: #aaa;
     position: absolute;
     top: 50%;
     left: 0;
@@ -439,8 +450,9 @@ details[open] summary .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 4px solid var(--line-border-empty);
+    border: 4px solid #aaa;
     transition: .4s ease;
+    font-weight: 600;
     z-index: 4;
 }
 
@@ -494,7 +506,9 @@ details[open] summary .icon {
     position: relative;
     display: inline-block;
     float: right;
-    width: fit-content;
+    /* width: fit-content; */
+    left: 9.5em;
+    position: relative;
 }
 
 .wrapper i.hlp {
@@ -506,6 +520,7 @@ details[open] summary .icon {
     font-weight: 700;
     border-radius: 20px;
     font-style: initial;
+    position: absolute;
 }
 
 

@@ -3,11 +3,14 @@ const prev = document.getElementById("prev");
 const prev1 = document.getElementById("prev1");
 const prev2 = document.getElementById("prev2");
 const prev3 = document.getElementById("prev3");
+const prev5 = document.getElementById("prev5");
 
 const next = document.getElementById("next");
 const next1 = document.getElementById("next1");
 const next2 = document.getElementById("next2");
 const next3 = document.getElementById("next3");
+const next4 = document.getElementById("next3");
+const next5 = document.getElementById("next3");
 const circles = document.querySelectorAll(".circle");
 
 
@@ -58,6 +61,25 @@ next3.addEventListener("click", () => {
 
 })
 
+next4.addEventListener("click", () => {
+  if (document.getElementById("section-step5").style.display === "block") {
+    currentActive++;
+    if (currentActive > circles.length) {
+      currentActive = circles.length;
+    }
+    update();
+  }
+
+})
+
+// next5.addEventListener("click", () => {
+//     currentActive++;
+//     if (currentActive > circles.length) {
+//       currentActive = circles.length;
+//     }
+//     update();
+// })
+
 prev1.addEventListener("click", () => {
   currentActive--;
   if (currentActive < 1) {
@@ -82,7 +104,7 @@ prev3.addEventListener("click", () => {
   update();
 });
 
-prev4.addEventListener("click", () => {
+prev5.addEventListener("click", () => {
   currentActive--;
   if (currentActive < 1) {
     currentActive = 1;
