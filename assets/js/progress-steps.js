@@ -11,14 +11,13 @@ const next2 = document.getElementById("next2");
 const next3 = document.getElementById("next3");
 const next4 = document.getElementById("next3");
 const next5 = document.getElementById("next3");
+const individual = document.getElementById("individual");
 const circles = document.querySelectorAll(".circle");
 
 
 let currentActive = 1;
 
-
-
-next.addEventListener("click", () => {
+individual.addEventListener("click", () => {
   if (document.getElementById("section-step2").style.display === "block") {
     currentActive++;
     if (currentActive > circles.length) {
@@ -28,7 +27,7 @@ next.addEventListener("click", () => {
   }
 });
 
-next1.addEventListener("click", () => {
+next.addEventListener("click", () => {
   if (document.getElementById("section-step3").style.display === "block") {
     currentActive++;
     if (currentActive > circles.length) {
@@ -36,10 +35,9 @@ next1.addEventListener("click", () => {
     }
     update();
   }
+});
 
-})
-
-next2.addEventListener("click", () => {
+next1.addEventListener("click", () => {
   if (document.getElementById("section-step4").style.display === "block") {
     currentActive++;
     if (currentActive > circles.length) {
@@ -50,7 +48,7 @@ next2.addEventListener("click", () => {
 
 })
 
-next3.addEventListener("click", () => {
+next2.addEventListener("click", () => {
   if (document.getElementById("section-step5").style.display === "block") {
     currentActive++;
     if (currentActive > circles.length) {
@@ -61,8 +59,19 @@ next3.addEventListener("click", () => {
 
 })
 
+next3.addEventListener("click", () => {
+  if (document.getElementById("section-step6").style.display === "block") {
+    currentActive++;
+    if (currentActive > circles.length) {
+      currentActive = circles.length;
+    }
+    update();
+  }
+
+})
+
 next4.addEventListener("click", () => {
-  if (document.getElementById("section-step5").style.display === "block") {
+  if (document.getElementById("section-step7").style.display === "block") {
     currentActive++;
     if (currentActive > circles.length) {
       currentActive = circles.length;
@@ -79,6 +88,14 @@ next4.addEventListener("click", () => {
 //     }
 //     update();
 // })
+
+prev.addEventListener("click", () => {
+  currentActive--;
+  if (currentActive < 1) {
+    currentActive = 1;
+  }
+  update();
+});
 
 prev1.addEventListener("click", () => {
   currentActive--;

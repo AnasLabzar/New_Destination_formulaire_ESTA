@@ -153,20 +153,20 @@
                 <form action="" name="myForm" id="myForm" method="post">
                     <div id="step-1" class="step">
                         <div id="section-step1">
-                            <div class="collapse-holder  p-1" style="color: #333; border: 1px solid #ddd; padding: auto; margin: 0 0 40px;">
-                                <div class="row">
-                                    <div class="col-6 d-flex gap-2">
+                            <div class="collapse-holder  p-1" style="background: #ededed; padding: .5em 2em !important; color: #333; border: 1px solid #ddd; padding: auto; margin: 0 0 40px;">
+                                <div class="row apply-application">
+                                    <div class="col-md-7 d-flex gap-2 apply-application-svg">
                                         <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                             <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                             <path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z" />
                                         </svg>
-                                        <p>APPLY</p>
+                                        <p>Make an application</p>
                                     </div>
-                                    <div class="col-2">
-                                        <button>test</button>
+                                    <div class="col-md-3">
+                                        <button type="button" id="individual" onclick="run()" value="individual">Individual request</button>
                                     </div>
-                                    <div class="col-2">
-                                        <button>test</button>
+                                    <div class="col-md-2">
+                                        <button id="group" value="group">Group request</button>
                                     </div>
                                 </div>
                             </div>
@@ -523,13 +523,13 @@
                                 <div class="container text-center my-5 footer-form">
                                     <div class="row">
                                         <div class="col">
-                                            <button id="prev" class="prevdisabled" disabled>Previous</button>
+                                            <button id="prev" onclick="prevStep()">Previous</button>
                                         </div>
                                         <div class="col-6">
-                                            <strong>Step 1 of 6</strong>
+                                            <strong>Step 2 of 6</strong>
                                         </div>
                                         <div class="col">
-                                            <button id="next" type="button" onclick="run()">Next
+                                            <button id="next" type="button" onclick="run2()">Next
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                                     <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                                     <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
@@ -873,7 +873,7 @@
                                             <strong>Step 2 of 6</strong>
                                         </div>
                                         <div class="col">
-                                            <button id="next1" type="button" onclick="run2()">Next
+                                            <button id="next1" type="button" onclick="run3()">Next
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                                     <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                                     <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
@@ -1142,7 +1142,7 @@
                                         <strong>Step 3 of 6</strong>
                                     </div>
                                     <div class="col">
-                                        <button id="next2" onclick="run3()" type="submit">Next
+                                        <button id="next2" onclick="run4()" type="submit">Next
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                                 <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                                 <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
@@ -2654,13 +2654,13 @@
                             <div class="container text-center my-5 footer-form">
                                 <div class="row">
                                     <div class="col">
-                                        <button id="prev prev3" onclick="prevStep4()">Previous</button>
+                                        <button id="prev3" onclick="prevStep4()">Previous</button>
                                     </div>
                                     <div class="col-6">
                                         <strong>Step 4 of 6</strong>
                                     </div>
                                     <div class="col">
-                                        <button id="next3" type="button" onclick="run4()">Next
+                                        <button id="next3" type="button" onclick="run5()">Next
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                                 <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                                 <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
@@ -2957,7 +2957,7 @@
                                         <strong>Step 5 of 6</strong>
                                     </div>
                                     <div class="col">
-                                        <button id="next4" type="button" onclick="run5()">Next
+                                        <button id="next4" type="button" onclick="run6()">Next
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                                 <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                                 <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />

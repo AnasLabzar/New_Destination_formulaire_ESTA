@@ -351,6 +351,45 @@ details[open] summary .icon {
     transform: rotate(180deg);
 }
 
+.apply-application-svg{
+    padding: 1.2em 0;
+}
+
+.apply-application-svg p {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.apply-application .col-md-2 button{
+    padding: 1em 2.5em;
+    border: none;
+    background-color: #143253;
+    color: white;
+    font-size: 14px;
+}
+
+.apply-application .col-md-3 button{
+    padding: 1em 2.5em;
+    border: none;
+    background-color: #143253;
+    color: white;
+    font-size: 14px;
+}
+
+.apply-application .col-md-3{
+    padding: 0.3em 0;
+    display: flex;
+    justify-content: end;
+}
+
+.apply-application .col-md-2{
+    padding: 0.3em 0;
+    display: flex;
+    justify-content: end;
+}
+
 .tooltipp {
     position: relative;
     display: inline-block;

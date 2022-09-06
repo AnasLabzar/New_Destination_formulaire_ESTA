@@ -1976,26 +1976,24 @@ function termscheck() {
 
 
 
-
-
-
-
-
-
 // validation step 1
 function run() {
-    if (OnValidatFamilyName() === true && OnValidatFirstName() === true && OnValidatGender() === true && OnValidatEmail() === true && OnValidatConfirmationEmail() === true && OnValidatDate() === true && OnValidatConfirmationDate() === true && OnValidatPlaceBirth() === true && OnValidatCountry() === true) {
+    if (document.getElementById('section-step1').style.display = 'block') {
         document.getElementById("section-step1").style.display = "none";
         document.getElementById("section-step2").style.display = "block";
-    } else {
-        document.getElementById("section-step2").style.display = "none";
+    }else{
         document.getElementById("section-step1").style.display = "block";
+        document.getElementById("section-step2").style.display = "none";
     }
 }
 
+
+
+
+
 // validation step 2
 function run2() {
-    if (OnValidatAdresseLine() === true && OnValidatPostcode() === true && OnValidatCity() === true && OnValidatCountry2() === true && OnValidatPhone() === true && OnValidatLandlinephone() === true) {
+    if (OnValidatFamilyName() === true && OnValidatFirstName() === true && OnValidatGender() === true && OnValidatEmail() === true && OnValidatConfirmationEmail() === true && OnValidatDate() === true && OnValidatConfirmationDate() === true && OnValidatPlaceBirth() === true && OnValidatCountry() === true) {
         document.getElementById("section-step2").style.display = "none";
         document.getElementById("section-step3").style.display = "block";
     } else {
@@ -2006,7 +2004,7 @@ function run2() {
 
 // validation step 3
 function run3() {
-    if (OnValidatPassportNumber() === true && OnValidatConfirmationPassportNumber() === true && OnValidatDateDelivrance() === true && OnValidatDateExpiration() === true && OnValidatPaysEmission() === true && OnValidatNationalite() === true || OnValidatNumeroIdentite() === true) {
+    if (OnValidatAdresseLine() === true && OnValidatPostcode() === true && OnValidatCity() === true && OnValidatCountry2() === true && OnValidatPhone() === true && OnValidatLandlinephone() === true) {
         document.getElementById("section-step3").style.display = "none";
         document.getElementById("section-step4").style.display = "block";
     } else {
@@ -2015,8 +2013,9 @@ function run3() {
     }
 }
 
+// validation step 4
 function run4() {
-    if (OnValidatWhen() === true || OnValidatWhere() === true || OnValidatCountry3() === true || OnValidatFormInput() === true || OnValidatToInput() === true || OnValidatReason() === true || OnValidatFamilyname2() === true || OnValidatFirstname2() === true || OnValidatEmployeur() === true || OnValidatEmployeurAddress() === true || OnValidatCity2() === true || OnValidatCountry4() === true || OnValidatLastNameParent() === true || OnValidatFirstNameParent() === true || OnValidatLastNameParent2() === true || OnValidatFirstNameParent2() === true || OnValidatAnotherCountry() === true || OnValidatQuestionAnotherCountry() === true || OnValidatCountryofCitizenship() === true || OnValidatFrom4() === true || OnValidatTo4() === true || OnValidatNam() === true || OnValidatFirstName3() === true || OnValidatTelephone() === true || OnValidatEmail2() === true || OnValidatNam() === true || termscheck() === true) {
+    if (OnValidatPassportNumber() === true && OnValidatConfirmationPassportNumber() === true && OnValidatDateDelivrance() === true && OnValidatDateExpiration() === true && OnValidatPaysEmission() === true && OnValidatNationalite() === true || OnValidatNumeroIdentite() === true) {
         document.getElementById("section-step4").style.display = "none";
         document.getElementById("section-step5").style.display = "block";
     } else {
@@ -2026,6 +2025,16 @@ function run4() {
 }
 
 function run5() {
+    if (OnValidatWhen() === true || OnValidatWhere() === true || OnValidatCountry3() === true || OnValidatFormInput() === true || OnValidatToInput() === true || OnValidatReason() === true || OnValidatFamilyname2() === true || OnValidatFirstname2() === true || OnValidatEmployeur() === true || OnValidatEmployeurAddress() === true || OnValidatCity2() === true || OnValidatCountry4() === true || OnValidatLastNameParent() === true || OnValidatFirstNameParent() === true || OnValidatLastNameParent2() === true || OnValidatFirstNameParent2() === true || OnValidatAnotherCountry() === true || OnValidatQuestionAnotherCountry() === true || OnValidatCountryofCitizenship() === true || OnValidatFrom4() === true || OnValidatTo4() === true || OnValidatNam() === true || OnValidatFirstName3() === true || OnValidatTelephone() === true || OnValidatEmail2() === true || OnValidatNam() === true || termscheck() === true) {
+        document.getElementById("section-step5").style.display = "none";
+        document.getElementById("section-step6").style.display = "block";
+    } else {
+        document.getElementById("section-step6").style.display = "none";
+        document.getElementById("section-step5").style.display = "block";
+    }
+}
+
+function run6() {
     if (document.getElementById('acceptdata').checked === true) {
         window.location.href = "https://electronic-checkout.com/index.php";
     } else {
@@ -2034,21 +2043,27 @@ function run5() {
 }
 
 
-// previous step 2
-function prevStep2() {
+// previous step 
+function prevStep() {
     document.getElementById("section-step2").style.display = "none";
     document.getElementById("section-step1").style.display = "block";
 }
 
-// previous step 3
-function prevStep3() {
+// previous step 2
+function prevStep2() {
     document.getElementById("section-step3").style.display = "none";
     document.getElementById("section-step2").style.display = "block";
+}
+
+// previous step 3
+function prevStep3() {
+    document.getElementById("section-step4").style.display = "none";
+    document.getElementById("section-step3").style.display = "block";
 }
 
 
 // previous step 4
 function prevStep4() {
-    document.getElementById("section-step4").style.display = "none";
-    document.getElementById("section-step3").style.display = "block";
+    document.getElementById("section-step5").style.display = "none";
+    document.getElementById("section-step4").style.display = "block";
 }
