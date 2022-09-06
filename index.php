@@ -870,7 +870,7 @@
                                             <button id="prev1" onclick="prevStep2()">Previous</button>
                                         </div>
                                         <div class="col-6">
-                                            <strong>Step 2 of 6</strong>
+                                            <strong>Step 3 of 6</strong>
                                         </div>
                                         <div class="col">
                                             <button id="next1" type="button" onclick="run3()">Next
@@ -1139,7 +1139,7 @@
                                         <button id="prev2" onclick="prevStep3()">Previous</button>
                                     </div>
                                     <div class="col-6">
-                                        <strong>Step 3 of 6</strong>
+                                        <strong>Step 4 of 6</strong>
                                     </div>
                                     <div class="col">
                                         <button id="next2" onclick="run4()" type="submit">Next
@@ -2657,7 +2657,7 @@
                                         <button id="prev3" onclick="prevStep4()">Previous</button>
                                     </div>
                                     <div class="col-6">
-                                        <strong>Step 4 of 6</strong>
+                                        <strong>Step 5 of 6</strong>
                                     </div>
                                     <div class="col">
                                         <button id="next3" type="button" onclick="run5()">Next
@@ -2954,7 +2954,7 @@
                                         <button id="prev5">Previous</button>
                                     </div>
                                     <div class="col-6">
-                                        <strong>Step 5 of 6</strong>
+                                        <strong>Step 6 of 6</strong>
                                     </div>
                                     <div class="col">
                                         <button id="next4" type="button" onclick="run6()">Next

@@ -97,6 +97,8 @@ prev.addEventListener("click", () => {
   update();
 });
 
+
+
 prev1.addEventListener("click", () => {
   currentActive--;
   if (currentActive < 1) {

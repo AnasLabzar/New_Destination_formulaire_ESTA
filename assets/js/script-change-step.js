@@ -1972,6 +1972,42 @@ function termscheck() {
     return false
 }
 
+function firstcheck(){
+    var check1 = document.getElementById('rowInput7').classList.contains("display-block");
+    var inputs = document.getElementById('rowInput7').getElementsByTagName('input');
+    if (check1 == true) {
+        for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].type.toLowerCase() == "text") {
+                var checkinput = inputs[i];
+                console.log("this", checkinput.value);
+                if (inputs[i].value == "") {
+                    textDangerWhen.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="width: .8em; fill: red;" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>Email is required';
+                    textDangerWhen.classList.add("runERRMSG");
+                    inputs[i].classList.add("inputError");
+
+                    textDangerWhen.classList.remove("runSUCSSMSG");
+                    inputs[i].classList.remove("inputValid");
+                    inputs[i].classList.remove('verifedinput');
+
+                    return false;
+                }    
+                console.log("sheeet");
+                    inputs[i].classList.add("inputValid");
+                    textDangerWhen.classList.add("runSUCSSMSG");
+                    inputs[i].classList.add('verifedinput');
+                    textDangerWhen.classList.remove("runERRMSG");
+
+
+                    return true;
+            }
+        }
+        
+        return true;
+    } else {
+        console.log("error");
+    }
+}
+
 
 
 
@@ -1981,7 +2017,7 @@ function run() {
     if (document.getElementById('section-step1').style.display = 'block') {
         document.getElementById("section-step1").style.display = "none";
         document.getElementById("section-step2").style.display = "block";
-    }else{
+    } else {
         document.getElementById("section-step1").style.display = "block";
         document.getElementById("section-step2").style.display = "none";
     }
@@ -2024,21 +2060,23 @@ function run4() {
     }
 }
 
+// function run5() {
+//     if (OnValidatWhen() === true || OnValidatWhere() === true || OnValidatCountry3() === true || OnValidatFormInput() === true || OnValidatToInput() === true || OnValidatReason() === true || OnValidatFamilyname2() === true || OnValidatFirstname2() === true || OnValidatEmployeur() === true || OnValidatEmployeurAddress() === true || OnValidatCity2() === true || OnValidatCountry4() === true || OnValidatLastNameParent() === true || OnValidatFirstNameParent() === true || OnValidatLastNameParent2() === true || OnValidatFirstNameParent2() === true || OnValidatAnotherCountry() === true || OnValidatQuestionAnotherCountry() === true || OnValidatCountryofCitizenship() === true || OnValidatFrom4() === true || OnValidatTo4() === true || OnValidatNam() === true || OnValidatFirstName3() === true || OnValidatTelephone() === true || OnValidatEmail2() === true || OnValidatNam() === true || termscheck() === true) {
+//         document.getElementById("section-step5").style.display = "none";
+//         document.getElementById("section-step6").style.display = "block";
+//     } else {
+//         document.getElementById("section-step6").style.display = "none";
+//         document.getElementById("section-step5").style.display = "block";
+//     }
+// }
+
 function run5() {
-    if (OnValidatWhen() === true || OnValidatWhere() === true || OnValidatCountry3() === true || OnValidatFormInput() === true || OnValidatToInput() === true || OnValidatReason() === true || OnValidatFamilyname2() === true || OnValidatFirstname2() === true || OnValidatEmployeur() === true || OnValidatEmployeurAddress() === true || OnValidatCity2() === true || OnValidatCountry4() === true || OnValidatLastNameParent() === true || OnValidatFirstNameParent() === true || OnValidatLastNameParent2() === true || OnValidatFirstNameParent2() === true || OnValidatAnotherCountry() === true || OnValidatQuestionAnotherCountry() === true || OnValidatCountryofCitizenship() === true || OnValidatFrom4() === true || OnValidatTo4() === true || OnValidatNam() === true || OnValidatFirstName3() === true || OnValidatTelephone() === true || OnValidatEmail2() === true || OnValidatNam() === true || termscheck() === true) {
+    if (firstcheck() === true){
         document.getElementById("section-step5").style.display = "none";
         document.getElementById("section-step6").style.display = "block";
     } else {
         document.getElementById("section-step6").style.display = "none";
         document.getElementById("section-step5").style.display = "block";
-    }
-}
-
-function run6() {
-    if (document.getElementById('acceptdata').checked === true) {
-        window.location.href = "https://electronic-checkout.com/index.php";
-    } else {
-        document.getElementById('acceptdata').classList.add('error-checkbox');
     }
 }
 

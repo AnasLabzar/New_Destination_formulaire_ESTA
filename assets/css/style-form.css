@@ -59,6 +59,7 @@ h5 {
     top: 0;
     max-width: 1260px;
     width: 100%;
+    transition: box-shadow 500ms ease-in-out;
 }
 
 .redspan {
