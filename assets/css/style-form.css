@@ -23,6 +23,7 @@ body {
 .title-circle{
     font-weight: 200 !important;
     font-size: 13px;
+    color: #2e2e2e;
 }
 
 .plsection{
@@ -95,15 +96,65 @@ section form .col-xs-12 .review-exemple {
     text-align: center;
     margin: 0 auto;
     display: grid;
+    position: relative;
 }
 
+.spanmodal{
+    color: black;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 5px;
+    width: 650px;
+    margin: 30px auto;
+    border: 1px solid #888;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #myBtn{
+    width: fit-content;
+    padding: 10px;
+    background: #8080805e;
+    position: absolute;
+    right: 0;
+  }
+
 section form .col-xs-12 .review-exemple img {
-    width: 20em;
+    width: 16em;
     margin: 0 auto;
 }
 
 section form .col-xs-12 .review-exemple h6 {
-    font-weight: 700;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 
 section form .col-xs-12 .review-exemple p {
@@ -111,6 +162,7 @@ section form .col-xs-12 .review-exemple p {
     text-align: left;
     position: relative;
     top: 1.5em;
+    margin-bottom: 3em;
 }
 
 section form .col-xs-12 .row .ifp .ifp_label .required-field:after {
@@ -253,6 +305,7 @@ section .warning-alert .header-alert {
 
 section .warning-alert span {
     font-size: 14px;
+    color: #242424;
 }
 
 /* section form details{
@@ -546,8 +599,8 @@ details[open] summary .icon {
     position: relative;
     display: inline-block;
     float: right;
-    /* width: fit-content; */
-    left: 9.5em;
+    width: 100%;
+    /* left: 9.5em; */
     position: relative;
 }
 
@@ -556,9 +609,13 @@ details[open] summary .icon {
     padding: 0 5px 0 0;
     color: #929292;
     float: right;
+    position: absolute;
+    right: 0;
     font-size: 20px;
     font-weight: 700;
     border-radius: 20px;
+    position: absolute;
+    right: 0;
     font-style: initial;
     position: absolute;
 }
@@ -613,8 +670,8 @@ details[open] summary .icon {
     bottom: -10px;
     content: " ";
     height: 0;
-    left: 50%;
     margin-left: -13px;
+    right: 1em;
     position: absolute;
     width: 0;
 }

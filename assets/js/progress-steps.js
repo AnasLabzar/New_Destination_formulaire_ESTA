@@ -3,6 +3,7 @@ const prev = document.getElementById("prev");
 const prev1 = document.getElementById("prev1");
 const prev2 = document.getElementById("prev2");
 const prev3 = document.getElementById("prev3");
+const prev4 = document.getElementById("prev4");
 const prev5 = document.getElementById("prev5");
 
 const next = document.getElementById("next");
@@ -116,6 +117,14 @@ prev2.addEventListener("click", () => {
 });
 
 prev3.addEventListener("click", () => {
+  currentActive--;
+  if (currentActive < 1) {
+    currentActive = 1;
+  }
+  update();
+});
+
+prev4.addEventListener("click", () => {
   currentActive--;
   if (currentActive < 1) {
     currentActive = 1;

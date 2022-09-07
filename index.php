@@ -46,7 +46,7 @@
 
 </head>
 
-<body onload="dynamic_Question()">
+<body>
     <header id="header-page">
         <section class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -166,7 +166,7 @@
                                         <button type="button" id="individual" onclick="run()" value="individual">Individual request</button>
                                     </div>
                                     <div class="col-md-2">
-                                        <button id="group" value="group">Group request</button>
+                                        <button id="group" onClick="run()" value="group">Group request</button>
                                     </div>
                                 </div>
                             </div>
@@ -511,12 +511,80 @@
                                     </div>
                                     <div class="col-4 mb-5">
                                         <div class="review-exemple">
-                                            <h5>SAMPLE NATIONAL ID CARD</h5>
-                                            <img class="cardID-module" src="assets/images/national id card.png" alt="">
+                                            <h5>SAMPLE PASSEPORT</h5>
+                                            <img class="cardID-module" src="assets/images/passeport id card.jpg" alt="">
                                             <p>This sample national id card displays the information you will need from
                                                 applicant's information personal. Information must be entered exactly as
                                                 it appears in national id card. Enlarge image to see more information
                                             </p>
+                                            <!-- Trigger/Open The Modal -->
+                                            <button id="myBtn">
+                                                <svg style="width: 1.3em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" />
+                                                </svg>
+                                            </button>
+
+                                            <!-- The Modal -->
+                                            <div id="myModal" class="modal">
+                                                <!-- Modal content -->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 id="modalTitle" class="modal-title">Exemple de passeport : vue détaillée</h4>
+                                                        <span class="close spanmodal">&times;</span>
+                                                    </div>
+                                                    <div  class="modal-body">
+                                                        <p >The sample passport below is shown to provide general guidance on the common fields to reference when filling out the ESTA application. Please refer to your own specific passport, and enter the information exactly as displayed</p>
+                                                        <p ><span class="spanmodal mb-2">Please refer to the </span><strong ><a  target="_blank" title="Link to passport accordion on faq page" href="/">Passport requirements for travel </a></strong><span class="spanmodal">under Visa Waiver Program.</span></p>
+                                                        <div  class="row">
+                                                            <div  class="col-xs-12 col-sm-6 d-flex"><img style="width: 18em;"  src="assets/images/passeport id card.jpg">
+                                                                <h6 style="position: relative; top: 11em; left: 1em; color: #14689B;"  id="mrzLabel">MRZ</h6>
+                                                            </div>
+                                                            <div  class="col-xs-12 col-sm-6">
+                                                                <h6 style="color: #14689B;">MACHINE READABLE ZONE (MRZ)</h6><img style="width: 19em;"  src="assets/images/machineReadable.png">
+                                                            </div>
+                                                        </div><br >
+                                                        <p ><strong >1) </strong><span class="spanmodal"><b> Issuing Country</b><br>The issuing country is your country of citizenship as it appears on your passport. The country of citizenship on your passport is the passport issuing authority, regardless of the country the passport was physically obtained in. Refer to this <a href="/" target="_blank">list of Country Codes</a> for complete listing.</span></p><br >
+                                                        <p ><strong >2) </strong><span class="spanmodal"><b> Family Name</b><br>Enter your family name as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >3) </strong><span class="spanmodal"><b> First (Given) Name</b><br>Enter your first (given) name as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >4) </strong><span class="spanmodal"><b> Passport Number</b><br>Enter your passport number as it appears in the Machine Readable Zone of your passport. The passport number may contain numbers and/or letters. Please closely distinguish between the two. Some commonly confused characters are the number zero (0) and letter 'O' and the number one (1) and letter 'I'.</span></p><br >
+                                                        <p ><strong >5) </strong><span class="spanmodal"><b>Country of Citizenship</b><br>Enter your country of citizenship as it appears in the Machine Readable Zone of your passport. Refer to this <a href="/" target="_blank">list of Country Codes</a> for complete listing.</span></p><br >
+                                                        <p ><strong >6) </strong><span class="spanmodal"><b> Date of Birth</b><br>Enter your date of birth as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >7) </strong><span class="spanmodal"><b> Gender</b><br>Enter your gender as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >8) </strong><span class="spanmodal"><b> Expiration Date</b><br>Enter the expiration date as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >9) </strong><span class="spanmodal"><b> Personal Identification Number (If Applicable)</b><br>Enter the personal identification number as it appears in the Machine Readable Zone of your passport (if applicable).</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <script>
+                                                    // Get the modal
+                                                    var modal = document.getElementById("myModal");
+
+                                                    // Get the button that opens the modal
+                                                    var btn = document.getElementById("myBtn");
+
+                                                    // Get the <span> element that closes the modal
+                                                    var span = document.getElementsByClassName("close")[0];
+
+                                                    // When the user clicks the button, open the modal 
+                                                    btn.onclick = function() {
+                                                        modal.style.display = "block";
+                                                    }
+
+                                                    // When the user clicks on <span> (x), close the modal
+                                                    span.onclick = function() {
+                                                        modal.style.display = "none";
+                                                    }
+
+                                                    // When the user clicks anywhere outside of the modal, close it
+                                                    window.onclick = function(event) {
+                                                        if (event.target == modal) {
+                                                            modal.style.display = "none";
+                                                        }
+                                                    }
+                                                </script>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -854,13 +922,81 @@
                                         </div>
                                     </div>
                                     <div class="col-4 mb-5">
-                                        <div class="review-exemple">
-                                            <h5>SAMPLE NATIONAL ID CARD</h5>
-                                            <img class="cardID-module" src="assets/images/national id card.png" alt="">
+                                    <div class="review-exemple">
+                                            <h5>SAMPLE PASSEPORT</h5>
+                                            <img class="cardID-module" src="assets/images/passeport id card.jpg" alt="">
                                             <p>This sample national id card displays the information you will need from
                                                 applicant's information personal. Information must be entered exactly as
                                                 it appears in national id card. Enlarge image to see more information
                                             </p>
+                                            <!-- Trigger/Open The Modal -->
+                                            <button id="myBtn">
+                                                <svg style="width: 1.3em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" />
+                                                </svg>
+                                            </button>
+
+                                            <!-- The Modal -->
+                                            <div id="myModal" class="modal">
+                                                <!-- Modal content -->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 id="modalTitle" class="modal-title">Exemple de passeport : vue détaillée</h4>
+                                                        <span class="close spanmodal">&times;</span>
+                                                    </div>
+                                                    <div  class="modal-body">
+                                                        <p >The sample passport below is shown to provide general guidance on the common fields to reference when filling out the ESTA application. Please refer to your own specific passport, and enter the information exactly as displayed</p>
+                                                        <p ><span class="spanmodal mb-2">Please refer to the </span><strong ><a  target="_blank" title="Link to passport accordion on faq page" href="/">Passport requirements for travel </a></strong><span class="spanmodal">under Visa Waiver Program.</span></p>
+                                                        <div  class="row">
+                                                            <div  class="col-xs-12 col-sm-6 d-flex"><img style="width: 18em;"  src="assets/images/passeport id card.jpg">
+                                                                <h6 style="position: relative; top: 11em; left: 1em; color: #14689B;"  id="mrzLabel">MRZ</h6>
+                                                            </div>
+                                                            <div  class="col-xs-12 col-sm-6">
+                                                                <h6 style="color: #14689B;">MACHINE READABLE ZONE (MRZ)</h6><img style="width: 19em;"  src="assets/images/machineReadable.png">
+                                                            </div>
+                                                        </div><br >
+                                                        <p ><strong >1) </strong><span class="spanmodal"><b> Issuing Country</b><br>The issuing country is your country of citizenship as it appears on your passport. The country of citizenship on your passport is the passport issuing authority, regardless of the country the passport was physically obtained in. Refer to this <a href="/" target="_blank">list of Country Codes</a> for complete listing.</span></p><br >
+                                                        <p ><strong >2) </strong><span class="spanmodal"><b> Family Name</b><br>Enter your family name as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >3) </strong><span class="spanmodal"><b> First (Given) Name</b><br>Enter your first (given) name as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >4) </strong><span class="spanmodal"><b> Passport Number</b><br>Enter your passport number as it appears in the Machine Readable Zone of your passport. The passport number may contain numbers and/or letters. Please closely distinguish between the two. Some commonly confused characters are the number zero (0) and letter 'O' and the number one (1) and letter 'I'.</span></p><br >
+                                                        <p ><strong >5) </strong><span class="spanmodal"><b>Country of Citizenship</b><br>Enter your country of citizenship as it appears in the Machine Readable Zone of your passport. Refer to this <a href="/" target="_blank">list of Country Codes</a> for complete listing.</span></p><br >
+                                                        <p ><strong >6) </strong><span class="spanmodal"><b> Date of Birth</b><br>Enter your date of birth as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >7) </strong><span class="spanmodal"><b> Gender</b><br>Enter your gender as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >8) </strong><span class="spanmodal"><b> Expiration Date</b><br>Enter the expiration date as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >9) </strong><span class="spanmodal"><b> Personal Identification Number (If Applicable)</b><br>Enter the personal identification number as it appears in the Machine Readable Zone of your passport (if applicable).</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <script>
+                                                    // Get the modal
+                                                    var modal = document.getElementById("myModal");
+
+                                                    // Get the button that opens the modal
+                                                    var btn = document.getElementById("myBtn");
+
+                                                    // Get the <span> element that closes the modal
+                                                    var span = document.getElementsByClassName("close")[0];
+
+                                                    // When the user clicks the button, open the modal 
+                                                    btn.onclick = function() {
+                                                        modal.style.display = "block";
+                                                    }
+
+                                                    // When the user clicks on <span> (x), close the modal
+                                                    span.onclick = function() {
+                                                        modal.style.display = "none";
+                                                    }
+
+                                                    // When the user clicks anywhere outside of the modal, close it
+                                                    window.onclick = function(event) {
+                                                        if (event.target == modal) {
+                                                            modal.style.display = "none";
+                                                        }
+                                                    }
+                                                </script>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1122,13 +1258,81 @@
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="review-exemple">
+                                    <div class="review-exemple">
                                             <h5>SAMPLE PASSEPORT</h5>
                                             <img class="cardID-module" src="assets/images/passeport id card.jpg" alt="">
                                             <p>This sample national id card displays the information you will need from
                                                 applicant's information personal. Information must be entered exactly as
                                                 it appears in national id card. Enlarge image to see more information
                                             </p>
+                                            <!-- Trigger/Open The Modal -->
+                                            <button id="myBtn">
+                                                <svg style="width: 1.3em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" />
+                                                </svg>
+                                            </button>
+
+                                            <!-- The Modal -->
+                                            <div id="myModal" class="modal">
+                                                <!-- Modal content -->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 id="modalTitle" class="modal-title">Exemple de passeport : vue détaillée</h4>
+                                                        <span class="close spanmodal">&times;</span>
+                                                    </div>
+                                                    <div  class="modal-body">
+                                                        <p >The sample passport below is shown to provide general guidance on the common fields to reference when filling out the ESTA application. Please refer to your own specific passport, and enter the information exactly as displayed</p>
+                                                        <p ><span class="spanmodal mb-2">Please refer to the </span><strong ><a  target="_blank" title="Link to passport accordion on faq page" href="/">Passport requirements for travel </a></strong><span class="spanmodal">under Visa Waiver Program.</span></p>
+                                                        <div  class="row">
+                                                            <div  class="col-xs-12 col-sm-6 d-flex"><img style="width: 18em;"  src="assets/images/passeport id card.jpg">
+                                                                <h6 style="position: relative; top: 11em; left: 1em; color: #14689B;"  id="mrzLabel">MRZ</h6>
+                                                            </div>
+                                                            <div  class="col-xs-12 col-sm-6">
+                                                                <h6 style="color: #14689B;">MACHINE READABLE ZONE (MRZ)</h6><img style="width: 19em;"  src="assets/images/machineReadable.png">
+                                                            </div>
+                                                        </div><br >
+                                                        <p ><strong >1) </strong><span class="spanmodal"><b> Issuing Country</b><br>The issuing country is your country of citizenship as it appears on your passport. The country of citizenship on your passport is the passport issuing authority, regardless of the country the passport was physically obtained in. Refer to this <a href="/" target="_blank">list of Country Codes</a> for complete listing.</span></p><br >
+                                                        <p ><strong >2) </strong><span class="spanmodal"><b> Family Name</b><br>Enter your family name as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >3) </strong><span class="spanmodal"><b> First (Given) Name</b><br>Enter your first (given) name as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >4) </strong><span class="spanmodal"><b> Passport Number</b><br>Enter your passport number as it appears in the Machine Readable Zone of your passport. The passport number may contain numbers and/or letters. Please closely distinguish between the two. Some commonly confused characters are the number zero (0) and letter 'O' and the number one (1) and letter 'I'.</span></p><br >
+                                                        <p ><strong >5) </strong><span class="spanmodal"><b>Country of Citizenship</b><br>Enter your country of citizenship as it appears in the Machine Readable Zone of your passport. Refer to this <a href="/" target="_blank">list of Country Codes</a> for complete listing.</span></p><br >
+                                                        <p ><strong >6) </strong><span class="spanmodal"><b> Date of Birth</b><br>Enter your date of birth as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >7) </strong><span class="spanmodal"><b> Gender</b><br>Enter your gender as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >8) </strong><span class="spanmodal"><b> Expiration Date</b><br>Enter the expiration date as it appears in the Machine Readable Zone of your passport.</span></p><br >
+                                                        <p ><strong >9) </strong><span class="spanmodal"><b> Personal Identification Number (If Applicable)</b><br>Enter the personal identification number as it appears in the Machine Readable Zone of your passport (if applicable).</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <script>
+                                                    // Get the modal
+                                                    var modal = document.getElementById("myModal");
+
+                                                    // Get the button that opens the modal
+                                                    var btn = document.getElementById("myBtn");
+
+                                                    // Get the <span> element that closes the modal
+                                                    var span = document.getElementsByClassName("close")[0];
+
+                                                    // When the user clicks the button, open the modal 
+                                                    btn.onclick = function() {
+                                                        modal.style.display = "block";
+                                                    }
+
+                                                    // When the user clicks on <span> (x), close the modal
+                                                    span.onclick = function() {
+                                                        modal.style.display = "none";
+                                                    }
+
+                                                    // When the user clicks anywhere outside of the modal, close it
+                                                    window.onclick = function(event) {
+                                                        if (event.target == modal) {
+                                                            modal.style.display = "none";
+                                                        }
+                                                    }
+                                                </script>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1273,13 +1477,13 @@
                                     <div class="form-group col-md-6">
                                         <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">When</span></div>
                                         <label class="control-label">When <span>*</span> </label>
-                                        <input type="text" class="form-control whenrefususa" onkeyup="OnValidatWhen()" autocomplete="nope" id="whenrefususa" name="whenrefususa" placeholder="" data-bind="value: whenrefususa" data-val="true" required="required">
+                                        <input type="text" class="form-control whenrefususa" onkeyup="OnValidatWhen()" autocomplete="nope" id="whenrefususa" placeholder="" data-bind="value: whenrefususa" data-val="true" required="required">
                                         <span id="text-danger-when" class="text-danger-when field-validation-valid" data-valmsg-for="whenrefususa" data-valmsg-replace="true"> </span>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Where</span></div>
                                         <label class="control-label">Where <span>*</span> </label>
-                                        <input type="text" class="form-control whererefususa" onkeyup="OnValidatWhere()" autocomplete="nope" id="whererefususa" name="whererefususa" placeholder="" data-bind="value: whererefususa" data-val="true" required="required">
+                                        <input type="text" class="form-control whererefususa" onkeyup="OnValidatWhere()" autocomplete="nope" id="whererefususa" placeholder="" data-bind="value: whererefususa" data-val="true" required="required">
                                         <span id="text-danger-where" class="text-danger field-validation-valid" data-valmsg-for="whererefususa" data-valmsg-replace="true"> </span>
                                     </div>
                                 </div>
@@ -1317,7 +1521,7 @@
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Country</span></div>
                                             <label class="control-label">Country <span>*</span> </label>
 
-                                            <select class="form-control q_country" onchange="OnValidatCountry3()" name="q_country" id="q_country" placeholder="" data-bind="value: q_country" data-val="true" required="required" aria-required="true" aria-describedby="q_country-error" aria-invalid="false">
+                                            <select class="form-control q_country" onchange="OnValidatCountry3()" id="q_country" placeholder="" data-bind="value: q_country" data-val="true" required="required" aria-required="true" aria-describedby="q_country-error" aria-invalid="false">
                                                 <option value=""></option>
                                                 <option value="Iran">Iran</option>
                                                 <option value="Iraq">Iraq</option>
@@ -1342,15 +1546,15 @@
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">please indicate the end date of your visit to
                                                     this country</span></div>
                                             <label class="control-label">To <span>*</span> </label>
-                                            <input type="DateFormat" onkeyup="OnValidatToInput()" class="form-control q_to" autocomplete="nope" id="q_to" name="q_to" placeholder="" data-bind="value: q_to" data-val="true" required="required">
+                                            <input type="DateFormat" onkeyup="OnValidatToInput()" class="form-control q_to" autocomplete="nope" id="q_to" placeholder="" data-bind="value: q_to" data-val="true" required="required">
                                             <span id="text-danger-to" class="text-danger field-validation-valid" data-valmsg-for="q_to" data-valmsg-replace="true"> </span>
                                         </div>
                                         <div class="form-group col-md-6 w-col">
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Motif du voyage</span></div>
                                             <label class="control-label">Reason <span>*</span> </label>
 
-                                            <select class="form-control q_reason" onchange="OnValidatReason()" name="q_reason" id="q_reason" placeholder="" onchange="toggleq_reason(this)" data-bind="value: q_reason" data-val="true" required="required">
-                                                <option value="" selected disabled>Select Reason</option>
+                                            <select class="form-control q_reason" onchange="OnValidatReason()" id="q_reason" placeholder="" data-bind="value: q_reason" data-val="true" required="required">
+                                                <option value="" selected disabled></option>
                                                 <option value="Tourism">Tourism</option>
                                                 <option value="Personal travel or Family visit">Personal travel or
                                                     Family visit</option>
@@ -1505,13 +1709,13 @@
                                         <div class="form-group col-md-4">
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Family Name </span></div>
                                             <label class="control-label">Family Name <span>*</span> </label>
-                                            <input type="text" onkeyup="OnValidatFamilyname2()" class="form-control familyname_alias" autocomplete="nope" id="familyname_alias" name="familyname_alias[]" placeholder="" data-bind="value: familyname_alias" data-val="true" required="required">
+                                            <input type="text" onkeyup="OnValidatFamilyname2()" class="form-control familyname_alias" autocomplete="nope" id="familyname_alias" placeholder="" data-bind="value: familyname_alias" data-val="true" required="required">
                                             <span id="text-danger-familyname2" class="text-danger field-validation-valid" data-valmsg-for="familyname_alias" data-valmsg-replace="true"> </span>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">First (Given) Name</span></div>
                                             <label class="control-label">First (Given) Name <span>*</span> </label>
-                                            <input type="text" onkeyup="OnValidatFirstname2()" class="form-control firstname_alias" autocomplete="nope" id="firstname_alias" name="firstname_alias[]" placeholder="" data-bind="value: firstname_alias" data-val="true" required="required">
+                                            <input type="text" onkeyup="OnValidatFirstname2()" class="form-control firstname_alias" autocomplete="nope" id="firstname_alias" placeholder="" data-bind="value: firstname_alias" data-val="true" required="required">
                                             <span id="text-danger-firtsname2" class="text-danger field-validation-valid" data-valmsg-for="firstname_alias" data-valmsg-replace="true"> </span>
                                         </div>
                                         <div class="form-group col-md-2">
@@ -1527,10 +1731,10 @@
                                             Do you have a current or previous employer ? <span>*</span>
                                         </label></div>
                                     <div class="col-md radio-option no-padding"><label class="control-label pull-right">
-                                            <input type="radio" value="NO" id="emploino" name="emploi" required="" onclick="toggleemploi(this)" data-bind="checked: emploi" data-val="true" aria-required="true" checked>
+                                            <input type="radio" value="NO" id="emploino" name="emploi" required="" data-bind="checked: emploi" data-val="true" aria-required="true" checked>
                                             NO
                                         </label><label class="control-label pull-right">
-                                            <input type="radio" value="YES" id="emploiyes" name="emploi" required="" onclick="toggleemploi(this)" data-bind="checked: emploi" data-val="true" aria-required="true">
+                                            <input type="radio" value="YES" id="emploiyes" name="emploi" required="" data-bind="checked: emploi" data-val="true" aria-required="true">
                                             YES
                                         </label></div><span class="text-danger field-validation-valid" data-valmsg-for="emploi" data-valmsg-replace="true"> </span>
                                 </div>
@@ -1539,14 +1743,14 @@
                                         <div class="form-group col-md-10">
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Kindly indicate your employer name</span></div>
                                             <label class="control-label">Employer Name <span>*</span> </label>
-                                            <input type="text" onkeyup="OnValidatEmployeur()" class="form-control employeur" autocomplete="nope" id="employeur" name="employeur" placeholder="Employer Name" data-bind="value: employeur" data-val="true" required="required">
+                                            <input type="text" onkeyup="OnValidatEmployeur()" class="form-control employeur" autocomplete="nope" id="employeur" placeholder="Employer Name" data-bind="value: employeur" data-val="true" required="required">
                                             <span id="text-danger-employeur" class="text-danger field-validation-valid" data-valmsg-for="employeur" data-valmsg-replace="true"> </span>
                                         </div>
                                         <div class="form-group col-md-10">
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Kindly indicate the employer address</span>
                                             </div>
                                             <label class="control-label">Employer Address <span>*</span> </label>
-                                            <input type="text" onkeyup="OnValidatEmployeurAddress()" class="form-control address_empl" autocomplete="nope" id="address_empl" name="address_empl" placeholder="Employer Address" data-bind="value: address_empl" data-val="true" required="required">
+                                            <input type="text" onkeyup="OnValidatEmployeurAddress()" class="form-control address_empl" autocomplete="nope" id="address_empl" placeholder="Employer Address" data-bind="value: address_empl" data-val="true" required="required">
                                             <span id="text-danger-employeur-address" class="text-danger field-validation-valid" data-valmsg-for="address_empl" data-valmsg-replace="true"> </span>
                                         </div>
                                     </div>
@@ -1554,15 +1758,15 @@
                                         <div class="form-group col-md-10">
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Employer City</span></div>
                                             <label class="control-label">City <span>*</span> </label>
-                                            <input type="text" onkeyup="OnValidatCity2()" class="form-control ville_empl" autocomplete="nope" id="ville_empl" name="ville_empl" placeholder="City" data-bind="value: ville_empl" data-val="true" required="required">
+                                            <input type="text" onkeyup="OnValidatCity2()" class="form-control ville_empl" autocomplete="nope" id="ville_empl" placeholder="City" data-bind="value: ville_empl" data-val="true" required="required">
                                             <span id="text-danger-city2" class="text-danger field-validation-valid" data-valmsg-for="ville_empl" data-valmsg-replace="true"> </span>
                                         </div>
                                         <div class="form-group col-md-10">
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Employer country</span></div>
                                             <label class="control-label">Country <span>*</span> </label>
 
-                                            <select class="form-control pays_empl" name="pays_empl" onchange="OnValidatCountry4()" id="pays_empl" placeholder="Country" data-bind="value: pays_empl" data-val="true" required="required">
-                                                <option value="" disabled></option>
+                                            <select class="form-control pays_empl" onchange="OnValidatCountry4()" id="pays_empl" placeholder="Country" data-bind="value: pays_empl" data-val="true" required="required">
+                                                <option disabled selected></option>
                                                 <option value="Australia">Australia</option>
                                                 <option value="Czech republic">Czech republic</option>
                                                 <option value="Estonia">Estonia</option>
@@ -1791,14 +1995,14 @@
                                             <div class="form-group col-md-5">
                                                 <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Parent 1: Last name</span></div>
                                                 <label class="control-label">Parent 1: Last name <span>*</span> </label>
-                                                <input type="text" onkeyup="OnValidatLastNameParent()" class="form-control parent1_nom" autocomplete="nope" id="parent1_nom" name="parent1_nom" placeholder="" data-bind="value: parent1_nom" data-val="true" required="" aria-required="true">
+                                                <input type="text" onkeyup="OnValidatLastNameParent()" class="form-control parent1_nom" autocomplete="nope" id="parent1_nom" placeholder="" data-bind="value: parent1_nom" data-val="true" required="" aria-required="true">
                                                 <span id="text-danger-lastname-parent1" class="text-danger field-validation-valid" data-valmsg-for="parent1_nom" data-valmsg-replace="true"> </span>
                                             </div>
                                             <div class="form-group col-md-5">
                                                 <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Parent 1: First name</span></div>
                                                 <label class="control-label">Parent 1: First name <span>*</span>
                                                 </label>
-                                                <input type="text" onkeyup="OnValidatFirstNameParent()" class="form-control parent1_prenom" autocomplete="nope" id="parent1_prenom" name="parent1_prenom" placeholder="" data-bind="value: parent1_prenom" data-val="true" required="" aria-required="true">
+                                                <input type="text" onkeyup="OnValidatFirstNameParent()" class="form-control parent1_prenom" autocomplete="nope" id="parent1_prenom" placeholder="" data-bind="value: parent1_prenom" data-val="true" required="" aria-required="true">
                                                 <span id="text-danger-firstname-parent1" class="text-danger field-validation-valid" data-valmsg-for="parent1_prenom" data-valmsg-replace="true"> </span>
                                             </div>
                                         </div>
@@ -1806,14 +2010,14 @@
                                             <div class="form-group col-md-5">
                                                 <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Parent 2: Last name</span></div>
                                                 <label class="control-label">Parent 2: Last name <span>*</span> </label>
-                                                <input type="text" onkeyup="OnValidatLastNameParent2()" class="form-control parent2_nom" autocomplete="nope" id="parent2_nom" name="parent2_nom" placeholder="" data-bind="value: parent2_nom" data-val="true" required="" aria-required="true">
+                                                <input type="text" onkeyup="OnValidatLastNameParent2()" class="form-control parent2_nom" autocomplete="nope" id="parent2_nom" placeholder=" data-bind=" value: parent2_nom" data-val="true" required="" aria-required="true">
                                                 <span id="text-danger-lastname-parent2" class="text-danger field-validation-valid" data-valmsg-for="parent2_nom" data-valmsg-replace="true"> </span>
                                             </div>
                                             <div class="form-group col-md-5">
                                                 <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Parent 2: First name</span></div>
                                                 <label class="control-label">Parent 2: First name <span>*</span>
                                                 </label>
-                                                <input type="text" onkeyup="OnValidatFirstNameParent2()" class="form-control parent2_prenom" autocomplete="nope" id="parent2_prenom" name="parent2_prenom" placeholder="" data-bind="value: parent2_prenom" data-val="true" required="" aria-required="true">
+                                                <input type="text" onkeyup="OnValidatFirstNameParent2()" class="form-control parent2_prenom" autocomplete="nope" id="parent2_prenom" placeholder="" data-bind="value: parent2_prenom" data-val="true" required="" aria-required="true">
                                                 <span id="text-danger-firstname-parent2" class="text-danger field-validation-valid" data-valmsg-for="parent2_prenom" data-valmsg-replace="true"> </span>
                                             </div>
                                         </div>
@@ -1829,10 +2033,10 @@
                                             Are you now, a citizen of any other country ? <span>*</span>
                                         </label></div>
                                     <div class="col-md radio-option no-padding"><label class="control-label pull-right">
-                                            <input type="radio" value="NO" id="other_citizenshipno" name="other_citizenship" required="" data-bind="checked: other_citizenship" data-val="true" aria-required="true" checked>
+                                            <input type="radio" value="NO" id="other_citizenshipno" required="" data-bind="checked: other_citizenship" name="other_citizenship" data-val="true" aria-required="true" checked>
                                             NO
                                         </label><label class="control-label pull-right">
-                                            <input type="radio" value="YES" id="other_citizenshipyes" name="other_citizenship" required="" data-bind="checked: other_citizenship" data-val="true" aria-required="true">
+                                            <input type="radio" value="YES" id="other_citizenshipyes" required="" data-bind="checked: other_citizenship" name="other_citizenship" data-val="true" aria-required="true">
                                             YES
                                         </label></div><span class="text-danger field-validation-valid" data-valmsg-for="other_citizenship" data-valmsg-replace="true"> </span>
                                 </div>
@@ -1843,7 +2047,7 @@
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Country of Citizenship</span></div>
                                             <label class="control-label">Country of Citizenship <span>*</span> </label>
 
-                                            <select class="form-control another_country" onchange="OnValidatAnotherCountry()" name="another_country[]" id="another_country" placeholder="Country of Citizenship" data-bind="value: another_country" data-val="true" required="required">
+                                            <select class="form-control another_country" onchange="OnValidatAnotherCountry()" id="another_country" placeholder="Country of Citizenship" data-bind="value: another_country" data-val="true" required="required">
                                                 <option value="" disabled></option>
                                                 <option value="Afghanistan">Afghanistan</option>
                                                 <option value="Albania">Albania</option>
@@ -2376,10 +2580,10 @@
                                         Is your trip to the United States a transit to another country ? <span>*</span>
                                     </label></div>
                                 <div class="col-md radio-option no-padding"><label class="control-label pull-right">
-                                        <input type="radio" value="NO" id="transit_question_no" name="transit_question" required="" onclick="toggletransit_question(this)" data-bind="checked: transit_question" data-val="true" aria-required="true">
+                                        <input type="radio" value="NO" id="transit_question_no" name="transit_question" required="" data-bind="checked: transit_question" data-val="true" aria-required="true">
                                         NO
                                     </label><label class="control-label pull-right">
-                                        <input type="radio" value="YES" id="transit_question_yes" name="transit_question" required="" onclick="toggletransit_question(this)" data-bind="checked: transit_question" data-val="true" aria-required="true" checked>
+                                        <input type="radio" value="YES" id="transit_question_yes" name="transit_question" required="" data-bind="checked: transit_question" data-val="true" aria-required="true" checked>
                                         YES
                                     </label></div><span class="text-danger field-validation-valid" data-valmsg-for="transit_question" data-valmsg-replace="true"> </span>
                             </div>
@@ -2522,10 +2726,10 @@
                                                 Contact Point address indicated above ?
                                             </label></div>
                                         <div class="col-md radio-option no-padding" style="position: relative; left: 2em;"><label class="control-label pull-right">
-                                                <input type="radio" value="No" id="transit_outher_address_no" name="transit_outher_address" transit_outher_address="" onclick="toggletransit_outher_address(this)" data-bind="checked: transit_outher_address" data-val="true" class="">
+                                                <input type="radio" value="No" id="transit_outher_address_no" name="transit_outher_address" transit_outher_address="" data-bind="checked: transit_outher_address" data-val="true" class="">
                                                 NO
                                             </label><label class="control-label pull-right">
-                                                <input type="radio" value="Yes" id="transit_outher_address_yes" name="transit_outher_address" transit_outher_address="" onclick="toggletransit_outher_address(this)" data-bind="checked: transit_outher_address" data-val="true" checked>
+                                                <input type="radio" value="Yes" id="transit_outher_address_yes" name="transit_outher_address" transit_outher_address="" data-bind="checked: transit_outher_address" data-val="true" checked>
                                                 Yes
                                             </label></div><span class="text-danger field-validation-valid" data-valmsg-for="transit_outher_address" data-valmsg-replace="true"> </span>
                                     </div>
@@ -2649,7 +2853,7 @@
                                         <input type="checkbox" id="terms" name="terms" required="" data-bind="checked: terms" data-val="true" aria-required="true">
                                         I accept the general conditions of sale
                                     </label>
-                                </div><span class="text-danger field-validation-valid" data-valmsg-for="terms" data-valmsg-replace="true"> </span>
+                                </div><span id="text-danger-terms" class="text-danger field-validation-valid" data-valmsg-for="terms" data-valmsg-replace="true"> </span>
                             </div>
                             <div class="container text-center my-5 footer-form">
                                 <div class="row">
@@ -2951,7 +3155,7 @@
                             <div class="container text-center my-5 footer-form">
                                 <div class="row">
                                     <div class="col">
-                                        <button id="prev5">Previous</button>
+                                        <button id="prev5" onclick="prevStep5()">Previous</button>
                                     </div>
                                     <div class="col-6">
                                         <strong>Step 6 of 6</strong>
@@ -3053,7 +3257,18 @@
             </div>
         </div>
     </footer>
-
+    <!-- <script>     
+        // validation step 1
+        function run() {
+            if (document.getElementById('section-step1').style.display = "block") {
+                document.getElementById("section-step1").style.display = "none";
+                document.getElementById("section-step2").style.display = "block";
+            } else {
+                document.getElementById("section-step1").style.display = "block";
+                document.getElementById("section-step2").style.display = "none";
+            }
+        }
+    </script>                                                -->
     <script src="assets/js/onscroll-banner-step.js"></script>
     <script src="assets/js/progress-steps.js"></script>
     <script src="assets/js/script-change-step.js"></script>

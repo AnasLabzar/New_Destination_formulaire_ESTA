@@ -11,6 +11,11 @@
 .clear-both{
 	clear: both;
 }
+
+span{
+    color: red;
+}
+
 body{
 	font-family: 'Raleway', sans-serif;
 	background: #f9f9f9;
