@@ -279,7 +279,7 @@ section form .col-xs-12 .row .ifp_input {
 }
 
 .display-none{
-    display: none;
+    display: none !important;
 }
 
 

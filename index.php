@@ -245,7 +245,7 @@
                                                 <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Please indicate your gender. Required to
                                                         complete the application.</span></div>
                                                 <label class="control-label">Gender <span class="redspan">*</span></label>
-                                                <select class="form-control" name="sexe" onchange="OnValidatGender()" id="sexe" placeholder="Sex" data-bind="value: sexe" data-val="true" aria-required="true">
+                                                <select class="form-control form-select" name="sexe" onchange="OnValidatGender()" id="sexe" placeholder="Sex" data-bind="value: sexe" data-val="true" aria-required="true">
                                                     <option value="" selected disabled>Choose your gender</option>
                                                     <option value="Female">Female</option>
                                                     <option value="Male">Male</option>
@@ -285,7 +285,7 @@
                                                 <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Choose the country where you were born. Country
                                                         of birth is required to complete the request.</span></div>
                                                 <label class="control-label">Country of birth <span class="redspan">*</span></label>
-                                                <select class="form-control" onchange="OnValidatCountry()" name="pays_naiss" id="pays_naiss" placeholder="Country of birth" data-bind="value: pays_naiss" data-val="true" aria-required="true">
+                                                <select class="form-control form-select" onchange="OnValidatCountry()" name="pays_naiss" id="pays_naiss" placeholder="Country of birth" data-bind="value: pays_naiss" data-val="true" aria-required="true">
                                                     <option value=""></option>
                                                     <option value="Australia">Australia</option>
                                                     <option value="Cyprus">Cyprus</option>
@@ -651,7 +651,7 @@
                                                 <div class="wrapper"><i class="fas fa-question-circle hlp"></i><span class="tooltip">Indicate your country of residence. The country
                                                         is required to complete the application.</span></div>
                                                 <label class="control-label">Country <span class="redspan">*</span></label>
-                                                <select class="form-control" name="pays" onkeyup="OnValidatCountry2()" id="pays" placeholder="Country" data-val="true" aria-required="true">
+                                                <select class="form-control form-select" name="pays" onkeyup="OnValidatCountry2()" id="pays" placeholder="Country" data-val="true" aria-required="true">
                                                     <option value="" selected disabled>select your country</option>
                                                     <option value="Australia">Australia</option>
                                                     <option value="Cyprus">Cyprus</option>
@@ -1082,7 +1082,7 @@
                                                         appears in your passport. The country that issued the passport
                                                         must complete the application.</span></div>
                                                 <label class="control-label">Issuing Country <span class="redspan">*</span></label>
-                                                <select class="form-control" value="" name="pays_emission" id="pays_emission" onchange="OnValidatPaysEmission()" placeholder="" data-bind="value: pays_emission" data-val="true" aria-required="true">
+                                                <select class="form-control form-select" value="" name="pays_emission" id="pays_emission" onchange="OnValidatPaysEmission()" placeholder="" data-bind="value: pays_emission" data-val="true" aria-required="true">
                                                     <option value="" selected disabled>Select country</option>
                                                     <option value="Australia">Australia</option>
                                                     <option value="Czech republic">Czech republic</option>
@@ -1146,7 +1146,7 @@
                                                         as it appears in your passport. The country of which you are a
                                                         national is required to complete the application.</span></div>
                                                 <label class="control-label">Citizenship <span class="redspan">*</span></label>
-                                                <select class="form-control" name="nationalite" id="nationalite" placeholder="" onchange="OnValidatNationalite()" data-msg-notrequiredradiovalue="Children with an 8-digit German passport are not eligible." data-bind="value: nationalite" data-val="true" aria-required="true">
+                                                <select class="form-control form-select" name="nationalite" id="nationalite" placeholder="" onchange="OnValidatNationalite()" data-msg-notrequiredradiovalue="Children with an 8-digit German passport are not eligible." data-bind="value: nationalite" data-val="true" aria-required="true">
                                                     <option value=""></option>
                                                     <option value="Australia">Australia</option>
                                                     <option value="Czech republic">Czech republic</option>
@@ -1521,7 +1521,7 @@
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Country</span></div>
                                             <label class="control-label">Country <span>*</span> </label>
 
-                                            <select class="form-control q_country" onchange="OnValidatCountry3()" id="q_country" placeholder="" data-bind="value: q_country" data-val="true" required="required" aria-required="true" aria-describedby="q_country-error" aria-invalid="false">
+                                            <select class="form-control q_country form-select" onchange="OnValidatCountry3()" id="q_country" placeholder="" data-bind="value: q_country" data-val="true" required="required" aria-required="true" aria-describedby="q_country-error" aria-invalid="false">
                                                 <option value=""></option>
                                                 <option value="Iran">Iran</option>
                                                 <option value="Iraq">Iraq</option>
@@ -1553,7 +1553,7 @@
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Motif du voyage</span></div>
                                             <label class="control-label">Reason <span>*</span> </label>
 
-                                            <select class="form-control q_reason" onchange="OnValidatReason()" id="q_reason" placeholder="" data-bind="value: q_reason" data-val="true" required="required">
+                                            <select class="form-control q_reason form-select" onchange="OnValidatReason()" id="q_reason" placeholder="" data-bind="value: q_reason" data-val="true" required="required">
                                                 <option value="" selected disabled></option>
                                                 <option value="Tourism">Tourism</option>
                                                 <option value="Personal travel or Family visit">Personal travel or
@@ -1624,7 +1624,7 @@
                                     <label class="control-label">Have you ever been issued an I-Authorization by a US.
                                         Consulate? <span>*</span> </label>
 
-                                    <select class="form-control i_document" name="i_document" id="i_document" placeholder="" data-bind="value: i_document" data-val="true">
+                                    <select class="form-control i_document form-select" name="i_document" id="i_document" placeholder="" data-bind="value: i_document" data-val="true">
                                         <option value=""></option>
                                         <option value="No">No</option>
                                         <option value="Yes">Yes</option>
@@ -1765,7 +1765,7 @@
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Employer country</span></div>
                                             <label class="control-label">Country <span>*</span> </label>
 
-                                            <select class="form-control pays_empl" onchange="OnValidatCountry4()" id="pays_empl" placeholder="Country" data-bind="value: pays_empl" data-val="true" required="required">
+                                            <select class="form-control pays_empl form-select" onchange="OnValidatCountry4()" id="pays_empl" placeholder="Country" data-bind="value: pays_empl" data-val="true" required="required">
                                                 <option disabled selected></option>
                                                 <option value="Australia">Australia</option>
                                                 <option value="Czech republic">Czech republic</option>
@@ -2047,7 +2047,7 @@
                                             <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">Country of Citizenship</span></div>
                                             <label class="control-label">Country of Citizenship <span>*</span> </label>
 
-                                            <select class="form-control another_country" onchange="OnValidatAnotherCountry()" id="another_country" placeholder="Country of Citizenship" data-bind="value: another_country" data-val="true" required="required">
+                                            <select class="form-control another_country form-select" onchange="OnValidatAnotherCountry()" id="another_country" placeholder="Country of Citizenship" data-bind="value: another_country" data-val="true" required="required">
                                                 <option value="" disabled></option>
                                                 <option value="Afghanistan">Afghanistan</option>
                                                 <option value="Albania">Albania</option>
@@ -2258,7 +2258,7 @@
                                                 country ? <span>*</span> </label>
                                             <div class="row">
                                                 <div class="col-md-7" style="padding: 0;">
-                                                    <select class="form-control how_acquired" onchange="OnValidatQuestionAnotherCountry()" name="how_acquired[]" id="how_acquired" placeholder="" data-bind="value: how_acquired" data-val="true" required="required">
+                                                    <select class="form-control how_acquired form-select" onchange="OnValidatQuestionAnotherCountry()" name="how_acquired[]" id="how_acquired" placeholder="" data-bind="value: how_acquired" data-val="true" required="required">
                                                         <option value="" disabled></option>
                                                         <option value="Par naissance">By birth</option>
                                                         <option value="Par les parents">By parents</option>
@@ -2303,7 +2303,7 @@
                                                 <label class="control-label">Country of Citizenship <span>*</span>
                                                 </label>
 
-                                                <select class="form-control country_other2" onchange="OnValidatCountryofCitizenship()" name="country_other2[]" id="country_other2" placeholder="Land der Staatsangehörigkeit" data-bind="value: country_other2" data-val="true" required="required">
+                                                <select class="form-control country_other2 form-select"  onchange="OnValidatCountryofCitizenship()" name="country_other2[]" id="country_other2" placeholder="Land der Staatsangehörigkeit" data-bind="value: country_other2" data-val="true" required="required">
                                                     <option value=""></option>
                                                     <option value="Afghanistan">Afghanistan</option>
                                                     <option value="Albania">Albania</option>
@@ -2512,7 +2512,7 @@
                                             <div class="form-group col-md-3">
                                                 <div class="tooltipp"><i class="fas fa-question-circle hlp"></i><span class="tooltiptext">From</span></div>
                                                 <label class="control-label">From <span>*</span> </label>
-                                                <input type="select" onkeyup="OnValidatFrom4()" class="form-control country_other2_start" autocomplete="nope" id="country_other2_start" name="country_other2_start[]" placeholder="" country_other2_start="" data-bind="value: country_other2_start" data-val="true">
+                                                <input type="select" onkeyup="OnValidatFrom4()" class="form-control form-select country_other2_start" autocomplete="nope" id="country_other2_start" name="country_other2_start[]" placeholder="" country_other2_start="" data-bind="value: country_other2_start" data-val="true">
                                                 <span id="text-danger-country-other-start" class="text-danger field-validation-valid" data-valmsg-for="country_other2_start" data-valmsg-replace="true">
                                                 </span>
                                             </div>
@@ -2645,7 +2645,7 @@
                                                 UNKNOWN.</span></div>
                                         <label class="control-label">State </label>
 
-                                        <select class="form-control transit_state" name="transit_state" id="transit_state" placeholder="(Optional information)" transit_state="" data-bind="value: transit_state" data-val="true">
+                                        <select class="form-control transit_state form-select" name="transit_state" id="transit_state" placeholder="(Optional information)" transit_state="" data-bind="value: transit_state" data-val="true">
                                             <option value=""></option>
                                             <option value="AK">ALASKA</option>
                                             <option value="AL">ALABAMA</option>
@@ -2779,7 +2779,7 @@
                                                     is optional to complete the application.</span></div>
                                             <label class="control-label">State </label>
 
-                                            <select class="form-control transit_outher_address_state" name="transit_outher_address_state" id="transit_outher_address_state" placeholder="(Optional information)" transit_outher_address_state="" data-bind="value: transit_outher_address_state" data-val="true">
+                                            <select class="form-control transit_outher_address_state form-select" name="transit_outher_address_state" id="transit_outher_address_state" placeholder="(Optional information)" transit_outher_address_state="" data-bind="value: transit_outher_address_state" data-val="true">
                                                 <option value=""></option>
                                                 <option value="AK">ALASKA</option>
                                                 <option value="AL">ALABAMA</option>
@@ -2940,11 +2940,11 @@
                                                 <label class="bind-label">Have you ever been denied a U.S. Authorization you applied for with your current or previous passport, or have you ever been refused admission to the United States or withdrawn your application for admission at a U.S. port of entry ?</label>
                                                 <span class="bind-span" id="getquestionusa7" data-bind="text: questionusa7"></span>
                                             </li>
-                                            <li class="whenrefususa questionNone">
+                                            <li class="whenrefususa" id="questionNoneWhen">
                                                 <label class="bind-label">When :</label>
                                                 <span class="bind-span" id="getwhenrefususa" data-bind="text: whenrefususa"></span>
                                             </li>
-                                            <li class="whererefususa questionNone">
+                                            <li class="whererefususa" id="questionNoneWhere">
                                                 <label class="bind-label">Where :</label>
                                                 <span class="bind-span" id="getwhererefususa" data-bind="text: whererefususa"></span>
                                             </li>
@@ -2956,19 +2956,19 @@
                                                 <label class="bind-label">Have you traveled to, or been present in Iraq, Syria, Iran, Sudan, Libya, Somalia or Yemen on or after March 1, 2011 ?</label>
                                                 <span class="bind-span" id="getquestionusa9" data-bind="text: questionusa9"></span>
                                             </li>
-                                            <li class="q_country questionNone">
+                                            <li class="q_country" id="questionNoneQ_country">
                                                 <label class="bind-label">Country :</label>
                                                 <span class="bind-span" id="getq_country" data-bind="text: q_country"></span>
                                             </li>
-                                            <li class="q_from questionNone">
+                                            <li class="q_from" id="questionNoneQ_from">
                                                 <label class="bind-label">From :</label>
                                                 <span class="bind-span" id="getq_from" data-bind="text: q_from"></span>
                                             </li>
-                                            <li class="q_to questionNone">
+                                            <li class="q_to" id="questionNoneQ_to">
                                                 <label class="bind-label">To :</label>
                                                 <span class="bind-span" id="getq_to" data-bind="text: q_to"></span>
                                             </li>
-                                            <li class="q_reason questionNone">
+                                            <li class="q_reason" id="questionNoneQ_reason">
                                                 <label class="bind-label">Reason :</label>
                                                 <span class="bind-span" id="getq_reason" data-bind="text: q_reason"></span>
                                             </li>
@@ -3276,6 +3276,7 @@
     <script src="assets/js/dynamic-button.js"></script>
     <script src="assets/js/insert-data-session.js"></script>
     <script src="assets/js/dynamic-view-question.js"></script>
+    <script src="assets/js/validation-application.js"></script>
 </body>
 
 </html>
